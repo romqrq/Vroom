@@ -19,6 +19,7 @@ from home.views import index_view
 from accounts import urls as urls_accounts
 from cars import urls as urls_cars
 from cart import urls as urls_cart
+from search import urls as urls_search
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -26,4 +27,5 @@ urlpatterns = [
     url(r'^accounts/', include(urls_accounts)),
     url(r'^cars/', include(urls_cars)),
     url(r'^cart/', include(urls_cart)),
+    url(r'^search/', include(urls_search)),
 ]
