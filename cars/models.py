@@ -30,4 +30,4 @@ class Car(models.Model):
     guidelines = models.TextField()
 
     def __str__(self):
-        return self.name
+        return self.brand
