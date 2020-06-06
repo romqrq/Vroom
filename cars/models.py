@@ -9,7 +9,7 @@ class Car(models.Model):
     # PASSENGER_OPTIONS = [(i, i) for i in (1, 10+)]
     # DOORS_OPTIONS = [(i, i) for i in (1, 6+)]
 
-    price_day = models.DecimalField(max_digits=6, decimal_places=2)
+    price = models.DecimalField(max_digits=6, decimal_places=2)
     brand = models.CharField(max_length=30, default='')
     model = models.CharField(max_length=30, default='')
     year = models.CharField(max_length=4, default='')
