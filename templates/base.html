@@ -19,7 +19,8 @@
 <body>
     <header>
         <nav class="navbar navbar-expand-lg menu-nav">
-            <a class="navbar-brand logo-nav" href="#">Vroom</a>
+
+            <a class="navbar-brand logo-nav lg-screen" href="#">Vroom</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsedMenu" aria-controls="collapsedMenu" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -52,6 +53,9 @@
                         <a class="nav-link" href="#">Contact</a>
                     </li>
                 </ul>
+            </div>
+            <a class="navbar-brand logo-nav sm-md-screen" href="#">Vroom</a>
+            <div class="nav-right">
                 <i class="fas fa-search nav-icons"></i>
                 <a href="{% url 'view_cart' %}">
                     <i class="fas fa-car nav-icons"></i>
@@ -78,17 +82,24 @@
         <div class="container">
             <div class="row">
                 <div class="col s6">
-                    <h5>Most Visited Links</h5>
-                    <p>Add links</p>
+                    <h5>About Vroom</h5>
+                    <p>We are passionate about cars and the experience associated to them.</p>
+                    <p>Our mission is to allow our users to experience the exclusivity, luxury and adrenaline that were limited to just a few until now.</p>
                 </div>
                 <div class="col s6">
-                    <h5>Visit our Social Channels</h5>
-                    <ul>
-                        <li><a href="https://www.facebook.com" target="_blank" rel="noopener" aria-label="Link to Facebook home page">Facebook</a></li>
-                        <li><a href="https://www.instagram.com" target="_blank" rel="noopener" aria-label="Link to Instagram home page">Instagram</a></li>
-                        <li><a href="https://www.twitter.com" target="_blank" rel="noopener" aria-label="Link to Twitter home page">Twitter</a></li>
-                        <li><a href="https://www.youtube.com" target="_blank" rel="noopener" aria-label="Link to Youtube home page">Youtube</a></li>
-                    </ul>
+                    <h5>Visit our Social Media Channels</h5>
+                    <a href="https://www.facebook.com" target="_blank" rel="noopener" aria-label="Link to Facebook home page">
+                        <i class="fab fa-facebook-square"></i>
+                    </a>
+                    <a href="https://www.instagram.com" target="_blank" rel="noopener" aria-label="Link to Instagram home page">
+                        <i class="fab fa-instagram-square"></i>
+                    </a>
+                    <a href="https://www.twitter.com" target="_blank" rel="noopener" aria-label="Link to Twitter home page">
+                        <i class="fab fa-twitter-square"></i>
+                    </a>
+                    <a href="https://www.youtube.com" target="_blank" rel="noopener" aria-label="Link to Youtube home page">
+                        <i class="fab fa-youtube-square"></i>
+                    </a>
                 </div>
             </div>
         </div>
