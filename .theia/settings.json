@@ -16,5 +16,19 @@
       "**/.DS_Store": true,
       "**/.theia": true,
    },
-   "emmet.extensionsPath": ".theia"
+   "emmet.extensionsPath": ".theia",
+
+   "liveSassCompile.settings.generateMap": false,
+   "liveSassCompile.settings.formats": [
+        {
+            "format": "expanded",
+            "extensionName": ".css",
+            "savePath": "/static/css"
+        },
+        {
+            "format": "compressed",
+            "extensionName": ".min.css",
+            "savePath": "/static/css"
+        },
+   ],
 }
