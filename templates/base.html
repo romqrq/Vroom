@@ -56,7 +56,7 @@
             </div>
             <a class="navbar-brand logo-nav sm-md-screen" href="#">Vroom</a>
             <div class="nav-right">
-                <i class="fas fa-search nav-icons"></i>
+                <a href="{% url 'cars' %}"><i class="fas fa-search nav-icons"></i></a>
                 <a href="{% url 'view_cart' %}">
                     <i class="fas fa-car nav-icons"></i>
                     {% if product_count > 0 %}
