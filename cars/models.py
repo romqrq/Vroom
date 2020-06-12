@@ -17,11 +17,11 @@ class Car(models.Model):
     city = models.CharField(max_length=10, default='')
     county = models.CharField(max_length=10, default='')
     country = models.CharField(max_length=10, default='')
-    image1 = models.ImageField(upload_to='images')
-    image2 = models.ImageField(upload_to='images')
-    image3 = models.ImageField(upload_to='images')
-    image4 = models.ImageField(upload_to='images')
-    image5 = models.ImageField(upload_to='images')
+    image1 = models.ImageField(upload_to='media/images')
+    image2 = models.ImageField(upload_to='media/images')
+    image3 = models.ImageField(upload_to='media/images')
+    image4 = models.ImageField(upload_to='media/images')
+    image5 = models.ImageField(upload_to='media/images')
     guidelines = models.TextField()
 
     def __str__(self):
