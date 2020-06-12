@@ -4,6 +4,7 @@ __pycache__
 env.py
 static/
 media/
+images/
 *.png
 *.jpg
 todo.txt
