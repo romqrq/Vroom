@@ -3,11 +3,11 @@
 {% block content %}
     <form method="post" action="{% url 'register' %}" class="accountform">
         <fieldset class="form-group">
-            <legend>Create a new account</legend>
+            <h2>Create a new account</h2>
             <p>Already got an account? <a href="{% url 'login' %}">Sign In</a></p>
             {% csrf_token %}
             {{  user_form | as_bootstrap }}
-            <button type="submit" class="btn btn-primary">Create account</button>
+            <button type="submit" class="btn general-button">Create account</button>
         </fieldset>
     </form>
 {% endblock %}
