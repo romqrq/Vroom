@@ -52,9 +52,16 @@
                     <li class="nav-item hvr-grow">
                         <a class="nav-link" href="#">Contact</a>
                     </li>
+                    {% if user.is_authenticated %}
+                    <li><a href="{% url 'profile' %}"><i class="fas fa-user"></i> Profile</a></li>
+                    <li><a href="{% url 'logout' %}"><i class="fas fa-sign-out-alt"></i> Log Out</a></li>
+                    {%  else %}
+                    <li><a href="{% url 'register' %}"><i class="fas fa-user-plus"></i> Register</a></li>
+                    <li><a href="{% url 'login' %}"><i class="fas fa-sign-in-alt"></i> Log In</a></li>
+                    {% endif %}
                 </ul>
             </div>
-            <a class="navbar-brand logo-nav sm-md-screen" href="#">Vroom</a>
+            <a class="navbar-brand logo-nav sm-md-screen" href="{% url 'index' %}">Vroom</a>
             <div class="nav-right">
                 <a href="{% url 'cars' %}"><i class="fas fa-search nav-icons"></i></a>
                 <a href="{% url 'view_cart' %}">
