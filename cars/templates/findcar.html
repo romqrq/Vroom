@@ -2,12 +2,20 @@
 
 {% block content %}
 
-<div class="display">
+<div class="row">
     <form action="{% url 'search' %}" method="get">
-        <input type="text" name="q">
+        <label for="search_select">Search by:</label>
+        <select class="form-control" name="search_key" id="search_select">
+            <option>Brand</option>
+            <option>Location</option>
+            <option>Model</option>
+            <option>Year</option>
+        </select>
+        <input type="text" name="search_value">
         <button type="submit">Search</button>
     </form>
 </div>
+
 <div class="row car-cards-row">
 {% for car in cars %}
     <div class="card col-12 col-md-6 col-lg-4 car-card">
