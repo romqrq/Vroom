@@ -10,10 +10,10 @@ def view_cart(request):
 def add_to_cart(request, id):
     """adds a quantity of the specified product to the cart"""
 
-    quantity = int(request.POST.get('quantity'))
+    numberOfDays = int(request.POST.get('quantity'))
 
     cart = request.session.get('cart', {})
-    cart[id] = cart.get(id, quantity)
+    cart[id] = cart.get(id, numberOfDays)
 
     request.session['cart'] = cart
 
@@ -23,11 +23,11 @@ def add_to_cart(request, id):
 def adjust_cart(request, id):
     """Adjusts the quantity of the specified product to the specified amount"""
 
-    quantity = int(request.POST.get('quantity'))
+    NumberOfDays = int(request.POST.get('quantity'))
     cart = request.session.get('cart', {})
 
-    if quantity > 0:
-        cart[id] = quantity
+    if NumberOfDays > 0:
+        cart[id] = NumberOfDays
     else:
         cart.pop(id)
 

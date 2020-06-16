@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load static from staticfiles %}
+{% load bootstrap_tags %}
+
+{% block content %}
+<div class="row cart-items-row">
+    {% for item in cart_items %}
+    <div class="cart-item col-12 col-md-8">
+        <div class="cart-item-line item-line-1">
+            <div class="cart-line1-col cart-item-image">
+                <img src="{{ MEDIA_URL }}{{ item.car.image1 }}" alt="image of a {{ item.car.year }} {{ item.car.brand }} {{ item.car.model }}">
+            </div>
+            <div class="cart-line1-col cart-item-description">
+                <h5>{{ item.car.year }} {{ item.car.brand }} {{ item.car.model }}</h5>
+                <p>{{ item.car.engine }} {{ item.car.fuel }} {{ item.car.transmission }}</p>
+            </div>
+        </div>
+        <div class="cart-item-line item-line-2">
+            <div class="cart-line2-col">
+                <h6>per day</h6>
+                <h5><i class="fas fa-euro-sign"></i>{{ item.car.price }}</h5>
+            </div>
+            <div class="cart-line2-col">
+                <form class="form-inline cart-form-inline" method="POST" action="{% url 'adjust_cart' item.car.id %}">
+                    {% csrf_token %}
+                    <div class="form-group cart-form-group">
+                        <div class="form-quantity">{{ item.quantity }}
+                            {% if item.quantity > 1 %}
+                             days
+                            {% else %}
+                             day
+                            {% endif %}
+                        </div>
+                        <label for="updateQuantity" class="sr-only">New Qty</label>
+                        <input name="quantity" type="number" min="0" max="999" class="form-control">
+                    </div>
+                    <button type="submit" class="btn general-button"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span>Update</button>
+                </form>
+            </div>
+            <div class="cart-line2-col">
+                <h6>Total</h6>
+                <h5><i class="fas fa-euro-sign"></i>{{ total }}</h5>
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+</div>
+<div class="col-12 cart-checkout">
+    <a href="{% url 'checkout' %}" class="btn general-button" role="button"><span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>Checkout</a>
+</div>
+{% endblock %}
