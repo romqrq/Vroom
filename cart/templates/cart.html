@@ -32,10 +32,7 @@
                             {% endif %}
                         </div>
                         <label for="updateQuantity" class="sr-only">New Qty</label>
-                        <div class="input-group">
-                            
-                            <input name="quantity" type="number" min="0" max="999" class="form-control">
-                        </div>
+                        <input name="quantity" type="number" min="0" max="999" class="form-control">
                     </div>
                     <button type="submit" class="btn general-button"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span>Update</button>
                 </form>
@@ -46,8 +43,9 @@
             </div>
         </div>
     {% endfor %}
+    </div>
 </div>
-<div class="col-12">
+<div class="col-12 cart-checkout">
     <a href="{% url 'checkout' %}" class="btn general-button" role="button"><span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>Checkout</a>
 </div>
 {% endblock %}
