@@ -3,13 +3,13 @@
 {% block content %}
     <form method="post" action="{% url 'login' %}?next={{ next }}" class="accountform">
         <fieldset class="form-group">
-            <legend>Login</legend>
+            <h2>Login</h2>
             {% csrf_token %}
             {{ user_form | as_bootstrap }}
             
              <p><a href="{% url 'password_reset' %}">Forgot my password</a></p>
              
-            <button type="submit" class="btn btn-primary">Login</button>
+            <button type="submit" class="btn general-button">Login</button>
         </fieldset>
     </form>
 {% endblock %}
