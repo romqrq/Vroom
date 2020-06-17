@@ -1,1 +1,82 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
+{% load static from staticfiles %}
+{% load bootstrap_tags %}
+
+{% block head_js %}
+<!-- Direct link for stripe's javascript -->
+<script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+<!-- Setting up the Stripe.publishableKey and making it available for us to use in the page-->
+<script type="text/javascript">
+    //<![CDATA[
+        Stripe.publishableKey = '{{ publishable }}';
+    //]]>
+</script>
+<!-- we're putting the stripe.js file in a js directory within our static -->
+<script type="text/javascript" src="{% static 'js/stripe.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+<div class="row order-summary-row">
+    <div class="col-12 order-summary-header">
+        <h5>Order Summary</h5>
+    </div>
+    <div class="col-12 order-item order-item-header">
+        <div class="item-description-col7">
+            <h6>Item</h6>
+        </div>
+        <div class="item-days-col2">
+            <h6>Days</h6>
+        </div>
+        <div class="item-total-col3">
+            <h6>Total</h6>
+        </div>
+    </div>
+    <!-- Loop to display each of the items in the cart -->
+    {% for item in cart_items %}
+    <div class="col-12 order-item">
+        <div class="item-description-col7">
+            <h6>{{ item.car.year }} {{ item.car.brand }} {{ item.car.model }}</h6>
+        </div>
+        <div class="item-days-col2">
+            <h6>{{ item.quantity }}</h6>
+        </div>
+        <div class="item-total-col3">
+            <h6>{{ item.car.price }}</h6>
+        </div>
+    </div>
+    {% endfor %}
+    <div class="row order-total">
+        <div class="col-8 text-left total-text">
+            <h5>TOTAL</h5>
+        </div>
+        <div class="col-4 total-value">
+            <h5>{{ total_cart }}</h5>
+        </div>
+    </div>
+</div>
+
+<div class="row payment-form-row">
+    <form class="payment-form" role="form" method="post" id="payment-form" action="{% url 'checkout' %}">
+        <div class="col-12 order-summary-header">
+            <h5>Payment Details</h5>
+        </div>
+        <!-- This div is a default display none but will be displayed in case of an error -->
+        <div id="credit-card-errors" style="display: none;">
+            <div class="alert-message block-message error" id="stripe-error-message"></div>
+        </div>
+
+        <div class="col-12 col-md-6 form-group outter-form-group">
+            {{ order_form | as_bootstrap }}
+        </div>
+
+        <div class="col-12 col-md-6 form-group outter-form-group">
+            {{ payment_form | as_bootstrap }}
+        </div>
+
+        {% csrf_token %}
+        <div class="col-12 form-group outter-form-group">
+            <input class=" btn general-button" id="submit_payment_btn" name="commit" type="submit" value="Submit Payment">
+        </div>
+    </form>
+</div>
+{% endblock %}
