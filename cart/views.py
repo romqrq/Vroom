@@ -8,7 +8,7 @@ def view_cart(request):
 
 
 def add_to_cart(request, id):
-    """adds a quantity of the specified product to the cart"""
+    """adds a specified number of days (quantity) of the chosen car(s) to the cart"""
 
     numberOfDays = int(request.POST.get('quantity'))
 
@@ -21,7 +21,7 @@ def add_to_cart(request, id):
 
 
 def adjust_cart(request, id):
-    """Adjusts the quantity of the specified product to the specified amount"""
+    """Adjusts the number of days(quantity) to the specified amount"""
 
     NumberOfDays = int(request.POST.get('quantity'))
     cart = request.session.get('cart', {})
