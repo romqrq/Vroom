@@ -68,6 +68,7 @@ def checkout(request):
     # If method isn't POST
     else:
         payment_form = MakePaymentForm()
+        order_form = OrderForm()
 
     return render(request, 'checkout.html', {
         'order_form': order_form,
