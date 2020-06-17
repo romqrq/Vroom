@@ -5,34 +5,34 @@ class Car(models.Model):
     """Class for the car object"""
 
     CAR_CLASS_CHOICES = [
-        ('CC', 'Custom Classic'),
-        ('LX', 'Luxury'),
-        ('SS', 'Supersport')
+        ('Custom Classic', 'Custom Classic'),
+        ('Luxury', 'Luxury'),
+        ('Supersport', 'Supersport')
     ]
     YEAR_CHOICES = [(i, i) for i in range(1800, 2021)]
     TRANSMISSION_CHOICES = [
-        ('AT', 'Automatic'),
-        ('MT', 'Manual')
+        ('Automatic', 'Automatic'),
+        ('Manual', 'Manual')
     ]
     FUEL_CHOICES = [
-        ('D', 'Diesel'),
-        ('E', 'Full Electric'),
-        ('H', 'Hybrid'),
-        ('P', 'Petrol')
+        ('Diesel', 'Diesel'),
+        ('Full Electric', 'Full Electric'),
+        ('Hybrid', 'Hybrid'),
+        ('Petrol', 'Petrol')
     ]
     PASSENGER_CHOICES = [(i, i) for i in range(1, 30)]
     DOORS_CHOICES = [(i, i) for i in range(1, 10)]
     CITY_CHOICES = [
-        ('DUB', 'Dublin'),
-        ('COR', 'Cork'),
-        ('GAL', 'Galway')
+        ('Dublin', 'Dublin'),
+        ('Cork', 'Cork'),
+        ('Galway', 'Galway')
     ]
     COUNTY_CHOICES = [
-        ('CTDUB', 'Dublin'),
-        ('CTCOR', 'Cork'),
-        ('CTGAL', 'Galway')
+        ('Dublin', 'Dublin'),
+        ('Cork', 'Cork'),
+        ('Galway', 'Galway')
     ]
-    COUNTRY_CHOICES = [('IRE', 'Ireland')]
+    COUNTRY_CHOICES = [('Ireland', 'Ireland')]
 
     car_class = models.CharField(max_length=30, choices=CAR_CLASS_CHOICES)
     price = models.DecimalField(max_digits=6, decimal_places=2)

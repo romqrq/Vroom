@@ -38,14 +38,20 @@
                 </form>
             </div>
             <div class="cart-line2-col">
-                <h6>Total</h6>
-                <h5><i class="fas fa-euro-sign"></i>{{ total }}</h5>
+                <h6>Partial</h6>
+                {% for key in partial_value %}
+                    {% if key.id == item.id %}
+                    <h5><i class="fas fa-euro-sign"></i>{{ key.item_total }}</h5>
+                    {% endif %}
+                {% endfor %}
             </div>
         </div>
     {% endfor %}
     </div>
 </div>
 <div class="col-12 cart-checkout">
+    <h6>Total</h6>
+    <h5><i class="fas fa-euro-sign"></i>{{ total_cart }}</h5>
     <a href="{% url 'checkout' %}" class="btn general-button" role="button"><span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>Checkout</a>
 </div>
 {% endblock %}
