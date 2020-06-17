@@ -12,7 +12,7 @@ def custom_classic_only(request):
     """Function to display only Custom Classic cars into the search page"""
     CS = []
     for car in Car.objects.all():
-        if car.car_class == 'CS':
+        if car.car_class == 'Custom Classic':
             CS.append(car)
     return render(request, "findcar.html", {"cars": CS})
 
@@ -21,7 +21,7 @@ def luxury_only(request):
     """Function to display only Luxury cars into the search page"""
     LX = []
     for car in Car.objects.all():
-        if car.car_class == 'LX':
+        if car.car_class == 'Luxury':
             LX.append(car)
     return render(request, "findcar.html", {"cars": LX})
 
@@ -30,6 +30,6 @@ def supersport_only(request):
     """Function to display only Supersport cars into the search page"""
     SS = []
     for car in Car.objects.all():
-        if car.car_class == 'SS':
+        if car.car_class == 'Supersport':
             SS.append(car)
     return render(request, "findcar.html", {"cars": SS})
