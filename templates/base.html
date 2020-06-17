@@ -28,7 +28,7 @@
             <div class="collapse navbar-collapse" id="collapsedMenu">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item hvr-grow active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="{% url 'index' %}">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item hvr-grow dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="collapsedFindACar" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -66,8 +66,8 @@
                 <a href="{% url 'cars' %}"><i class="fas fa-search nav-icons"></i></a>
                 <a href="{% url 'view_cart' %}">
                     <i class="fas fa-car nav-icons"></i>
-                    {% if product_count > 0 %}
-                        <label class="badge badge-warning">{{ product_count }}</label>
+                    {% if item_count > 0 %}
+                        <label class="badge badge-warning">{{ item_count }}</label>
                     {% endif %}
                 </a>
             </div>
