@@ -10,14 +10,17 @@ def cart_contents(request):
     cart = request.session.get('cart', {})
 
     cart_items = []
-    total = 0
-    product_count = 0
+    total_cart = 0
+    item_count = 0
+    partial_value = []
 
     for id, quantity in cart.items():
         car = get_object_or_404(Car, pk=id)
-        total += quantity * car.price
-        product_count += quantity
+        total_cart += quantity * car.price
+        item_total = quantity * car.price
+        item_count += 1
+        partial_value.append({'id': id, 'item_total': item_total})
         cart_items.append({'id': id, 'quantity': quantity, 'car': car})
 
-    return {'cart_items': cart_items, 'total': total,
-            'product_count': product_count}
+    return {'cart_items': cart_items, 'partial_value': partial_value,
+            'total_cart': total_cart, 'item_count': item_count}
