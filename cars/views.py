@@ -1,5 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.core.urlresolvers import reverse
+from django.contrib import messages
 from .models import Car
+from .forms import CarRegistrationForm
 
 
 def all_cars(request):
@@ -33,3 +36,22 @@ def supersport_only(request):
         if car.car_class == 'Supersport':
             SS.append(car)
     return render(request, "findcar.html", {"cars": SS})
+
+
+def car_register(request):
+    """Function to allow users to add their cars to the database"""
+
+    if request.method == 'POST':
+        car_reg_form = CarRegistrationForm(request.POST, request.FILES)
+        if car_reg_form.is_valid():
+            car_reg_form.save()
+            messages.error(request, "Your car is ready to Vroom!")
+            return redirect(reverse('index'))
+        else:
+            messages.error(request, "We were unable to add your car! Please double check the information")
+
+    else:
+        car_reg_form = CarRegistrationForm()
+
+    args = {'car_reg_form': car_reg_form}
+    return render(request, 'rentmycar.html', args)
