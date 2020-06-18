@@ -6,5 +6,5 @@ class CarTests(TestCase):
     """Tests ran against the Car model"""
 
     def test_str(self):
-        test_brand = Car(brand='Ferrari')
-        self.assertEqual(str(test_brand), 'Ferrari')
+        test_car_description = Car(year=2020, brand='Ferrari', model='Spider')
+        self.assertEqual(str(test_car_description), '2020 Ferrari Spider')
