@@ -1,0 +1,13 @@
+
+{% extends "base.html" %}
+{% load bootstrap_tags %}
+{% block content %}
+    <form enctype="multipart/form-data" method="POST" action="{% url 'car_register' %}">
+        <fieldset class="form-group">
+            <h2>Register my car</h2>
+            {% csrf_token %}
+            {{  car_reg_form | as_bootstrap }}
+            <button type="submit" class="btn general-button">Vroom my car!</button>
+        </fieldset>
+    </form>
+{% endblock %}
