@@ -5,6 +5,7 @@ env.py
 static/
 media/
 images/
+migs/
 *.png
 *.jpg
 todo.txt
