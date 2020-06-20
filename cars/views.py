@@ -42,13 +42,20 @@ def car_register(request):
     """Function to allow users to add their cars to the database"""
 
     if request.method == 'POST':
-        car_reg_form = CarRegistrationForm(request.POST, request.FILES)
-        if car_reg_form.is_valid():
+        form = CarRegistrationForm(request.POST, request.FILES)
+
+        if form.is_valid():
+            car_reg_form = form.save(commit=False)
+            car_reg_form.user_id = request.user.id
             car_reg_form.save()
+
             messages.error(request, "Your car is ready to Vroom!")
             return redirect(reverse('index'))
         else:
-            messages.error(request, "We were unable to add your car! Please double check the information")
+            messages.error(
+                request,
+                "We were unable to add your car! Please check the information"
+            )
 
     else:
         car_reg_form = CarRegistrationForm()
