@@ -2,6 +2,8 @@ from django.shortcuts import render, redirect, HttpResponseRedirect
 from django.contrib import messages, auth
 from django.core.urlresolvers import reverse
 from .forms import UserLoginForm, UserRegistrationForm
+from cars.models import Car
+from django.contrib.auth.models import User
 from django.template.context_processors import csrf
 from django.contrib.auth.decorators import login_required
 
@@ -30,6 +32,7 @@ def login(request):
             if user:
                 auth.login(request, user)
                 messages.error(request, "You have successfully logged in")
+                request.session['user_id'] = user.id
 
                 if request.GET and request.GET['next'] != '':
                     next = request.GET['next']
@@ -49,7 +52,15 @@ def login(request):
 @login_required
 def profile(request):
     """A view that displays the profile page of a logged in user"""
-    return render(request, 'profile.html')
+
+    all_cars = Car.objects.all()
+    user_cars = []
+    uid = request.user.id
+
+    for car in all_cars:
+        if car.user_id == str(uid):
+            user_cars.append(car)
+    return render(request, 'profile.html', {'cars': user_cars})
 
 
 def register(request):
@@ -74,4 +85,3 @@ def register(request):
 
     args = {'user_form': user_form}
     return render(request, 'register.html', args)
-
