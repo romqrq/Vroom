@@ -39,7 +39,7 @@ class Car(models.Model):
     ]
     COUNTRY_CHOICES = [('Ireland', 'Ireland')]
 
-    # user_id = models.CharField(max_length=300, default='')
+    user_id = models.CharField(max_length=20)
     car_class = models.CharField(max_length=40, choices=CAR_CLASS_CHOICES)
     price = models.DecimalField(max_digits=6, decimal_places=2)
     brand = models.CharField(max_length=30, default='')

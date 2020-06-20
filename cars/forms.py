@@ -43,8 +43,7 @@ class CarRegistrationForm(ModelForm):
     ]
     COUNTRY_CHOICES = [('Ireland', 'Ireland')]
 
-    # user = User.objects.get(pk=user_id)
-    # user_id = forms.CharField(max_length=30)
+    user_id = forms.CharField(max_length=20, widget=forms.HiddenInput())
     car_class = forms.ChoiceField(choices=CAR_CLASS_CHOICES)
     price = forms.DecimalField(max_digits=6, decimal_places=2)
     brand = forms.CharField(max_length=30)
@@ -71,5 +70,5 @@ class CarRegistrationForm(ModelForm):
             'car_class', 'price', 'brand', 'model', 'year', 'engine',
             'transmission', 'fuel', 'passengers', 'doors', 'accessories',
             'city', 'county', 'country', 'image1', 'image2', 'image3',
-            'image4', 'image5', 'guidelines'
+            'image4', 'image5', 'guidelines', 'user_id'
         ]
