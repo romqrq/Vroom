@@ -1,22 +1,12 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
-<div class="row search-row">
-    <form action="{% url 'search' %}" method="get">
-        <label for="search_select">Search by:</label>
-        <select class="form-control" name="search_key" id="search_select">
-            <option>Brand</option>
-            <option>Location</option>
-            <option>Model</option>
-            <option>Year</option>
-        </select>
-        <input type="text" name="search_value">
-        <button type="submit">Search</button>
-    </form>
+<div class="row">
+    <div class="col-12 header-strip profile-header">
+        <h4>{{ car.brand|upper }}'s PROFILE</h4>
+    </div>
 </div>
-
-<div class="row cards-row">
+<!-- <div class="row cards-row">
 {% for car in cars %}
     <div class="card col-12 col-md-6 col-lg-4 car-card">
         <div class="card-header">
@@ -64,11 +54,8 @@
                     <button class="btn general-button card-button" type="submit">Vroom!</button> 
                 </div>
             </form>
-            <a href="{% url 'car_detail', car.id %}" rel="noopener" aria-label="Link to page with car details">
-                <button type="button" class="btn general-button card-button">View</button>
-            </a>
         </div>
     </div>
-{% endfor %}
-</div>
+{% endfor %} -->
+<!-- </div> -->
 {% endblock %}
