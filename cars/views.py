@@ -62,3 +62,14 @@ def car_register(request):
 
     args = {'car_reg_form': car_reg_form}
     return render(request, 'rentmycar.html', args)
+
+
+# def car_detail(request, car_id):
+#     """Function to display expanded details of the chosen car"""
+
+#     all_cars = Car.objects.all()
+
+#     for car in all_cars:
+#         if car_id == car.id:
+#             return render(request, 'cardetail.html', car)
+#     return render(request, 'cardetail.html', car_id)
