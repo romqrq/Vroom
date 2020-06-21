@@ -50,6 +50,14 @@ def login(request):
 def profile(request):
     """A view that displays the profile page of a logged in user"""
 
+    # all_users = User.objects.all()
+
+    # if userid:
+    #     for user in all_users:
+    #         if user.id == int(userid):
+    #             visited_user = user
+    #             return render(request, 'profile.html', {'user': visited_user})
+    # else:
     all_cars = Car.objects.all()
     user_cars = []
     uid = request.user.id
@@ -58,6 +66,24 @@ def profile(request):
         if car.user_id == str(uid):
             user_cars.append(car)
     return render(request, 'profile.html', {'cars': user_cars})
+
+
+def visit_profile(request, userid):
+    """Function to allow a user to visit other users' profile pages"""
+
+    all_users = User.objects.all()
+    all_cars = Car.objects.all()
+    user_cars = []
+
+    for user in all_users:
+        if user.id == int(userid):
+            visited_user = user
+            for car in all_cars:
+                if car.user_id == str(user.id):
+                    user_cars.append(car)
+
+    return render(request, 'profile.html',
+                  {'user': visited_user, 'cars': user_cars})
 
 
 def register(request):
