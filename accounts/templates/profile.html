@@ -67,7 +67,7 @@
                 <p>{{ car.city }} {{ car.country }}</p>
             </div>
             <h5 class="card-price">{{ car.price }} per day</h5>
-            <a href="#" rel="noopener" aria-label="View this cars details">
+            <a href="{% url 'car_detail' car.id %}" rel="noopener" aria-label="View this cars details">
                 <button type="button" class="btn general-button card-button">View</button>
             </a>
             <!-- <a href="#" rel="noopener" aria-label="Edit this cars details">

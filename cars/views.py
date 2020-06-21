@@ -2,6 +2,8 @@ from django.shortcuts import render, redirect
 from django.core.urlresolvers import reverse
 from django.contrib import messages
 from .models import Car
+from django.contrib.auth.models import User
+from django.db.models import Q
 from .forms import CarRegistrationForm
 
 
@@ -64,12 +66,22 @@ def car_register(request):
     return render(request, 'rentmycar.html', args)
 
 
-# def car_detail(request, car_id):
-#     """Function to display expanded details of the chosen car"""
+def car_detail(request, car_id):
+    """Function to display expanded details of the chosen car based on its ID"""
 
-#     all_cars = Car.objects.all()
+    all_cars = Car.objects.all()
+    all_users = User.objects.all()
 
-#     for car in all_cars:
-#         if car_id == car.id:
-#             return render(request, 'cardetail.html', car)
-#     return render(request, 'cardetail.html', car_id)
+    for car in all_cars:
+
+        if car.id == int(car_id):
+            for owner in all_users:
+                # print(type(user.id))
+                # print(type(car.user_id))
+                if owner.id == int(car.user_id):
+                    # print(user.id)
+                    # print(car.user_id)
+                    car_owner = owner
+                    # print(car_owner.email)
+                    return render(request, 'cardetail.html', {'car': car, 'car_owner': car_owner})
+    # return render(request, 'cardetail.html')

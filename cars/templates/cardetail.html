@@ -3,15 +3,18 @@
 {% block content %}
 <div class="row">
     <div class="col-12 header-strip profile-header">
-        <h4>{{ car.brand|upper }}'s PROFILE</h4>
+        <h4>Details</h4>
+        
     </div>
 </div>
-<!-- <div class="row cards-row">
-{% for car in cars %}
-    <div class="card col-12 col-md-6 col-lg-4 car-card">
-        <div class="card-header">
-            <h4 class="card-title">{{ car.brand|upper }} {{ car.model|upper }} {{ car.year }}</h4>
-        </div>
+<div class="row">
+    <div class="col-12 header-strip">
+        <h4>{{ car.brand|upper }} {{ car.model|upper }} {{ car.year }}</h4>
+    </div>
+</div>
+<div class="row profile-row">
+<h5>{{ car_owner.id }} test</h5>
+    <div class="col-12">
         <div id="{{ car.brand }}{{ car.id }}" class="carousel slide" data-interval="false">
             <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -39,23 +42,43 @@
                 <span class="sr-only">Next</span>
             </a>
         </div>
-        <div class="card-body">
-            <div class="card-text">
-                <p>{{ car.class }}</p>
-                <p>{{ car.engine }} {{ car.fuel }} {{ car.transmission }}</p>
-                <p>Passengers: {{ car.passengers }} Doors: {{ car.doors }}</p>
-                <p>{{ car.city }} {{ car.country }}</p>
-            </div>
-            <h5 class="card-price">{{ car.price }} per day</h5>
-            <form method="POST" action="{% url 'add_to_cart' car.id %}">
-                {% csrf_token %}
-                <div class="input-area mt-3">
-                    <input name="quantity" type="number" min="1" max="999" class="form-control" placeholder="How many days?">
-                    <button class="btn general-button card-button" type="submit">Vroom!</button> 
-                </div>
-            </form>
-        </div>
     </div>
-{% endfor %} -->
-<!-- </div> -->
+    <div class="col-12 profile-info">
+        <h5>Class:</h5>
+        <p>{{ car.car_class }}</p>
+        <h5>Price:</h5>
+        <p>{{ car.price }} per day</p>
+        <h5>Brand:</h5>
+        <p>{{ car.brand }}</p>
+        <h5>Model:</h5>
+        <p>{{ car.model }}</p>
+        <h5>Year:</h5>
+        <p>{{ car.year }}</p>
+        <h5>Engine:</h5>
+        <p>{{ car.engine }}</p>
+        <h5>Transission:</h5>
+        <p>{{ car.transmission }}</p>
+        <h5>Fuel:</h5>
+        <p>{{ car.fuel }}</p>
+        <h5>Passengers:</h5>
+        <p>{{ car.passengers }}</p>
+        <h5>Doors:</h5>
+        <p>{{ car.doors }}</p>
+        <h5>Location:</h5>
+        <p>{{ car.city }} - {{ car.country }}</p>
+        <h5>Guidelines:</h5>
+        <p>{{ car.guidelines }}</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12 profile-info">
+        <h5>Owner:</h5>
+        <p>{{ user.username }}</p>
+        <h5>Member since:</h5>
+        <p>{{ user.date_joined }}</p>
+        <a href="{% url 'visit_profile' car_owner.id %}" rel="noopener" aria-label="Button to allow user to edit personal information">
+            <button type="button" class="btn general-button card-button">View profile</button>
+        </a>
+    </div>
+</div>
 {% endblock %}
