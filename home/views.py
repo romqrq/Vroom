@@ -9,3 +9,14 @@ def index_view(request):
 def about_view(request):
     """View that displays the About page"""
     return render(request, 'about.html')
+
+
+def faqs_view(request):
+    """View that displays the Frequently Asked Questions page"""
+    return render(request, 'faqs.html')
+
+
+def contact_view(request):
+    """View that displays the Frequently Asked Questions page"""
+    return render(request, 'contact.html')
+
