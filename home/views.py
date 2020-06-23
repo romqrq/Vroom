@@ -19,4 +19,3 @@ def faqs_view(request):
 def contact_view(request):
     """View that displays the Frequently Asked Questions page"""
     return render(request, 'contact.html')
-
