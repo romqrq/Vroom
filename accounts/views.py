@@ -63,7 +63,7 @@ def profile(request):
     uid = request.user.id
 
     for car in all_cars:
-        if car.user_id == str(uid):
+        if car.car_owner.id == uid:
             user_cars.append(car)
     return render(request, 'profile.html', {'cars': user_cars})
 
@@ -71,16 +71,19 @@ def profile(request):
 def visit_profile(request, userid):
     """Function to allow a user to visit other users' profile pages"""
 
-    all_users = User.objects.all()
-    all_cars = Car.objects.all()
-    user_cars = []
+    # all_users = User.objects.all()
+    # all_cars = Car.objects.all()
+    # user_cars = []
+    # user_cars = Car.objects.get(car_owner__id__in=(userid))
+    visited_user = User.objects.get(pk=userid)
+    user_cars = Car.objects.filter(car_owner=visited_user)
 
-    for user in all_users:
-        if user.id == int(userid):
-            visited_user = user
-            for car in all_cars:
-                if car.user_id == str(user.id):
-                    user_cars.append(car)
+    # for user in all_users:
+    #     if user.id == int(userid):
+    #         visited_user = user
+    # for car in all_cars:
+    #     if car.user_id == visited_user.id:
+    #         user_cars.append(car)
 
     return render(request, 'profile.html',
                   {'user': visited_user, 'cars': user_cars})
