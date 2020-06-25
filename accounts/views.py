@@ -4,7 +4,7 @@ from django.core.urlresolvers import reverse
 from .forms import UserLoginForm, UserRegistrationForm
 from cars.models import Car
 from django.contrib.auth.models import User
-from django.template.context_processors import csrf
+# from django.template.context_processors import csrf
 from django.contrib.auth.decorators import login_required
 
 
@@ -58,13 +58,14 @@ def profile(request):
     #             visited_user = user
     #             return render(request, 'profile.html', {'user': visited_user})
     # else:
-    all_cars = Car.objects.all()
-    user_cars = []
-    uid = request.user.id
+    # all_cars = Car.objects.all()
+    # user_cars = []
+    uid = request.user
+    user_cars = Car.objects.filter(car_owner=uid)
 
-    for car in all_cars:
-        if car.car_owner.id == uid:
-            user_cars.append(car)
+    # for car in all_cars:
+    #     if car.car_owner.id == uid:
+    #         user_cars.append(car)
     return render(request, 'profile.html', {'cars': user_cars})
 
 

@@ -1,10 +1,10 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.core.urlresolvers import reverse
 from django.contrib import messages
 from .models import Car
-from django.contrib.auth.models import User
+# from django.contrib.auth.models import User
 # from django.db.models import Q
-from .forms import CarRegistrationForm
+from .forms import CarRegistrationForm, CarUpdateForm
 
 
 def all_cars(request):
@@ -78,29 +78,35 @@ def car_detail(request, car_id):
     return render(request, 'cardetail.html', {'car': car})
 
 
-def car_edit_form(request, car_id):
+def car_edit_view(request, car_id):
     """Function to allow user to edit their own cars"""
+    # print(car_id)
+    # print('-----------------------')
+    # this_car = Car.objects.get(id=car_id)
+    instance = get_object_or_404(Car, id=car_id)
+    # print(this_car)
+    # print('-----------------------')
+    form = CarUpdateForm(request.POST or None, request.FILES or None, instance=instance)
+    # if request.method == 'POST':
 
-    this_car = Car.objects.get(pk=car_id)
+    if form.is_valid():
+        # print('VALID')
+        # for key in form:
+        #     if this_car.key != key:
+        #         this_car.key = key
+        form.save()
 
-    if request.method == 'POST':
-        form = CarRegistrationForm(request.POST, request.FILES)
-
-        if form.is_valid():
-            for key in form:
-                if this_car.key != key:
-                    this_car.key = key
-                    this_car.save()
-
-            messages.error(request, "Your car has been successfully updated!")
-            return redirect(reverse('index'))
-        else:
-            messages.error(
-                request,
-                "We were unable to update your car!"
-            )
-
+        messages.error(request, "Your car has been successfully updated!")
+        return redirect(reverse('index'))
     else:
-        car_edit_form = CarRegistrationForm(this_car)
+        messages.error(
+            request,
+            "We were unable to update your car!"
+        )
 
-    return render(request, 'rentmycar.html', {'car_edit_form': car_edit_form})
+    # else:
+    #     # car_edit_form = CarUpdateForm(instance=this_car)
+    #     car_edit_form = CarUpdateForm(instance)
+
+    args = {'car_edit_form': form, 'car': instance}
+    return render(request, 'careditform.html', args)
