@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 
 class Car(models.Model):
@@ -39,7 +40,8 @@ class Car(models.Model):
     ]
     COUNTRY_CHOICES = [('Ireland', 'Ireland')]
 
-    user_id = models.CharField(max_length=20)
+    car_owner = models.ForeignKey(User, on_delete=models.CASCADE)
+    # user_id = models.CharField(max_length=10)
     car_class = models.CharField(max_length=40, choices=CAR_CLASS_CHOICES)
     price = models.DecimalField(max_digits=6, decimal_places=2)
     brand = models.CharField(max_length=30, default='')
