@@ -69,14 +69,19 @@
         <h5>Guidelines:</h5>
         <p>{{ car.guidelines }}</p>
     </div>
+    <p>{{car.user_id}}</p>
+    <p>{{ user.id }}</p>
+    {% if user.id == car.car_owner.id %}
+    <button type="button" class="btn general-button card-button">Edit car</button>
+    {% endif %}
 </div>
 <div class="row">
     <div class="col-12 profile-info">
         <h5>Owner:</h5>
-        <p>{{ user.username }}</p>
+        <p>{{ car.car_owner.username }}</p>
         <h5>Member since:</h5>
-        <p>{{ user.date_joined }}</p>
-        <a href="{% url 'visit_profile' car_owner.id %}" rel="noopener" aria-label="Button to allow user to edit personal information">
+        <p>{{ car.car_owner.date_joined }}</p>
+        <a href="{% url 'visit_profile' car.car_owner.id %}" rel="noopener" aria-label="Button to allow user to edit personal information">
             <button type="button" class="btn general-button card-button">View profile</button>
         </a>
     </div>
