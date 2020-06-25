@@ -74,3 +74,69 @@ class CarRegistrationForm(ModelForm):
             'accessories', 'city', 'county', 'country', 'image1',
             'image2', 'image3', 'image4', 'image5', 'guidelines'
         ]
+
+
+class CarUpdateForm(ModelForm):
+
+    CAR_CLASS_CHOICES = [
+        ('Custom Classic', 'Custom Classic'),
+        ('Luxury', 'Luxury'),
+        ('Supersport', 'Supersport')
+    ]
+    YEAR_CHOICES = [(i, i) for i in range(1900, 2021)]
+    TRANSMISSION_CHOICES = [
+        ('Automatic', 'Automatic'),
+        ('Manual', 'Manual')
+    ]
+    FUEL_CHOICES = [
+        ('Diesel', 'Diesel'),
+        ('Full Electric', 'Full Electric'),
+        ('Hybrid', 'Hybrid'),
+        ('Petrol', 'Petrol')
+    ]
+    ACCESSORIES_CHOICES = [
+        ('Basic', 'Basic'),
+        ('Standard', 'Standard'),
+        ('Custom', 'Custom')
+    ]
+    CITY_CHOICES = [
+        ('Dublin', 'Dublin'),
+        ('Cork', 'Cork'),
+        ('Galway', 'Galway')
+    ]
+    COUNTY_CHOICES = [
+        ('Dublin', 'Dublin'),
+        ('Cork', 'Cork'),
+        ('Galway', 'Galway')
+    ]
+    COUNTRY_CHOICES = [('Ireland', 'Ireland')]
+
+    car_class = forms.ChoiceField(choices=CAR_CLASS_CHOICES, required=False)
+    price = forms.DecimalField(required=False)
+    brand = forms.CharField(required=False)
+    model = forms.CharField(required=False)
+    year = forms.ChoiceField(choices=YEAR_CHOICES, required=False)
+    engine = forms.CharField(required=False)
+    transmission = forms.ChoiceField(choices=TRANSMISSION_CHOICES, required=False)
+    fuel = forms.ChoiceField(choices=FUEL_CHOICES, required=False)
+    passengers = forms.DecimalField(max_digits=2, decimal_places=0, required=False)
+    doors = forms.DecimalField(max_digits=2, decimal_places=0, required=False)
+    accessories = forms.ChoiceField(choices=ACCESSORIES_CHOICES, required=False)
+    city = forms.ChoiceField(choices=CITY_CHOICES, required=False)
+    county = forms.ChoiceField(choices=COUNTY_CHOICES, required=False)
+    country = forms.ChoiceField(choices=COUNTRY_CHOICES, required=False)
+    image1 = forms.ImageField(required=False)
+    image2 = forms.ImageField(required=False)
+    image3 = forms.ImageField(required=False)
+    image4 = forms.ImageField(required=False)
+    image5 = forms.ImageField(required=False)
+    guidelines = forms.CharField(widget=forms.Textarea, required=False)
+
+    class Meta:
+        model = Car
+        fields = [
+            'car_class', 'price', 'brand', 'model', 'year', 'engine',
+            'transmission', 'fuel', 'passengers', 'doors',
+            'accessories', 'city', 'county', 'country', 'image1',
+            'image2', 'image3', 'image4', 'image5', 'guidelines'
+        ]

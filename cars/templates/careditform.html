@@ -2,7 +2,7 @@
 {% load bootstrap_tags %}
 {% block content %}
 <div class="form-box hide" id="{{ car.id }}" value="edit">
-    <form enctype="multipart/form-data" method="POST" action="{% url 'car_edit_form' car.id %}">
+    <form enctype="multipart/form-data" method="POST" action="{% url 'edit_car' car.id %}">
         <fieldset class="form-group">
             <h2>Edit my car</h2>
             {% csrf_token %}
