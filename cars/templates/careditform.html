@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% load bootstrap_tags %}
 {% block content %}
-<div class="form-box hide" id="{{ car.id }}" value="edit">
+<div class="form-box" id="{{ car.id }}" value="edit">
     <form enctype="multipart/form-data" method="POST" action="{% url 'edit_car' car.id %}">
         <fieldset class="form-group">
             <h2>Edit my car</h2>
