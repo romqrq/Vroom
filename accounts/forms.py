@@ -15,13 +15,14 @@ class UserRegistrationForm(UserCreationForm):
         label='Password Confirmation',
         widget=forms.PasswordInput
     )
-    name = forms.CharField(label="Name", max_length=40)
-    surname = forms.CharField(label="Surname", max_length=40)
+    first_name = forms.CharField(label="First name", max_length=40)
+    last_name = forms.CharField(label="Last name", max_length=40)
 
     class Meta:
         model = User
         fields = [
-            'username', 'name', 'surname', 'email', 'password1', 'password2'
+            'username', 'first_name', 'last_name',
+            'email', 'password1', 'password2'
         ]
 
     def clean_email(self):
@@ -42,3 +43,42 @@ class UserRegistrationForm(UserCreationForm):
             raise ValidationError("Passwords do not match")
 
         return password2
+
+
+class EditUserForm(forms.Form):
+
+    username = forms.CharField(max_length=50, required=False)
+    email = forms.EmailField(required=False)
+    first_name = forms.CharField(
+        label="First name", max_length=40, required=False
+        )
+    last_name = forms.CharField(
+        label="Last name", max_length=40, required=False
+        )
+
+    class Meta:
+        model = User
+        fields = [
+            'username', 'first_name', 'last_name', 'email'
+        ]
+
+
+class EditUserPasswordForm(forms.Form):
+    password1 = forms.CharField(
+        label='Password',
+        widget=forms.PasswordInput,
+        initial='',
+        required=False
+        )
+    password2 = forms.CharField(
+        label='Password Confirmation',
+        widget=forms.PasswordInput,
+        initial='',
+        required=False
+    )
+
+    class Meta:
+        model = User
+        fields = [
+            'password1', 'password2'
+        ]
