@@ -7,15 +7,15 @@
 </div>
 <div class="row profile-row">
     <div class="col-12 profile-info">
-        <h5>Name:</h5>
-        <p>{{ user.name }}</p>
-        <h5>Surname:</h5>
-        <p>{{ user.surname }}</p>
+        <h5>First name:</h5>
+        <p>{{ user.first_name }}</p>
+        <h5>Last name:</h5>
+        <p>{{ user.last_name }}</p>
         <h5>Email:</h5>
         <p>{{ user.email }}</p>
         <h5>Member since:</h5>
         <p>{{ user.date_joined }}</p>
-        <a href="#" rel="noopener" aria-label="Button to allow user to edit personal information">
+        <a href="{% url 'edit_user' user.id %}" rel="noopener" aria-label="Button to allow user to edit personal information">
             <button type="button" class="btn general-button card-button">Edit</button>
         </a>
     </div>
