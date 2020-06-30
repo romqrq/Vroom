@@ -1,7 +1,7 @@
-from django.shortcuts import render, redirect, HttpResponseRedirect
+from django.shortcuts import render, redirect, HttpResponseRedirect, get_object_or_404
 from django.contrib import messages, auth
 from django.core.urlresolvers import reverse
-from .forms import UserLoginForm, UserRegistrationForm
+from .forms import UserLoginForm, UserRegistrationForm, EditUserForm, EditUserPasswordForm
 from cars.models import Car
 from django.contrib.auth.models import User
 # from django.template.context_processors import csrf
@@ -60,8 +60,8 @@ def profile(request):
     # else:
     # all_cars = Car.objects.all()
     # user_cars = []
-    uid = request.user
-    user_cars = Car.objects.filter(car_owner=uid)
+    car_owner = request.user
+    user_cars = Car.objects.filter(car_owner=car_owner)
 
     # for car in all_cars:
     #     if car.car_owner.id == uid:
@@ -112,3 +112,61 @@ def register(request):
 
     args = {'user_form': user_form}
     return render(request, 'register.html', args)
+
+
+def edit_user_view(request, user_id):
+    """Function to allow user to edit their own profile"""
+
+    u = User.objects.get(pk=user_id)
+
+    if request.method == 'POST':
+        form = EditUserForm(request.POST)
+        pwform = EditUserPasswordForm(request.POST)
+
+        if form.is_valid():
+            if form['username'].value():
+                u.username = request.POST.get('username')
+                u.save()
+            if form['first_name'].value():
+                u.first_name = request.POST.get('first_name')
+                u.save()
+            if form['last_name'].value():
+                u.last_name = request.POST.get('last_name')
+                u.save()
+            if form['email'].value():
+                u.email = request.POST.get('email')
+                u.save()
+
+        if pwform.is_valid():
+            if pwform['password1'].value() and pwform['password2'].value():
+                print('values there')
+                if pwform['password1'].value() == pwform['password2'].value():
+                    print('values there and equal')
+                    u = User.objects.get(pk=user_id)
+                    u.set_password(pwform['password2'].value())
+                    u.save()
+                    messages.error(
+                        request,
+                        "Your password was successfully updated!"
+                    )
+                else:
+                    messages.error(
+                        request,
+                        "Make sure the password is the same on both fields"
+                    )
+
+            if pwform['password1'].value() != pwform['password2'].value():
+                print('values there and different')
+                messages.error(
+                    request,
+                    "Make sure the password is the same on both fields"
+                )
+
+        return redirect(reverse('index'))
+
+    else:
+        form = EditUserForm()
+        pwform = EditUserPasswordForm()
+
+    args = {'edit_user_form': form, 'edit_pw_form': pwform, 'user': u}
+    return render(request, 'editprofile.html', args)
