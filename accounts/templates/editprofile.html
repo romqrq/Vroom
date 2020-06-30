@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load bootstrap_tags %}
+{% block content %}
+<div class="form-box" id="{{ user.id }}" value="edit">
+    <form enctype="multipart/form-data" method="POST" action="{% url 'edit_user' user.id %}">
+        <fieldset class="form-group">
+            <h2>Edit my Profile</h2>
+            {% csrf_token %}
+            {{  edit_user_form | as_bootstrap }}
+            {{  edit_pw_form | as_bootstrap }}
+            <button type="submit" class="btn general-button">Update</button>
+        </fieldset>
+    </form>
+</div>
+{% endblock %}
