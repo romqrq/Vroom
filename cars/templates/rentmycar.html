@@ -1,6 +1,10 @@
-
 {% extends "base.html" %}
 {% load bootstrap_tags %}
+
+{% block meta_description %}Vroom. Rent your car to other users.{% endblock %}
+
+{% block title %}Vroom - Rent my car{% endblock %}
+
 {% block content %}
     <form enctype="multipart/form-data" method="POST" action="{% url 'car_register' %}">
         <fieldset class="form-group">
