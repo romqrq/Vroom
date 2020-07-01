@@ -2,6 +2,10 @@
 {% load static from staticfiles %}
 {% load bootstrap_tags %}
 
+{% block meta_description %}Vroom. Cart contents.{% endblock %}
+
+{% block title %}Vroom - Cart{% endblock %}
+
 {% block content %}
 <div class="row cart-items-row">
     {% for item in cart_items %}
