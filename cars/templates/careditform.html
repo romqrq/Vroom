@@ -1,5 +1,10 @@
 {% extends "base.html" %}
 {% load bootstrap_tags %}
+
+{% block meta_description %}Vroom. Edit details of your car.{% endblock %}
+
+{% block title %}Vroom - Edit My Car{% endblock %}
+
 {% block content %}
 <div class="form-box" id="{{ car.id }}" value="edit">
     <form enctype="multipart/form-data" method="POST" action="{% url 'edit_car' car.id %}">
