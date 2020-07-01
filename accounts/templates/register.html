@@ -1,5 +1,10 @@
 {% extends "base.html" %}
 {% load bootstrap_tags %}
+
+{% block meta_description %}Vroom. Register your Vroom account.{% endblock %}
+
+{% block title %}Vroom - Register{% endblock %}
+
 {% block content %}
     <form method="post" action="{% url 'register' %}" class="accountform">
         <fieldset class="form-group">

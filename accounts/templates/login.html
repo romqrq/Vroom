@@ -1,5 +1,10 @@
 {% extends "base.html" %}
 {% load bootstrap_tags %}
+
+{% block meta_description %}Vroom. Login with Vroom account.{% endblock %}
+
+{% block title %}Vroom - Login{% endblock %}
+
 {% block content %}
     <form method="post" action="{% url 'login' %}?next={{ next }}" class="accountform">
         <fieldset class="form-group">
