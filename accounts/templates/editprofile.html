@@ -1,5 +1,10 @@
 {% extends "base.html" %}
 {% load bootstrap_tags %}
+
+{% block meta_description %}Vroom. Edit your profile information.{% endblock %}
+
+{% block title %}Vroom - Edit Profile{% endblock %}
+
 {% block content %}
 <div class="form-box" id="{{ user.id }}" value="edit">
     <form enctype="multipart/form-data" method="POST" action="{% url 'edit_user' user.id %}">

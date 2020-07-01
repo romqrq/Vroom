@@ -4,124 +4,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{% block meta_description %}{% endblock %}">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Vroom</title>
-    <!-- Get titles as individual blocks -->
-    <!-- CSS only -->
-        <!-- JS, Popper.js, and jQuery -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    <title>{% block title %}{% endblock %}</title>
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css"/>
     <link rel="stylesheet" href="{% static 'font-awesome/css/all.css' %}">
     <link rel="stylesheet" href="{% static 'css/custom.css' %}">
 
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
     {% block head_js %}
     {% endblock head_js %}
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg menu-nav">
+    {% include 'layout/header.html' %}
 
-            <a class="navbar-brand logo-nav lg-screen" href="{% url 'index' %}">Vroom</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsedMenu" aria-controls="collapsedMenu" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="collapsedMenu">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item hvr-grow active">
-                        <a class="nav-link" href="{% url 'index' %}">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item hvr-grow dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="collapsedFindACar" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Find a Car
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="collapsedFindACar">
-                            <a class="dropdown-item" href="{% url 'custom_classic_only' %}">Custom Classic</a>
-                            <a class="dropdown-item" href="{% url 'luxury_only' %}">Luxury</a>
-                            <a class="dropdown-item" href="{% url 'supersport_only' %}">Supersport</a>
-                        </div>
-                    </li>
-                    <li class="nav-item hvr-grow">
-                        <a class="nav-link" href="{% url 'car_register' %}">Rent my car</a>
-                    </li>
-                    <li class="nav-item hvr-grow">
-                        <a class="nav-link" href="{% url 'about' %}">About</a>
-                    </li>
-                    <li class="nav-item hvr-grow">
-                        <a class="nav-link" href="{% url 'faqs' %}">FAQs</a>
-                    </li>
-                    <li class="nav-item hvr-grow">
-                        <a class="nav-link" href="{% url 'contact' %}">Contact</a>
-                    </li>
-                    {% if user.is_authenticated %}
-                    <li><a href="{% url 'profile' %}"><i class="fas fa-user"></i> Profile</a></li>
-                    <li><a href="{% url 'logout' %}"><i class="fas fa-sign-out-alt"></i> Log Out</a></li>
-                    {%  else %}
-                    <li><a href="{% url 'register' %}"><i class="fas fa-user-plus"></i> Register</a></li>
-                    <li><a href="{% url 'login' %}"><i class="fas fa-sign-in-alt"></i> Log In</a></li>
-                    {% endif %}
-                </ul>
-            </div>
-            <a class="navbar-brand logo-nav sm-md-screen" href="{% url 'index' %}">Vroom</a>
-            <div class="nav-right">
-                <a href="{% url 'cars' %}"><i class="fas fa-search nav-icons"></i></a>
-                <a href="{% url 'view_cart' %}">
-                    <i class="fas fa-car nav-icons"></i>
-                    {% if item_count > 0 %}
-                        <label class="badge badge-warning">{{ item_count }}</label>
-                    {% endif %}
-                </a>
-            </div>
-        </nav>
-    </header>
     {% if messages %}
-        <div class="alert alert-success">
-            <div class="messages">
-                {% for message in messages %}
-                    {{ message }}
-                {% endfor %}
-            </div>
-        </div>
+        {% include 'layout/messages.html' %}
     {% endif %}
+
     <div class="container content-container">
         {% block content %} {% endblock %}
     </div>
-    <footer>
-        <div class="container">
-            <div class="row footer-row">
-                <div class="col-xs-12 footer-col">
-                    <h2 class="heading-text">About Vroom</h2>
-                    <p>We are passionate about cars and the experience associated to them.</p>
-                    <p>Our mission is to allow our users to experience the exclusivity, luxury and adrenaline that were limited to just a few until now.</p>
-                </div>
-                <div class="col-xs-12 footer-col">
-                    <h2 class="heading-text">Visit our Social Media Channels</h2>
-                    <a href="https://www.facebook.com" target="_blank" rel="noopener" aria-label="Link to Facebook home page">
-                        <i class="fab fa-facebook-square"></i>
-                    </a>
-                    <a href="https://www.instagram.com" target="_blank" rel="noopener" aria-label="Link to Instagram home page">
-                        <i class="fab fa-instagram-square"></i>
-                    </a>
-                    <a href="https://www.twitter.com" target="_blank" rel="noopener" aria-label="Link to Twitter home page">
-                        <i class="fab fa-twitter-square"></i>
-                    </a>
-                    <a href="https://www.youtube.com" target="_blank" rel="noopener" aria-label="Link to Youtube home page">
-                        <i class="fab fa-youtube-square"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="footer-copyright">
-            <div class="container">
-                <p>© 2020 Romulo Albuquerque - Vroom Copyright</p>
-            </div>
-        </div>
-    </footer>
-</body>
+    
+    {% include 'layout/footer.html' %}
 
+</body>
 
 
 </html>
