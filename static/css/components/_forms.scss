@@ -1,0 +1,13 @@
+.form-group {
+    margin: 1rem;
+    border: $orange-border;
+    padding: 1.5rem 0;
+
+    div {
+        border: none;
+        padding: 0;
+    }
+    a {
+        color: $bright-orange;
+    }
+}

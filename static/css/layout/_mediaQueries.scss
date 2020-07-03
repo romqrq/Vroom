@@ -1,0 +1,23 @@
+@media (min-width: 992px){
+    .lg-screen {
+        display: inline-block;
+    }
+    .sm-md-screen {
+        display: none;
+    }
+    .logo-nav {
+        margin-right: 1rem;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        position: absolute;
+        top: 5rem;
+        left: 0;
+        right: 0;
+        background-color: black;
+        padding: 1rem;
+        z-index: 11;
+    }
+}
