@@ -1,6 +1,8 @@
  
 *.sqlite3
 __pycache__
+static/
+media/
 env.py
 images/
 *.png
