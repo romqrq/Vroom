@@ -10,7 +10,21 @@ class Car(models.Model):
         ('Luxury', 'Luxury'),
         ('Supersport', 'Supersport')
     ]
-    YEAR_CHOICES = [(i, i) for i in range(1800, 2021)]
+    YEAR_CHOICES = [(i, i) for i in range(1900, 2021)]
+    ENGINE_TYPE_CHOICES = [
+        ('Inline 3', 'Inline 3'),
+        ('Inline 4', 'Inline 4'),
+        ('Inline 6', 'Inline 6'),
+        ('Boxer 4', 'Boxer 4'),
+        ('Boxer 6', 'Boxer 6'),
+        ('V6', 'V6'),
+        ('V8', 'V8'),
+        ('V10', 'V10'),
+        ('V12', 'V12'),
+        ('W10', 'W10'),
+        ('W12', 'W12'),
+        ('Other', 'Other')
+    ]
     TRANSMISSION_CHOICES = [
         ('Automatic', 'Automatic'),
         ('Manual', 'Manual')
@@ -40,7 +54,7 @@ class Car(models.Model):
     ]
     COUNTRY_CHOICES = [('Ireland', 'Ireland')]
 
-    car_owner = models.ForeignKey(User, on_delete=models.CASCADE)
+    car_owner = models.ForeignKey(User, on_delete=models.CASCADE, default=5)
     # user_id = models.CharField(max_length=10)
     car_class = models.CharField(max_length=40, choices=CAR_CLASS_CHOICES)
     price = models.DecimalField(max_digits=6, decimal_places=2)
@@ -48,7 +62,9 @@ class Car(models.Model):
     model = models.CharField(max_length=30, default='')
     year = models.DecimalField(max_digits=4,
                                decimal_places=0, choices=YEAR_CHOICES)
-    engine = models.CharField(max_length=10, default='')
+    engine_type = models.CharField(max_length=40,
+                                   choices=ENGINE_TYPE_CHOICES)
+    displacement = models.DecimalField(max_digits=4, decimal_places=1)
     transmission = models.CharField(max_length=20,
                                     choices=TRANSMISSION_CHOICES)
     fuel = models.CharField(max_length=50, choices=FUEL_CHOICES)
