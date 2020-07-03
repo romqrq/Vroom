@@ -2,10 +2,7 @@
 *.sqlite3
 __pycache__
 env.py
-static/
-media/
 images/
-migs/
 *.png
 *.jpg
 todo.txt

@@ -1,0 +1,42 @@
+.car-card {
+    padding: 0;
+    margin-bottom: 1rem;
+    border: $orange-border;
+    box-shadow: -3px 5px 8px #0000009c;
+
+    .carousel {
+        border: $orange-border;
+    }
+}
+.car-carousel-img {
+    width: 130%;
+    position: absolute;
+    top: -12%;
+    left: -15%;
+}
+.card-header {
+    border: $orange-border;
+    background-color: $dark-grey;
+}
+.card-title {
+    margin: 0;
+    color: white;
+    text-shadow: $header-shadow-darkbg;
+}
+.card-body {
+    border: $orange-border;
+}
+.card-text p {
+    margin: 0;
+}
+.card-price {
+    text-shadow: $header-shadow-lightbg;
+    margin-top: 1rem;
+}
+.input-area .form-control {
+    width: 50%;
+    margin: auto;
+}
+.card-button {
+    width: 50%;
+}
