@@ -170,3 +170,13 @@ def edit_user_view(request, user_id):
 
     args = {'edit_user_form': form, 'edit_pw_form': pwform, 'user': u}
     return render(request, 'editprofile.html', args)
+
+
+def del_user(request, user_id):
+    """Function to allow users to delete their own profile"""
+
+    u = User.objects.get(pk=user_id)
+    u.delete()
+    messages.success(request, "The user is deleted")
+
+    return redirect(reverse('index'))
