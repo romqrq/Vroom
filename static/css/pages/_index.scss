@@ -1,7 +1,7 @@
 .index-boxes {
     height: 40vh;
     overflow: hidden;
-    padding: 1.5rem 1rem 0.5rem;
+    padding: 0;
     z-index: 1;
     color: white;
     border: 1px solid $bright-orange;
@@ -20,6 +20,8 @@
     margin: 0;
 }
 .index-content-boxes {
+    padding: 1rem;
+    background-color: #0000008f;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -28,18 +30,56 @@
 .index-boxes-row p {
     margin: 0;
 }
-.vroom-my-car {
-    color: black;
-    background-color: white;
+.luxury-box {
+    background-image: url("../images/index/business.jpg");
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
 }
-.vroom-my-car .index-boxes-img {
-    width: initial;
+.custom-classic-box {
+    background-image: url("../images/index/customclassic2.jpg");
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+}
+.supersport-box {
+    background-image: url("../images/index/supersport2.jpeg");
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+}
+.vroom-my-car {
+    color: white;
+    padding: 0;
+    background-image: url("../images/index/vroommycar.jpg");
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+}
+// .using-vroom-image {
+//     background-image: url("../images/index/usingvroom.jpg");
+
+// }
+// .vroom-my-car .index-boxes-img {
+//     width: initial;
+// }
+.track-day {
+    padding: 0;
+    background-image: url("../images/index/trackdaydriver2.jpg");
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
 }
 .track-day .index-boxes-img {
     height: initial;
 }
 .using-vroom {
+    padding: 0;
     height: fit-content;
+    background-image: url("../images/index/usingvroom.jpg");
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
 }
 .using-vroom-item {
     margin: 1rem auto;
@@ -48,7 +88,7 @@
         font-size: 4rem;
     }
 }
-.using-vroom .index-boxes-img {
-    width: initial;
-    left: -4rem;
-}
+// .using-vroom .index-boxes-img {
+//     width: initial;
+//     left: -4rem;
+// }
