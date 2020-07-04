@@ -6,7 +6,7 @@
 {% block title %}Vroom - Edit Profile{% endblock %}
 
 {% block content %}
-<div class="form-box" id="{{ user.id }}" value="edit">
+<div class="form-box">
     <form enctype="multipart/form-data" method="POST" action="{% url 'edit_user' user.id %}">
         <fieldset class="form-group">
             <h2>Edit my Profile</h2>
@@ -14,6 +14,16 @@
             {{  edit_user_form | as_bootstrap }}
             {{  edit_pw_form | as_bootstrap }}
             <button type="submit" class="btn general-button">Update</button>
+        </fieldset>
+    </form>
+</div>
+<div class="form-box">
+    <form method="POST" action="{% url 'delete_user' user.id %}">
+        <fieldset class="form-group">
+            <h2>Delete my profile</h2>
+            {% csrf_token %}
+            <p>Once you press the delete button, your account will be permanently deleted</p>
+            <button type="submit" class="btn general-button">Delete</button>
         </fieldset>
     </form>
 </div>
