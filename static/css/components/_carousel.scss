@@ -9,6 +9,9 @@
 .index-carousel-image {
     max-height: 100%;
 }
+.carousel-caption {
+    text-shadow: $header-shadow-lightbg;
+}
 
 // testimonials carousel
 
@@ -52,7 +55,7 @@
 
 .jane-doe{
     background-image: url("../images/index/businesstestimonial.jpeg");
-        box-shadow: inset 4px 0px 5px black;
+    box-shadow: inset 4px 0px 5px black;
 }
 .joanne-doe{
     background-image: url("../images/index/traveltestimonial.jpg");

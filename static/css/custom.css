@@ -55,10 +55,20 @@ i {
 }
 
 .header-title {
-  padding: 2rem 0.5rem 1rem;
+  padding: 3rem 0.5rem 1rem;
   background-color: white;
   color: #252525;
   text-shadow: -1px 2px 3px #000000bd;
+}
+
+.secondary-title-light {
+  text-shadow: -1px 2px 3px #000000bd;
+  margin-bottom: 1rem;
+}
+
+.secondary-title-dark {
+  text-shadow: -1px 2px 3px #7d7979;
+  margin-bottom: 1rem;
 }
 
 .logo-nav {
@@ -100,7 +110,7 @@ h1, h2, h3, h4, h5, h6 {
 .index-boxes {
   height: 40vh;
   overflow: hidden;
-  padding: 1.5rem 1rem 0.5rem;
+  padding: 0;
   z-index: 1;
   color: white;
   border: 1px solid #ff7b00;
@@ -122,6 +132,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .index-content-boxes {
+  padding: 1rem;
+  background-color: #0000008f;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -139,13 +151,42 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
-.vroom-my-car {
-  color: black;
-  background-color: white;
+.luxury-box {
+  background-image: url("../images/index/business.jpg");
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
 }
 
-.vroom-my-car .index-boxes-img {
-  width: initial;
+.custom-classic-box {
+  background-image: url("../images/index/customclassic2.jpg");
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+}
+
+.supersport-box {
+  background-image: url("../images/index/supersport2.jpeg");
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+}
+
+.vroom-my-car {
+  color: white;
+  padding: 0;
+  background-image: url("../images/index/vroommycar.jpg");
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+}
+
+.track-day {
+  padding: 0;
+  background-image: url("../images/index/trackdaydriver2.jpg");
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
 }
 
 .track-day .index-boxes-img {
@@ -153,9 +194,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .using-vroom {
+  padding: 0;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
+  background-image: url("../images/index/usingvroom.jpg");
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
 }
 
 .using-vroom-item {
@@ -164,11 +210,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .using-vroom-item i {
   font-size: 4rem;
-}
-
-.using-vroom .index-boxes-img {
-  width: initial;
-  left: -4rem;
 }
 
 .cart-items-row {
@@ -499,6 +540,10 @@ footer {
 
 .index-carousel-image {
   max-height: 100%;
+}
+
+.carousel-caption {
+  text-shadow: -1px 2px 3px #000000bd;
 }
 
 .testimonials-carousel {
