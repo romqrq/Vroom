@@ -212,6 +212,48 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 4rem;
 }
 
+.search-row {
+  margin: 1rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.search-row .form-control {
+  border: 1px solid #252525;
+}
+
+.search-row label {
+  font-family: "Audiowide", sans-serif;
+  font-size: 1.5rem;
+  color: inherit;
+  text-shadow: -1px 2px 3px #000000bd;
+}
+
+.search-row input {
+  border: 1px solid #252525;
+  border-radius: 0.25rem;
+}
+
+.search-row button {
+  font-family: "Audiowide", sans-serif;
+  border: 3px solid #ff7b00;
+  background-color: #ff7b00;
+  color: black;
+  -webkit-box-shadow: -1px 4px 9px 1px black;
+          box-shadow: -1px 4px 9px 1px black;
+  padding: 0 0.5rem;
+  border-radius: 0.25rem;
+}
+
+.car-cards-row {
+  margin-top: 1.5rem;
+}
+
+.car-view-button {
+  margin: 0 !important;
+}
+
 .cart-items-row {
   padding: 1rem;
 }
