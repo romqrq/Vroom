@@ -110,3 +110,13 @@ def car_edit_view(request, car_id):
 
     args = {'car_edit_form': form, 'car': instance}
     return render(request, 'careditform.html', args)
+
+
+def del_car(request, car_id):
+    """Function to allow users to delete their own profile"""
+
+    c = Car.objects.get(pk=car_id)
+    c.delete()
+    messages.success(request, "The car was deleted")
+
+    return redirect(reverse('index'))
