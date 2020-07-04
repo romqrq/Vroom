@@ -1,5 +1,33 @@
-// .cards-row {
-//     max-width: 100%;
-//     padding: 0;
-//     margin: 1rem;
-// }
+.search-row {
+    margin: 1rem;
+    justify-content: center;
+
+    .form-control {
+        border: 1px solid $dark-grey;
+    }
+    label {
+        font-family: "Audiowide", sans-serif;
+        font-size: 1.5rem;
+        color: inherit;
+        text-shadow: $header-shadow-lightbg;
+    }
+    input {
+        border: 1px solid $dark-grey;
+        border-radius: 0.25rem;
+    }
+    button {
+        font-family: "Audiowide", sans-serif;
+        border: 3px solid $bright-orange;
+        background-color: $bright-orange;
+        color: black;
+        box-shadow: -1px 4px 9px 1px black;
+        padding: 0 0.5rem;
+        border-radius: 0.25rem;
+    }
+}
+.car-cards-row {
+    margin-top: 1.5rem;
+}
+.car-view-button {
+    margin: 0 !important;
+}
