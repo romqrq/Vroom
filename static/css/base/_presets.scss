@@ -42,8 +42,16 @@ i {
     margin: 1rem;
 }
 .header-title {
-    padding: 2rem 0.5rem 1rem;
+    padding: 3rem 0.5rem 1rem;
     background-color: white;
     color: $dark-grey;
     text-shadow: $header-shadow-lightbg;
+}
+.secondary-title-light {
+    text-shadow: $header-shadow-lightbg;
+    margin-bottom: 1rem;
+}
+.secondary-title-dark {
+    text-shadow: $header-shadow-darkbg;
+    margin-bottom: 1rem;
 }

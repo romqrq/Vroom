@@ -36,10 +36,10 @@
     <div class="col-12 header-title">
         <h2>Find the car of your dreams!</h2>
     </div>
-    <div class="col-12 col-md-4 index-boxes">
-        <img class="index-boxes-img" src="/static/images/index/business.jpg" alt="">
+    <div class="col-12 col-md-4 index-boxes luxury-box">
+        <!-- <img class="index-boxes-img" src="/static/images/index/business.jpg" alt=""> -->
         <div class="index-content-boxes">
-            <h4>Go Luxury</h4>
+            <h3 class="secondary-title-light">Go Luxury</h3>
             <p>Comfort, exclusiveness and finesse.</p>
             <p>Go around with comfort and confidence.</p>
             <p>A portfolio that includes Rolls Royce, Bentley and more.</p>
@@ -48,10 +48,10 @@
             </a>
         </div>
     </div>
-    <div class="col-12 col-md-4 index-boxes">
-        <img class="index-boxes-img" src="/static/images/index/customclassic2.jpg" alt="">
+    <div class="col-12 col-md-4 index-boxes custom-classic-box">
+        <!-- <img class="index-boxes-img" src="/static/images/index/customclassic2.jpg" alt=""> -->
         <div class="index-content-boxes">
-            <h3>Go Custom Classic</h3>
+            <h3 class="secondary-title-light">Go Custom Classic</h3>
             <p>Tradition, memories and uniqueness.</p>
             <p>Perfect for especial occasions.</p>
             <p>A portfolio that includes Chevy, Porshe and more.</p>
@@ -60,10 +60,10 @@
             </a>
         </div>
     </div>
-    <div class="col-12 col-md-4 index-boxes">
-        <img class="index-boxes-img" src="/static/images/index/supersport2.jpeg" alt="">
+    <div class="col-12 col-md-4 index-boxes supersport-box">
+        <!-- <img class="index-boxes-img" src="/static/images/index/supersport2.jpeg" alt=""> -->
         <div class="index-content-boxes">
-            <h2>Go Supersport</h2>
+            <h3 class="secondary-title-light">Go Supersport</h3>
             <p>Speed, power and technology.</p>
             <p>Experience the most desired track machines made street legal.</p>
             <p>A portfolio that includes Ferrari, Lamborghini and more.</p>
@@ -77,53 +77,60 @@
         <h2>I want to rent my car</h2>
     </div>
     <div class="col-12 index-boxes vroom-my-car">
-        <img class="index-boxes-img" src="/static/images/index/vroommycar.jpg" alt="">
-        <h2>I want to Vroom my car</h2>
-        <p>If you have an amazing car and want to allow people to have the same experience as you or if you just want to rent it and make some extra money, this is the place for you.</p>
-        <p>With Vroom you rent your car to other users with insurance coverage and safe payment.</p>
-        <a href="{% url 'car_register' %}" rel="noopener" aria-label="Link to rent my car with Vroom">
-            <button type="button" class="btn general-button">Vroom my car</button>
-        </a>
+        <div class="index-content-boxes">
+            <!-- <img class="index-boxes-img" src="/static/images/index/vroommycar.jpg" alt=""> -->
+            <h3 class="secondary-title-light">Vroom my car</h3>
+            <p>If you have an amazing car and want to allow people to have the same experience as you or if you just want to rent it and make some extra money, this is the place for you.</p>
+            <p>With Vroom you rent your car to other users with insurance coverage and safe payment.</p>
+            <a href="{% url 'car_register' %}" rel="noopener" aria-label="Link to rent my car with Vroom">
+                <button type="button" class="btn general-button">Vroom my car</button>
+            </a>
+        </div>
     </div>
 <!-- Track day experience -->
     <div class="col-12 header-title">
         <h2>Adrenaline is what I need</h2>
     </div>
     <div class="col-12 index-boxes track-day">
-        <img class="index-boxes-img" src="/static/images/index/trackdaydriver2.jpg" alt="">
-        <h2>Track day experience</h2>
-        <p>Have you always wanted to experience racing in a sports car?</p>
-        <p>Some of the cars for rent are set as track day available, which means they were prepared for track use.</p>
-        <a href="#" rel="noopener" aria-label="Link to learn more about track days">
-            <button type="button" class="btn general-button">Learn more</button>
-        </a>
+        <div class="index-content-boxes">
+            <!-- <img class="index-boxes-img" src="/static/images/index/trackdaydriver2.jpg" alt=""> -->
+            <h3 class="secondary-title-light">Track day experience</h3>
+            <p>Have you always wanted to experience racing in a sports car?</p>
+            <p>Some of the cars for rent are set as track day available, which means they were prepared for track use.</p>
+            <a href="#" rel="noopener" aria-label="Link to learn more about track days">
+                <button type="button" class="btn general-button">Learn more</button>
+            </a>
+        </div>
     </div>
 <!-- Using vroom for... -->
     <div class="col-12 header-title">
         <h2>What are users using Vroom for</h2>
     </div>
     <div class="col-12 index-boxes using-vroom">
-        <img class="index-boxes-img" src="/static/images/index/usingvroom.jpg" alt="">
-        <div class="row using-vroom-row">
-            <div class="col-6 col-md-4 col-lg-2 offset-lg-1 using-vroom-item">
-                <i class="fas fa-user-tie"></i>
-                <p>Business Trips</p>
-            </div>
-            <div class="col-6 col-md-4 col-lg-2 using-vroom-item">
-                <i class="fas fa-flag-checkered"></i>
-                <p>Track days</p>
-            </div>
-            <div class="col-6 col-md-4 col-lg-2 using-vroom-item">
-                <i class="fas fa-birthday-cake"></i>
-                <p>Especial events</p>
-            </div>
-            <div class="col-6 col-md-6 col-lg-2 using-vroom-item">
-                <i class="far fa-grin-stars"></i>
-                <p>Unique experience</p>
-            </div>
-            <div class="col-12 col-md-6 col-lg-2 using-vroom-item">
-                <i class="fas fa-gift"></i>
-                <p>Gift</p>
+        <div class="index-content-boxes">
+            <!-- <img class="index-boxes-img" src="/static/images/index/usingvroom.jpg" alt=""> -->
+            <!-- <div class="using-vroom-image"></div> -->
+            <div class="row using-vroom-row">
+                <div class="col-6 col-md-4 col-lg-2 offset-lg-1 using-vroom-item">
+                    <i class="fas fa-user-tie"></i>
+                    <p>Business Trips</p>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2 using-vroom-item">
+                    <i class="fas fa-flag-checkered"></i>
+                    <p>Track days</p>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2 using-vroom-item">
+                    <i class="fas fa-birthday-cake"></i>
+                    <p>Especial events</p>
+                </div>
+                <div class="col-6 col-md-6 col-lg-2 using-vroom-item">
+                    <i class="far fa-grin-stars"></i>
+                    <p>Unique experience</p>
+                </div>
+                <div class="col-12 col-md-6 col-lg-2 using-vroom-item">
+                    <i class="fas fa-gift"></i>
+                    <p>Gift</p>
+                </div>
             </div>
         </div>
     </div>
@@ -136,7 +143,7 @@
             <div class="carousel-item testimonial-carousel-item active">
                 <div class="row testimonials-carousel-row">
                     <div class="col-8 testimonials-carousel-text">
-                        <h4>Jane Doe</h4>
+                        <h4 class="secondary-title-light">Jane Doe</h4>
                         <hr class="testimonials-carousel-hr">
                         <p>Such a great idea! Vroom takes away my concerns about transportation during my business trips.</p>
                     </div>
@@ -151,7 +158,7 @@
                         <!-- <img src="static/images/index/traveltestimonial.jpg" class="col-4" alt="..."> -->
                     </div>
                     <div class="col-8 testimonials-carousel-text">
-                        <h4>Joanne Doe</h4>
+                        <h4 class="secondary-title-light">Joanne Doe</h4>
                         <hr class="testimonials-carousel-hr">
                         <p>Amazing solution for my road trips abroad! Got an amazing car for a great price and also the car owner is a great friend of mine now!</p>
                     </div>
@@ -160,7 +167,7 @@
             <div class="carousel-item testimonial-carousel-item">
                 <div class="row testimonials-carousel-row">
                     <div class="col-8 testimonials-carousel-text">
-                        <h4>Joe Doe</h4>
+                        <h4 class="secondary-title-light">Joe Doe</h4>
                         <hr class="testimonials-carousel-hr">
                         <p>Got as a present two full days in the car of my dreams and had a track day with it...Looking forward to my next birthday!</p>
                     </div>
