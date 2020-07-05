@@ -25,8 +25,8 @@ class Order(models.Model):
 class OrderLineItem(models.Model):
     """Model for each line in the order representing a product"""
 
-    order = models.ForeignKey(Order, null=False)
-    car = models.ForeignKey(Car, null=False)
+    order = models.ForeignKey(Order, on_delete=models.CASCADE, null=False)
+    car = models.ForeignKey(Car,on_delete=models.PROTECT, null=False)
     rental_days = models.IntegerField(blank=False)
 
     def __str__(self):
