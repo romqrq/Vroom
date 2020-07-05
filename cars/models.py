@@ -55,7 +55,6 @@ class Car(models.Model):
     COUNTRY_CHOICES = [('Ireland', 'Ireland')]
 
     car_owner = models.ForeignKey(User, on_delete=models.CASCADE, default=5)
-    # user_id = models.CharField(max_length=10)
     car_class = models.CharField(max_length=40, choices=CAR_CLASS_CHOICES)
     price = models.DecimalField(max_digits=6, decimal_places=2)
     brand = models.CharField(max_length=30, default='')
@@ -73,9 +72,9 @@ class Car(models.Model):
                                      choices=PASSENGER_CHOICES)
     doors = models.DecimalField(max_digits=10,
                                 decimal_places=0, choices=DOORS_CHOICES)
-    accessories = models.CharField(max_length=200, choices=ACCESSORIES_CHOICES)
-    city = models.CharField(max_length=10, choices=CITY_CHOICES)
-    county = models.CharField(max_length=10, choices=COUNTY_CHOICES)
+    accessories = models.CharField(max_length=20, choices=ACCESSORIES_CHOICES)
+    city = models.CharField(max_length=30, choices=CITY_CHOICES)
+    county = models.CharField(max_length=30, choices=COUNTY_CHOICES)
     country = models.CharField(max_length=10, choices=COUNTRY_CHOICES)
     image1 = models.ImageField(upload_to='media/images')
     image2 = models.ImageField(upload_to='media/images')
