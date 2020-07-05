@@ -3,8 +3,5 @@
 __pycache__
 media/
 env.py
-images/
-*.png
-*.jpg
 todo.txt
 .coverage
