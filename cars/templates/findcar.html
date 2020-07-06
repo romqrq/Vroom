@@ -6,8 +6,19 @@
 
 {% block content %}
 
+<div class="row">
+    <div class="col-12 header-strip profile-header">
+        <h4>Find a Car</h4>
+    </div>
+    <div class="col-12">
+        <p>Here you will find what you're looking for.</p>
+        <p>Classic cars with unique history bringing nostalgia or maybe classics with a modern heart delivering amazing performance.</p>
+        <p>If you are looking for luxury and exclusiveness, here you will find the pinacle of the luxury cars universe.</p>
+        <p>In case you are seeking performance and adrenaline, you will find what you are looking for under our wide purebred supersports cars selection</p>
+    </div>
+</div>
 <div class="row search-row">
-    <form action="{% url 'search' %}" method="get">
+    <form class="search-form" action="{% url 'search' %}" method="get">
         <label for="search_select">Search by:</label>
         <select class="form-control" name="search_key" id="search_select">
             <option>Brand</option>
@@ -53,15 +64,11 @@
                 <span class="sr-only">Next</span>
             </a>
         </div>
-        <!-- 'car_class', 'price', 'brand', 'model', 'year', 'engine_type',
-            'displacement', 'transmission', 'fuel', 'passengers', 'doors',
-            'accessories', 'city', 'county', 'country', 'image1', 'image2',
-            'image3', 'image4', 'image5', 'guidelines' -->
         <div class="card-body">
             <div class="card-text">
                 <p>{{ car.class }}</p>
                 <p><i class="fas fa-cogs"></i> {{ car.engine_type }} {{ car.displacement }}L</p>
-                <p><i class="fas fa-gas-pump"></i> {{ car.fuel }} - {{ car.transmission }} transmission</p>
+                <p><i class="fas fa-gas-pump"></i> {{ car.fuel }} - {{ car.transmission }}</p>
                 <p>{{ car.doors }} doors - {{ car.passengers }} seats</p>
                 <p><i class="fas fa-map-marked-alt"></i> {{ car.city }} - {{ car.country }}</p>
             </div>
