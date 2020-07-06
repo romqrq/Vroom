@@ -14,6 +14,20 @@ a {
   color: inherit;
 }
 
+a:hover {
+  text-decoration: none;
+}
+
+.body-link {
+  color: #ff7b00;
+  text-shadow: -1px 1px 2px #000000ab;
+}
+
+.body-link:hover {
+  text-decoration: none;
+  color: #007cff;
+}
+
 a:hover, .nav-icons:hover {
   color: #ff7b00;
 }
@@ -257,6 +271,18 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 !important;
 }
 
+.register-form-box {
+  padding: 0;
+}
+
+input#id_image1,
+input#id_image2,
+input#id_image3,
+input#id_image4,
+input#id_image5 {
+  padding: 0.2rem;
+}
+
 .cart-items-row {
   padding: 1rem;
 }
@@ -363,10 +389,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .cart-checkout {
   margin-bottom: 1rem;
-}
-
-.search-form {
-  width: 100%;
 }
 
 .order-summary-row, .payment-form-row {
