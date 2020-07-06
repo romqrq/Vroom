@@ -209,7 +209,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .search-row {
-  margin: 1rem;
+  margin: 1rem 1rem 2rem;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -229,6 +229,9 @@ h1, h2, h3, h4, h5, h6 {
 .search-row input {
   border: 1px solid #252525;
   border-radius: 0.25rem;
+  width: 74%;
+  height: 2rem;
+  margin-top: 0.2rem;
 }
 
 .search-row button {
@@ -240,6 +243,10 @@ h1, h2, h3, h4, h5, h6 {
           box-shadow: -1px 4px 9px 1px black;
   padding: 0 0.5rem;
   border-radius: 0.25rem;
+}
+
+.search-form {
+  width: 100%;
 }
 
 .car-cards-row {
@@ -356,6 +363,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .cart-checkout {
   margin-bottom: 1rem;
+}
+
+.search-form {
+  width: 100%;
 }
 
 .order-summary-row, .payment-form-row {
