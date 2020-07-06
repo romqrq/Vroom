@@ -6,11 +6,34 @@
 .carousel-item {
     height: 50vh;
 }
-.index-carousel-image {
-    max-height: 100%;
+.index-carousel-image {  
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+}
+.luxury-img {
+    background-image: url("../images/index/business.jpg");
+}
+.custom-classic-img {
+    background-image: url("../images/index/customclassic.jpg");
+}
+.supersport-img {
+    background-image: url("../images/index/supersport3.jpg");
 }
 .carousel-caption {
     text-shadow: $header-shadow-lightbg;
+    background-color: #0000003d;
+    height: 100%;
+    width: 100%;
+    padding: 0 1rem;
+    right: 0;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 
 // testimonials carousel
