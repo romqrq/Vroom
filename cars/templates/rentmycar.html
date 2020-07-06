@@ -6,12 +6,27 @@
 {% block title %}Vroom - Rent my car{% endblock %}
 
 {% block content %}
-    <form enctype="multipart/form-data" method="POST" action="{% url 'car_register' %}">
-        <fieldset class="form-group">
-            <h2>Register my car</h2>
-            {% csrf_token %}
-            {{  car_reg_form | as_bootstrap }}
-            <button type="submit" class="btn general-button">Vroom my car!</button>
-        </fieldset>
-    </form>
+<div class="row">
+    <div class="col-12 header-strip profile-header">
+        <h4>Rent my Car</h4>
+    </div>
+    <div class="col-12">
+        <p>Do you have a car that people would love to drive?</p>
+        <p>With Vroom you can rent you car fully insured and stress free!</p>
+        <p>You can register your car below and it will be available to other users immediately.</p>
+        <p>If you have any questions, visit our <a class="body-link" href="{% url 'faqs' %}" rel="noopener" aria-label="Link to frequently asked questions page">Frequently Asked Questions</a> page or <a class="body-link" href="{% url 'contact' %}" rel="noopener" aria-label="Link to contact page">Contact us</a>.</p>
+    </div>
+</div>
+<div class="row car-register-row">
+    <div class="col-12 col-lg-6 offset-lg-3 register-form-box">
+        <form enctype="multipart/form-data" method="POST" action="{% url 'car_register' %}">
+            <fieldset class="form-group">
+                <h2>Register my car</h2>
+                {% csrf_token %}
+                {{  car_reg_form | as_bootstrap }}
+                <button type="submit" class="btn general-button">Vroom my car!</button>
+            </fieldset>
+        </form>
+    </div>
+</div>
 {% endblock %}
