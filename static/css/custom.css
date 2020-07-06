@@ -22,10 +22,6 @@ i {
   font-size: 2.5rem;
 }
 
-.lg-screen {
-  display: none;
-}
-
 .content-container {
   padding: 0;
 }
@@ -625,9 +621,9 @@ footer {
   right: 0;
   top: 0;
   left: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -739,5 +735,8 @@ footer {
     background-color: black;
     padding: 1rem;
     z-index: 11;
+  }
+  .lg-screen {
+    display: none;
   }
 }

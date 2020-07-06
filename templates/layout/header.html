@@ -34,11 +34,38 @@
                 <li class="nav-item hvr-grow">
                     <a class="nav-link" href="{% url 'contact' %}">Contact</a>
                 </li>
+                {% if user.is_authenticated %}
+                <li class="nav-item hvr-grow sm-md-screen action-menu-buttons">
+                    <a href="{% url 'profile' %}">
+                        <i class="fas fa-user"></i>
+                        Profile
+                    </a>
+                </li>
+                <li class="nav-item hvr-grow sm-md-screen action-menu-buttons">
+                    <a href="{% url 'logout' %}">
+                        <i class="fas fa-sign-out-alt"></i>
+                        Log Out
+                    </a>
+                </li>
+                {%  else %}
+                <li class="nav-item hvr-grow sm-md-screen action-menu-buttons">
+                    <a href="{% url 'register' %}">
+                        <i class="fas fa-user-plus"></i>
+                        Register
+                    </a>
+                </li>
+                <li class="nav-item hvr-grow sm-md-screen action-menu-buttons">
+                    <a href="{% url 'login' %}">
+                        <i class="fas fa-sign-in-alt"></i>
+                        Log In
+                    </a>
+                </li>
+                {% endif %}
             </ul>
         </div>
         <a class="navbar-brand logo-nav sm-md-screen" href="{% url 'index' %}">Vroom</a>
         <div class="nav-right">
-            <ul class="navbar-nav mr-auto navbar-nav-right">
+            <ul class="navbar-nav mr-auto lg-screen navbar-nav-right">
                 {% if user.is_authenticated %}
                 <li class="nav-item hvr-grow action-menu-buttons"><a href="{% url 'profile' %}"><i class="fas fa-user"></i> Profile</a></li>
                 <li class="nav-item hvr-grow action-menu-buttons"><a href="{% url 'logout' %}"><i class="fas fa-sign-out-alt"></i> Log Out</a></li>
