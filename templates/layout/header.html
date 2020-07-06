@@ -16,6 +16,7 @@
                     Find a Car
                     </a>
                     <div class="dropdown-menu" aria-labelledby="collapsedFindACar">
+                        <a class="dropdown-item" href="{% url 'all_cars' %}">All Cars</a>
                         <a class="dropdown-item" href="{% url 'custom_classic_only' %}">Custom Classic</a>
                         <a class="dropdown-item" href="{% url 'luxury_only' %}">Luxury</a>
                         <a class="dropdown-item" href="{% url 'supersport_only' %}">Supersport</a>
@@ -33,18 +34,20 @@
                 <li class="nav-item hvr-grow">
                     <a class="nav-link" href="{% url 'contact' %}">Contact</a>
                 </li>
-                {% if user.is_authenticated %}
-                <li><a href="{% url 'profile' %}"><i class="fas fa-user"></i> Profile</a></li>
-                <li><a href="{% url 'logout' %}"><i class="fas fa-sign-out-alt"></i> Log Out</a></li>
-                {%  else %}
-                <li><a href="{% url 'register' %}"><i class="fas fa-user-plus"></i> Register</a></li>
-                <li><a href="{% url 'login' %}"><i class="fas fa-sign-in-alt"></i> Log In</a></li>
-                {% endif %}
             </ul>
         </div>
         <a class="navbar-brand logo-nav sm-md-screen" href="{% url 'index' %}">Vroom</a>
         <div class="nav-right">
-            <a href="{% url 'cars' %}"><i class="fas fa-search nav-icons"></i></a>
+            <ul class="navbar-nav mr-auto navbar-nav-right">
+                {% if user.is_authenticated %}
+                <li class="nav-item hvr-grow action-menu-buttons"><a href="{% url 'profile' %}"><i class="fas fa-user"></i> Profile</a></li>
+                <li class="nav-item hvr-grow action-menu-buttons"><a href="{% url 'logout' %}"><i class="fas fa-sign-out-alt"></i> Log Out</a></li>
+                {%  else %}
+                <li class="nav-item hvr-grow action-menu-buttons"><a href="{% url 'register' %}"><i class="fas fa-user-plus"></i> Register</a></li>
+                <li class="nav-item hvr-grow action-menu-buttons"><a href="{% url 'login' %}"><i class="fas fa-sign-in-alt"></i> Log In</a></li>
+                {% endif %}
+            </ul>
+            <a href="{% url 'all_cars' %}"><i class="fas fa-search nav-icons"></i></a>
             <a href="{% url 'view_cart' %}">
                 <i class="fas fa-car nav-icons"></i>
                 {% if item_count > 0 %}
