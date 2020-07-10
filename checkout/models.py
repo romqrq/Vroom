@@ -9,10 +9,10 @@ class Order(models.Model):
     last_name = models.CharField(max_length=40, blank=False)
     phone_number = models.CharField(max_length=40, blank=False)
     address1 = models.CharField(max_length=80, blank=False)
-    address2 = models.CharField(max_length=80, blank=False)
+    address2 = models.CharField(max_length=80, blank=True)
     postcode = models.CharField(max_length=20, blank=True)
     city = models.CharField(max_length=40, blank=False)
-    county = models.CharField(max_length=40, blank=False)
+    county = models.CharField(max_length=40, blank=True)
     country = models.CharField(max_length=40, blank=False)
     date = models.DateField()
 
