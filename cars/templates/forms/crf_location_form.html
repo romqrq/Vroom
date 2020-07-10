@@ -1,0 +1,19 @@
+{% load crispy_forms_tags %}
+<div class="row crf-location-div form-box d-none" id="crfLocation">
+    <div class="col-12">
+        <h2>Location</h2>
+        <p>Where can users collect the car?</p>
+    </div>
+    <div class="col-12 col-md-6 crf-field">
+        {{ crf.city|as_crispy_field }}
+    </div>
+    <div class="col-12 col-md-6 crf-field">
+        {{ crf.county|as_crispy_field }}
+    </div>
+    <div class="col-12 col-md-6 crf-field">
+        {{ crf.country|as_crispy_field }}
+    </div>
+    <button type="button" value="crfTech" class="btn form-trigger general-button">Previous</button>
+    <button type="button" value="crfImg" class="btn form-trigger general-button">Next</button>
+
+</div>
