@@ -11,6 +11,10 @@ class Car(models.Model):
         ('Supersport', 'Supersport')
     ]
     YEAR_CHOICES = [(i, i) for i in range(1900, 2021)]
+    TRACK_DAY_CHOICES = [
+        ('Yes', 'Yes'),
+        ('No', 'No')
+    ]
     ENGINE_TYPE_CHOICES = [
         ('Inline 3', 'Inline 3'),
         ('Inline 4', 'Inline 4'),
@@ -61,6 +65,7 @@ class Car(models.Model):
     model = models.CharField(max_length=30, default='')
     year = models.DecimalField(max_digits=4,
                                decimal_places=0, choices=YEAR_CHOICES)
+    track_day = models.CharField(max_length=40, choices=TRACK_DAY_CHOICES)
     engine_type = models.CharField(max_length=40,
                                    choices=ENGINE_TYPE_CHOICES)
     displacement = models.DecimalField(max_digits=4, decimal_places=1)
@@ -74,7 +79,7 @@ class Car(models.Model):
                                 decimal_places=0, choices=DOORS_CHOICES)
     accessories = models.CharField(max_length=20, choices=ACCESSORIES_CHOICES)
     city = models.CharField(max_length=30, choices=CITY_CHOICES)
-    county = models.CharField(max_length=30, choices=COUNTY_CHOICES)
+    county = models.CharField(max_length=30, choices=COUNTY_CHOICES, default='')
     country = models.CharField(max_length=10, choices=COUNTRY_CHOICES)
     image1 = models.ImageField(upload_to='media/images')
     image2 = models.ImageField(upload_to='media/images')
