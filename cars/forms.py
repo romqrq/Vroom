@@ -1,5 +1,5 @@
 from django import forms
-from django.contrib.auth.models import User
+# from django.contrib.auth.models import User
 # from django.contrib.auth.forms import UserCreationForm
 from django.forms import ModelForm
 from .models import Car
@@ -13,10 +13,10 @@ class CarRegistrationForm(ModelForm):
     class Meta:
         model = Car
         fields = [
-            'car_class', 'price', 'brand', 'model', 'year', 'engine_type',
-            'displacement', 'transmission', 'fuel', 'passengers', 'doors',
-            'accessories', 'city', 'county', 'country', 'image1', 'image2',
-            'image3', 'image4', 'image5', 'guidelines'
+            'car_class', 'price', 'brand', 'model', 'year', 'track_day',
+            'engine_type', 'displacement', 'transmission', 'fuel',
+            'passengers', 'doors', 'accessories', 'city', 'county', 'country',
+            'image1', 'image2', 'image3', 'image4', 'image5', 'guidelines'
         ]
 
 
@@ -28,6 +28,10 @@ class CarUpdateForm(ModelForm):
         ('Supersport', 'Supersport')
     ]
     YEAR_CHOICES = [(i, i) for i in range(1900, 2021)]
+    TRACK_DAY_CHOICES = [
+        ('Yes', 'Yes'),
+        ('No', 'No')
+    ]
     ENGINE_TYPE_CHOICES = [
         ('Inline 3', 'Inline 3'),
         ('Inline 4', 'Inline 4'),
@@ -74,6 +78,7 @@ class CarUpdateForm(ModelForm):
     brand = forms.CharField(required=False)
     model = forms.CharField(required=False)
     year = forms.ChoiceField(choices=YEAR_CHOICES, required=False)
+    track_day = forms.ChoiceField(choices=TRACK_DAY_CHOICES, required=False)
     engine_type = forms.ChoiceField(choices=ENGINE_TYPE_CHOICES,
                                     required=False)
     displacement = forms.DecimalField(max_digits=4, decimal_places=1,
@@ -99,8 +104,8 @@ class CarUpdateForm(ModelForm):
     class Meta:
         model = Car
         fields = [
-            'car_class', 'price', 'brand', 'model', 'year', 'engine_type',
-            'displacement', 'transmission', 'fuel', 'passengers', 'doors',
-            'accessories', 'city', 'county', 'country', 'image1', 'image2',
-            'image3', 'image4', 'image5', 'guidelines'
+            'car_class', 'price', 'brand', 'model', 'year', 'track_day',
+            'engine_type', 'displacement', 'transmission', 'fuel',
+            'passengers', 'doors', 'accessories', 'city', 'county', 'country',
+            'image1', 'image2', 'image3', 'image4', 'image5', 'guidelines'
         ]

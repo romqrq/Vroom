@@ -1,0 +1,26 @@
+{% load crispy_forms_tags %}
+<div class="row crf-main-div form-box" id="crfMain">
+    <div class="col-12">
+        <h2>Main Details</h2>
+        <p>Please add some general details about your car.</p>
+    </div>
+    <div class="col-12 col-md-6 crf-field">
+        {{ crf.car_class|as_crispy_field }}
+    </div>
+    <div class="col-12 col-md-6 crf-field">
+        {{ crf.brand|as_crispy_field }}
+    </div>
+    <div class="col-12 col-md-6 crf-field">
+        {{ crf.model|as_crispy_field }}
+    </div>
+    <div class="col-12 col-md-6 crf-field">
+        {{ crf.year|as_crispy_field }}
+    </div>
+    <div class="col-12 col-md-6 crf-field">
+        {{ crf.price|as_crispy_field }}
+    </div>
+    <div class="col-12 col-md-6 crf-field">
+        {{ crf.track_day|as_crispy_field }}
+    </div>
+    <button type="button" value="crfTech" class="btn form-trigger general-button">Next Step</button>
+</div>

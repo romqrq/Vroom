@@ -35,24 +35,24 @@
 {% for car in cars %}
     <div class="card col-12 col-md-6 col-lg-4 car-card">
         <div class="card-header">
-            <h4 class="card-title">{{ car.brand|upper }} {{ car.model|upper }} {{ car.year }}</h4>
+            <h4 class="card-title">{{ car.car_main.brand|upper }} {{ car.car_main.model|upper }} {{ car.car_main.year }}</h4>
         </div>
-        <div id="{{ car.brand }}{{ car.id }}" class="carousel slide" data-interval="false">
+        <div id="{{ car.car_main.brand }}{{ car.id }}" class="carousel slide" data-interval="false">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="{{ MEDIA_URL }}{{ car.image1 }}" class="car-carousel-img" alt="image of a {{ car.year }} {{ car.brand }} {{ car.model }}">
+                    <img src="{{ MEDIA_URL }}{{ car.image1 }}" class="car-carousel-img" alt="image of a {{ car.car_main.year }} {{ car.car_main.brand }} {{ car.car_main.model }}">
                 </div>
                 <div class="carousel-item">
-                    <img src="{{ MEDIA_URL }}{{ car.image2 }}" class="car-carousel-img" alt="image of a {{ car.year }} {{ car.brand }} {{ car.model }}">
+                    <img src="{{ MEDIA_URL }}{{ car.image2 }}" class="car-carousel-img" alt="image of a {{ car.car_main.year }} {{ car.car_main.brand }} {{ car.car_main.model }}">
                 </div>
                 <div class="carousel-item">
-                    <img src="{{ MEDIA_URL }}{{ car.image3 }}" class="car-carousel-img" alt="image of a {{ car.year }} {{ car.brand }} {{ car.model }}">
+                    <img src="{{ MEDIA_URL }}{{ car.image3 }}" class="car-carousel-img" alt="image of a {{ car.car_main.year }} {{ car.car_main.brand }} {{ car.car_main.model }}">
                 </div>
                 <div class="carousel-item">
-                    <img src="{{ MEDIA_URL }}{{ car.image4 }}" class="car-carousel-img" alt="image of a {{ car.year }} {{ car.brand }} {{ car.model }}">
+                    <img src="{{ MEDIA_URL }}{{ car.image4 }}" class="car-carousel-img" alt="image of a {{ car.car_main.year }} {{ car.car_main.brand }} {{ car.car_main.model }}">
                 </div>
                 <div class="carousel-item">
-                    <img src="{{ MEDIA_URL }}{{ car.image5 }}" class="car-carousel-img" alt="image of a {{ car.year }} {{ car.brand }} {{ car.model }}">
+                    <img src="{{ MEDIA_URL }}{{ car.image5 }}" class="car-carousel-img" alt="image of a {{ car.car_main.year }} {{ car.car_main.brand }} {{ car.car_main.model }}">
                 </div>
             </div>
             <a class="carousel-control-prev" href="#{{ car.brand }}{{ car.id }}" role="button" data-slide="prev">
@@ -66,13 +66,13 @@
         </div>
         <div class="card-body">
             <div class="card-text">
-                <p>{{ car.class }}</p>
+                <p>{{ car.car_main.class }}</p>
                 <p><i class="fas fa-cogs"></i> {{ car.engine_type }} {{ car.displacement }}L</p>
                 <p><i class="fas fa-gas-pump"></i> {{ car.fuel }} - {{ car.transmission }}</p>
                 <p>{{ car.doors }} doors - {{ car.passengers }} seats</p>
                 <p><i class="fas fa-map-marked-alt"></i> {{ car.city }} - {{ car.country }}</p>
             </div>
-            <h5 class="card-price">{{ car.price }} per day</h5>
+            <h5 class="card-price">{{ car.price }}€ per day</h5>
             <form method="POST" action="{% url 'add_to_cart' car.id %}">
                 {% csrf_token %}
                 <div class="input-area mt-3">

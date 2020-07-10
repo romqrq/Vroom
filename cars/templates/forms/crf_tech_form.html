@@ -1,0 +1,33 @@
+{% load crispy_forms_tags %}
+<div class="row crf-tech-div form-box d-none" id="crfTech">
+    <div class="col-12">
+        <h2>Technical Specifications</h2>
+        <p>Here you can tell us more about the technical specifications of your car.</p>
+    </div>
+    <div class="col-12 col-md-6 crf-field">
+        {{ crf.engine_type|as_crispy_field }}
+    </div>
+    <div class="col-12 col-md-6 crf-field">
+        {{ crf.displacement|as_crispy_field }}
+    </div>
+    <div class="col-12 col-md-6 crf-field">
+        {{ crf.transmission|as_crispy_field }}
+    </div>
+    <div class="col-12 col-md-6 crf-field">
+        {{ crf.fuel|as_crispy_field }}
+    </div>
+    <div class="col-12 col-md-6 crf-field">
+        {{ crf.passengers|as_crispy_field }}
+    </div>
+    <div class="col-12 col-md-6 crf-field">
+        {{ crf.doors|as_crispy_field }}
+    </div>
+    <div class="col-12 col-md-6 crf-field">
+        {{ crf.accessories|as_crispy_field }}
+    </div>
+    <div class="col-12 col-md-6 crf-field">
+        {{ crf.guidelines|as_crispy_field }}
+    </div>
+    <button type="button" value="crfMain" class="btn form-trigger general-button">Previous</button>
+    <button type="button" value="crfLocation" class="btn form-trigger general-button">Next</button>
+</div>
