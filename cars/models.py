@@ -79,7 +79,8 @@ class Car(models.Model):
                                 decimal_places=0, choices=DOORS_CHOICES)
     accessories = models.CharField(max_length=20, choices=ACCESSORIES_CHOICES)
     city = models.CharField(max_length=30, choices=CITY_CHOICES)
-    county = models.CharField(max_length=30, choices=COUNTY_CHOICES, default='')
+    county = models.CharField(max_length=30,
+                              choices=COUNTY_CHOICES, default='')
     country = models.CharField(max_length=10, choices=COUNTRY_CHOICES)
     image1 = models.ImageField(upload_to='media/images')
     image2 = models.ImageField(upload_to='media/images')
@@ -91,3 +92,60 @@ class Car(models.Model):
     def __str__(self):
         car_description = [str(self.year), str(self.brand), str(self.model)]
         return ' '.join(car_description)
+
+
+class TrackDayAddon(models.Model):
+    """Model to create instance of Track Day add on"""
+
+    TRACK_CHOICES = [
+        ('None', 'None'),
+        ('Morning', 'Morning'),
+        ('Afternoon', 'Afternoon'),
+        ('Full Day', 'Full Day'),
+    ]
+
+    title = 'Track Day'
+    coverage = models.CharField(max_length=40, choices=TRACK_CHOICES)
+    price = models.DecimalField(max_digits=6, decimal_places=2)
+    description = models.TextField(max_length=500)
+    image = models.ImageField(upload_to='media/images')
+
+    def __str__(self):
+        return f'{self.title} - {self.coverage}'
+
+
+class InsuranceAddon(models.Model):
+    """Model to create instance of Insurance add on"""
+
+    INSURANCE_CHOICES = [
+        ('Basic', 'Basic'),
+        ('Standard', 'Standard'),
+        ('Full Coverage', 'Full Coverage'),
+    ]
+
+    title = 'Insurance'
+    coverage = models.CharField(max_length=40, choices=INSURANCE_CHOICES)
+    price = models.DecimalField(max_digits=6, decimal_places=2)
+    description = models.TextField(max_length=500)
+    image = models.ImageField(upload_to='media/images')
+
+    def __str__(self):
+        return f'{self.title} - {self.coverage}'
+
+
+class PrivateDriverAddon(models.Model):
+    """Model to create instance of Private Driver add on"""
+
+    PRIVATE_DRIVER_CHOICES = [
+        ('Yes', 'Yes'),
+        ('No', 'No'),
+    ]
+
+    title = 'Private Driver'
+    coverage = models.CharField(max_length=40, choices=PRIVATE_DRIVER_CHOICES)
+    price = models.DecimalField(max_digits=6, decimal_places=2)
+    description = models.TextField(max_length=500)
+    image = models.ImageField(upload_to='media/images')
+
+    def __str__(self):
+        return f'{self.title} - {self.coverage}'
