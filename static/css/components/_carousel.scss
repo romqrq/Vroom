@@ -40,6 +40,7 @@
 
 .testimonials-carousel{
     padding: 0;
+    background-color: $dark-grey;
 }
 .testimonial-carousel-item {
     height: 40vh;
@@ -55,7 +56,11 @@
     justify-content: center;
     flex-direction: column;
 
+    h4 {
+        margin: 0;
+    }
     p {
+        margin: 0;
         line-height: 1.5rem;
     }
 }
@@ -78,15 +83,15 @@
 
 .jane-doe{
     background-image: url("../images/index/businesstestimonial.jpeg");
-    box-shadow: inset 4px 0px 5px black;
+    box-shadow: inset 4px 0px 5px $dark-grey;
 }
 .joanne-doe{
     background-image: url("../images/index/traveltestimonial.jpg");
-    box-shadow: inset -4px 0px 5px black;
+    box-shadow: inset -4px 0px 5px $dark-grey;
 }
 .joe-doe{
     background-image: url("../images/index/trackday.jpg");
-        box-shadow: inset 4px 0px 5px black;
+        box-shadow: inset 4px 0px 5px $dark-grey;
 }
     // img {
     //     min-height: 100%;

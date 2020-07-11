@@ -118,7 +118,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .index-boxes {
-  height: 40vh;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   overflow: hidden;
   padding: 0;
   z-index: 1;
@@ -668,6 +670,7 @@ footer {
 
 .testimonials-carousel {
   padding: 0;
+  background-color: #252525;
 }
 
 .testimonial-carousel-item {
@@ -694,7 +697,12 @@ footer {
           flex-direction: column;
 }
 
+.testimonials-carousel-text h4 {
+  margin: 0;
+}
+
 .testimonials-carousel-text p {
+  margin: 0;
   line-height: 1.5rem;
 }
 
@@ -713,20 +721,20 @@ footer {
 
 .jane-doe {
   background-image: url("../images/index/businesstestimonial.jpeg");
-  -webkit-box-shadow: inset 4px 0px 5px black;
-          box-shadow: inset 4px 0px 5px black;
+  -webkit-box-shadow: inset 4px 0px 5px #252525;
+          box-shadow: inset 4px 0px 5px #252525;
 }
 
 .joanne-doe {
   background-image: url("../images/index/traveltestimonial.jpg");
-  -webkit-box-shadow: inset -4px 0px 5px black;
-          box-shadow: inset -4px 0px 5px black;
+  -webkit-box-shadow: inset -4px 0px 5px #252525;
+          box-shadow: inset -4px 0px 5px #252525;
 }
 
 .joe-doe {
   background-image: url("../images/index/trackday.jpg");
-  -webkit-box-shadow: inset 4px 0px 5px black;
-          box-shadow: inset 4px 0px 5px black;
+  -webkit-box-shadow: inset 4px 0px 5px #252525;
+          box-shadow: inset 4px 0px 5px #252525;
 }
 
 .form-group {
