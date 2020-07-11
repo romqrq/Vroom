@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.core.urlresolvers import reverse
 from django.contrib import messages
-from .models import Car
+from .models import Car, TrackDayAddon, InsuranceAddon, PrivateDriverAddon
 from .forms import CarRegistrationForm, CarUpdateForm
 
 
@@ -35,8 +35,8 @@ def supersport_only(request):
 
 def car_register(request):
     """Function to allow users to add their cars to the database"""
-    if request.method == 'POST':
 
+    if request.method == 'POST':
         form = CarRegistrationForm(request.POST, request.FILES)
 
         if form.is_valid():
@@ -73,7 +73,11 @@ def car_edit_view(request, car_id):
 
     instance = get_object_or_404(Car, id=car_id)
 
-    form = CarUpdateForm(request.POST or None, request.FILES or None, instance=instance)
+    form = CarUpdateForm(
+                         request.POST or None,
+                         request.FILES or None,
+                         instance=instance
+                        )
     if request.method == 'POST':
 
         if form.is_valid():
@@ -104,3 +108,14 @@ def del_car(request, car_id):
     messages.success(request, "The car was deleted")
 
     return redirect(reverse('index'))
+
+
+def add_ons(request):
+    """Function to add other products to their cart after choosing a car"""
+
+    track = TrackDayAddon.objects.all()
+    pdriver = PrivateDriverAddon.objects.all()
+
+    return render(request, 'addons.html',
+                  {'track_day': track, 'private_driver': pdriver}
+                  )
