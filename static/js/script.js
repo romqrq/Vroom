@@ -6,6 +6,11 @@ $(document).ready(function() {
         $(`#${targetdiv_id}`).removeClass('d-none');
         // $(`#${filled_form}`).submit('d-none');
     });
+    $(".addon-radio").click(function(){
+        item_id = $(this).attr('id');
+        addon_type = $(this).attr('value');
+        $(`#${addon_type}`).attr('action', `/cart/add/${addon_type}/${item_id}`);
+    });
     // $( "#carRegForm").submit(function( event ) {
     //     alert( "Handler for .submit() called." );
     //     event.preventDefault();
