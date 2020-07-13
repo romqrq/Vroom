@@ -8,50 +8,13 @@
 
 {% block content %}
 <div class="row cart-items-row">
-    {% for item in cart_items %}
-    <div class="col-12 col-md-8 cart-item">
-        <div class="cart-item-line item-line-1">
-            <div class="cart-line1-col cart-item-image">
-                <img src="{{ MEDIA_URL }}{{ item.car.image1 }}" alt="image of a {{ item.car.year }} {{ item.car.brand }} {{ item.car.model }}">
-            </div>
-            <div class="cart-line1-col cart-item-description">
-                <h5>{{ item.car.year }} {{ item.car.brand }} {{ item.car.model }}</h5>
-                <p>{{ item.car.engine }} {{ item.car.fuel }} {{ item.car.transmission }}</p>
-            </div>
-        </div>
-        <div class="cart-item-line item-line-2">
-            <div class="cart-line2-col">
-                <h6>per day</h6>
-                <h5><i class="fas fa-euro-sign"></i>{{ item.car.price }}</h5>
-            </div>
-            <div class="cart-line2-col">
-                <form class="form-inline cart-form-inline" method="POST" action="{% url 'adjust_cart' item.car.id %}">
-                    {% csrf_token %}
-                    <div class="form-group cart-form-group">
-                        <div class="form-quantity">{{ item.quantity }}
-                            {% if item.quantity > 1 %}
-                             days
-                            {% else %}
-                             day
-                            {% endif %}
-                        </div>
-                        <label for="updateQuantity" class="sr-only">New Qty</label>
-                        <input name="quantity" type="number" min="0" max="999" class="form-control">
-                    </div>
-                    <button type="submit" class="btn general-button"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span>Update</button>
-                </form>
-            </div>
-            <div class="cart-line2-col">
-                <h6>Partial</h6>
-                {% for key in partial_value %}
-                    {% if key.id == item.id %}
-                    <h5><i class="fas fa-euro-sign"></i>{{ key.item_total }}</h5>
-                    {% endif %}
-                {% endfor %}
-            </div>
-        </div>
+    <div class="col-12">
+        <p>{{ cart_items }}</p>
+        {% for item in cart_items %}
+            <p>{{ item.item_type }}</p>
+
+        {% endfor %}
     </div>
-    {% endfor %}
 </div>
 <div class="col-12 cart-checkout">
     <h6>Total</h6>
