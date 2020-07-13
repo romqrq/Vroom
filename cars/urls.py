@@ -10,5 +10,5 @@ urlpatterns = [
     url(r'^car_details/(?P<car_id>\d+)', car_detail, name='car_detail'),
     url(r'^edit_car/(?P<car_id>\d+)', car_edit_view, name='edit_car'),
     url(r'^delete_car/(?P<car_id>\d+)', del_car, name='delete_car'),
-    url(r'^add_ons/$', add_ons, name='add_ons'),
+    url(r'^add_ons/', add_ons, name='add_ons'),
 ]
