@@ -8,13 +8,10 @@
 
 {% block content %}
 <div class="row cart-items-row">
-    <div class="col-12">
-        <p>{{ cart_items }}</p>
-        {% for item in cart_items %}
-            <p>{{ item.item_type }}</p>
-
-        {% endfor %}
-    </div>
+    {% for item in cart_items %}
+        {{ item }}
+        
+    {% endfor %}
 </div>
 <div class="col-12 cart-checkout">
     <h6>Total</h6>
