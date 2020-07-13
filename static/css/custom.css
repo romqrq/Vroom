@@ -224,6 +224,31 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 4rem;
 }
 
+.addon-track-box {
+  background-image: url("../images/addons/track_day_car1.jpg");
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+}
+
+.addon-insurance-box {
+  background-image: url("../images/addons/man_driving.jpg");
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+}
+
+.addon-driver-box {
+  background-image: url("../images/addons/private_driver.jpg");
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+}
+
+.addon-box {
+  background-color: #252525;
+}
+
 .search-row {
   margin: 1rem 1rem 2rem;
   -webkit-box-pack: center;
