@@ -54,6 +54,8 @@ def car_register(request):
 
     else:
         car_reg_form = CarRegistrationForm()
+    # SESSION CLEAR USED FOR TESTING ---- DELETE
+    # request.session.clear()
     args = {'crf': car_reg_form}
     return render(request, 'rentmycar.html', args)
 
@@ -115,7 +117,15 @@ def add_ons(request):
 
     track = TrackDayAddon.objects.all()
     pdriver = PrivateDriverAddon.objects.all()
-
-    return render(request, 'addons.html',
-                  {'track_day': track, 'private_driver': pdriver}
-                  )
+    insurance = InsuranceAddon.objects.all()
+    # cart = request.session.get('cart', {})
+    # print(cart)
+    return render(
+                  request,
+                  'addons.html',
+                  {
+                      'track_day': track,
+                      'private_driver': pdriver,
+                      'insurance': insurance,
+                  }
+                 )
