@@ -25,9 +25,11 @@
     <div class="col-12 col-md-6 crf-field">
         {{ crf.accessories|as_crispy_field }}
     </div>
-    <div class="col-12 col-md-6 crf-field">
+    <div class="col-12 crf-field">
         {{ crf.guidelines|as_crispy_field }}
     </div>
-    <button type="button" value="crfMain" class="btn form-trigger general-button">Previous</button>
-    <button type="button" value="crfLocation" class="btn form-trigger general-button">Next</button>
+    <div class="col-12 crf-buttons">
+        <button type="button" value="crfMain" class="btn form-trigger general-button">Previous</button>
+        <button type="button" value="crfLocation" class="btn form-trigger general-button">Next</button>
+    </div>
 </div>
