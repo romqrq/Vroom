@@ -6,7 +6,7 @@
 
 {% block content %} 
 <!-- Carousel -->
-<div id="carouselIndex" class="carousel slide index-carousel" data-ride="carousel">
+<div id="carouselIndex" class="carousel slide index-carousel box-shadow top-div" data-ride="carousel">
     <div class="carousel-inner">
         <div class="carousel-item active">
             <div class="index-carousel-image custom-classic-img"></div>
@@ -31,11 +31,47 @@
         </div>
     </div>
 </div>
-<!-- Find a car -->
-<div class="row index-boxes-row">
+<!-- Using vroom for... -->
+<div class="row index-boxes-title-row">
     <div class="col-12 header-title">
-        <h2>Find the car of your dreams!</h2>
+        <h1>What are users using Vroom for</h1>
     </div>
+</div>
+<div class="row index-boxes-content-row box-shadow">
+    <div class="col-12 index-boxes using-vroom">
+        <div class="index-content-boxes">
+            <div class="row using-vroom-row">
+                <div class="col-6 col-md-4 col-lg-2 offset-lg-1 using-vroom-item">
+                    <i class="fas fa-user-tie"></i>
+                    <p>Business Trips</p>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2 using-vroom-item">
+                    <i class="fas fa-flag-checkered"></i>
+                    <p>Track days</p>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2 using-vroom-item">
+                    <i class="fas fa-birthday-cake"></i>
+                    <p>Especial events</p>
+                </div>
+                <div class="col-6 col-md-6 col-lg-2 using-vroom-item">
+                    <i class="far fa-grin-stars"></i>
+                    <p>Unique experience</p>
+                </div>
+                <div class="col-12 col-md-6 col-lg-2 using-vroom-item">
+                    <i class="fas fa-gift"></i>
+                    <p>Gift</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Find a car -->
+<div class="row index-boxes-title-row">
+    <div class="col-12 header-title">
+        <h1>Find the car of your dreams!</h1>
+    </div>
+</div>
+<div class="row index-boxes-content-row box-shadow">
     <div class="col-12 col-md-4 index-boxes luxury-box">
         <div class="index-content-boxes">
             <h3 class="secondary-title-light">Go Luxury</h3>
@@ -69,10 +105,14 @@
             </a>
         </div>
     </div>
+</div>
 <!-- Rent my car -->
+<div class="row index-boxes-title-row">
     <div class="col-12 header-title">
-        <h2>I want to rent my car</h2>
+        <h1>I want to rent my car</h1>
     </div>
+</div>
+<div class="row index-boxes-content-row box-shadow">
     <div class="col-12 index-boxes vroom-my-car">
         <div class="index-content-boxes">
             <h3 class="secondary-title-light">Vroom my car</h3>
@@ -83,54 +123,64 @@
             </a>
         </div>
     </div>
+</div>
 <!-- Track day experience -->
+<div class="row index-boxes-title-row">
     <div class="col-12 header-title">
-        <h2>Adrenaline is what I need</h2>
+        <h1>Great experience, safety and convenience</h1>
     </div>
-    <div class="col-12 index-boxes track-day">
+</div>
+<div class="row index-boxes-content-row box-shadow">
+    <div class="col-12 col-md-4 index-boxes track-day-box">
         <div class="index-content-boxes">
-            <h3 class="secondary-title-light">Track day experience</h3>
-            <p>Have you always wanted to experience racing in a sports car?</p>
-            <p>Some of the cars for rent are set as track day available, which means they were prepared for track use.</p>
-            <a href="{% url 'add_ons' %}" rel="noopener" aria-label="Link to learn more about track days">
-                <button type="button" class="btn general-button">Learn more</button>
+            <h3 class="secondary-title-light">Track Day</h3>
+            <i class="fas fa-flag-checkered"></i>
+            <p>Ready for the rush of adrenaline?</p>
+            <p>Choose a full day, afternoon or morning on track.</p>
+            <p>Coach on track just for you.</p>
+            <a class="sm-md-screen" href="{% url 'all_cars' %}" rel="noopener" aria-label="Link to all cars page">
+                <button type="button" class="btn general-button">Find a car</button>
             </a>
         </div>
     </div>
-<!-- Using vroom for... -->
-    <div class="col-12 header-title">
-        <h2>What are users using Vroom for</h2>
-    </div>
-    <div class="col-12 index-boxes using-vroom">
+    <div class="col-12 col-md-4 index-boxes insurance-box">
         <div class="index-content-boxes">
-            <div class="row using-vroom-row">
-                <div class="col-6 col-md-4 col-lg-2 offset-lg-1 using-vroom-item">
-                    <i class="fas fa-user-tie"></i>
-                    <p>Business Trips</p>
-                </div>
-                <div class="col-6 col-md-4 col-lg-2 using-vroom-item">
-                    <i class="fas fa-flag-checkered"></i>
-                    <p>Track days</p>
-                </div>
-                <div class="col-6 col-md-4 col-lg-2 using-vroom-item">
-                    <i class="fas fa-birthday-cake"></i>
-                    <p>Especial events</p>
-                </div>
-                <div class="col-6 col-md-6 col-lg-2 using-vroom-item">
-                    <i class="far fa-grin-stars"></i>
-                    <p>Unique experience</p>
-                </div>
-                <div class="col-12 col-md-6 col-lg-2 using-vroom-item">
-                    <i class="fas fa-gift"></i>
-                    <p>Gift</p>
-                </div>
-            </div>
+            <h3 class="secondary-title-light">Insurance</h3>
+            <i class="fas fa-hand-holding-usd"></i>
+            <p>We look after you.</p>
+            <p>Choose between basic, standard or full coverage.</p>
+            <p>Our partners will offer you a great deal.</p>
+            <a class="sm-md-screen" href="{% url 'all_cars' %}" rel="noopener" aria-label="Link to all cars page">
+                <button type="button" class="btn general-button">Find a car</button>
+            </a>
         </div>
     </div>
-<!-- Carousel of users testimonials     -->
-    <div class="col-12 header-title">
-        <h2>What our users have to say</h2>
+    <div class="col-12 col-md-4 index-boxes private-driver-box">
+        <div class="index-content-boxes">
+            <h3 class="secondary-title-light">Private Driver</h3>
+            <i class="far fa-id-card"></i>
+            <p>Leave the driving with us</p>
+            <p>Highly trained drivers.</p>
+            <p>Get 24h coverage.</p>
+            <a class="sm-md-screen" href="{% url 'all_cars' %}" rel="noopener" aria-label="Link to all cars page">
+                <button type="button" class="btn general-button">Find a car</button>
+            </a>
+        </div>
     </div>
+    <div class="col-12 lg-screen index-boxes addons-button">
+        <p>Before choosing your package, choose a car and we will guide you from there.</p>
+        <a href="{% url 'all_cars' %}" rel="noopener" aria-label="Link to all cars page">
+            <button type="button" class="btn general-button">Find a car</button>
+        </a>
+    </div>
+</div>
+<!-- Carousel of users testimonials     -->
+<div class="row index-boxes-title-row">
+    <div class="col-12 header-title">
+        <h1>What our users have to say</h1>
+    </div>
+</div>
+<div class="row index-boxes-content-row box-shadow">
     <div id="carouselTestimonials" class="carousel slide index-boxes testimonials-carousel" data-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item testimonial-carousel-item active">
