@@ -66,3 +66,11 @@ i {
     text-shadow: $header-shadow-darkbg;
     margin-bottom: 1rem;
 }
+.box-shadow {
+    box-shadow: 0 0 8px 4px #0000008a;
+    margin: 1rem 0 1rem !important;
+    border: $orange-border;
+}
+.top-div {
+    margin: 0 0 1rem !important;
+}

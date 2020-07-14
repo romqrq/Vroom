@@ -81,6 +81,17 @@ i {
   margin-bottom: 1rem;
 }
 
+.box-shadow {
+  -webkit-box-shadow: 0 0 8px 4px #0000008a;
+          box-shadow: 0 0 8px 4px #0000008a;
+  margin: 1rem 0 1rem !important;
+  border: 1px solid #ff7b00;
+}
+
+.top-div {
+  margin: 0 0 1rem !important;
+}
+
 .logo-nav {
   font-family: "Audiowide", sans-serif;
   font-size: 3rem;
@@ -128,6 +139,11 @@ h1, h2, h3, h4, h5, h6 {
   border: 1px solid #ff7b00;
 }
 
+.index-boxes i {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
 .index-boxes-img {
   max-height: 105%;
   opacity: 0.7;
@@ -138,7 +154,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .index-boxes-row {
-  background-color: black;
   max-width: 100%;
   margin: 0;
 }
@@ -193,7 +208,7 @@ h1, h2, h3, h4, h5, h6 {
   background-position: center;
 }
 
-.track-day {
+.track-day-box {
   padding: 0;
   background-image: url("../images/index/trackdaydriver2.jpg");
   overflow: hidden;
@@ -201,8 +216,32 @@ h1, h2, h3, h4, h5, h6 {
   background-position: center;
 }
 
-.track-day .index-boxes-img {
-  height: initial;
+.insurance-box {
+  padding: 0;
+  background-image: url("../images/index/index_insurance.jpg");
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+}
+
+.private-driver-box {
+  padding: 0;
+  background-image: url("../images/index/private_driver_index.jpg");
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+}
+
+.track-day-box,
+.insurance-box,
+.private-driver-box {
+  height: 50vh;
+}
+
+.track-day-box p,
+.insurance-box p,
+.private-driver-box p {
+  margin: 0;
 }
 
 .using-vroom {
@@ -218,10 +257,19 @@ h1, h2, h3, h4, h5, h6 {
 
 .using-vroom-item {
   margin: 1rem auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
-.using-vroom-item i {
-  font-size: 4rem;
+.using-vroom-item p {
+  margin: 0;
 }
 
 .addon-track-box {
@@ -645,7 +693,7 @@ footer {
 }
 
 .index-carousel {
-  border: 1px solid #ff7b00;
+  border: 2px solid #ff7b00;
 }
 
 .carousel-item {
