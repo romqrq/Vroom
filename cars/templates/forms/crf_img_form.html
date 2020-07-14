@@ -4,21 +4,23 @@
         <h2>Images</h2>
         <p>Add some stunning pictures of your car to attract more customers</p>
     </div>
-    <div class="col-12 col-md-6 crf-field">
+    <div class="col-12 crf-field">
         {{ crf.image1|as_crispy_field }}
     </div>
-    <div class="col-12 col-md-6 crf-field">
+    <div class="col-12 crf-field">
         {{ crf.image2|as_crispy_field }}
     </div>
-    <div class="col-12 col-md-6 crf-field">
+    <div class="col-12 crf-field">
         {{ crf.image3|as_crispy_field }}
     </div>
-    <div class="col-12 col-md-6 crf-field">
+    <div class="col-12 crf-field">
         {{ crf.image4|as_crispy_field }}
     </div>
-    <div class="col-12 col-md-6 crf-field">
+    <div class="col-12 crf-field">
         {{ crf.image5|as_crispy_field }}
     </div>
-    <button type="button" value="crfLocation" class="btn form-trigger general-button">Previous</button>
-    <button type="submit" class="btn general-button" id="crfSubmitButton">Vroom my car!</button>
+    <div class="col-12 crf-buttons">
+        <button type="button" value="crfLocation" class="btn form-trigger general-button">Previous</button>
+        <button type="submit" class="btn general-button" id="crfSubmitButton">Vroom my car!</button>
+    </div>
 </div>
