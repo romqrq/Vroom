@@ -21,24 +21,11 @@
     <div class="col-12 col-lg-6 offset-lg-3 register-form-box">
         <form enctype="multipart/form-data" method="POST" action="{% url 'car_register' %}" id="carRegForm">
             <fieldset class="form-group">
-                <!-- <h2>Register my car</h2> -->
                 {% csrf_token %}
                 {% include 'forms/crf_main_form.html' %}
                 {% include 'forms/crf_tech_form.html' %}
                 {% include 'forms/crf_location_form.html' %}
                 {% include 'forms/crf_img_form.html' %}
-                <!-- {{  crf|crispy }} -->
-                <!-- <div class="row">
-                    <div class="col-12 col-md-6 crf-main-div" id="crf_main">
-                        <div class="col-6">
-                            {{ crf.brand|as_crispy_field }}
-                        </div>
-                        <div class="col-6">
-                            {{ crf.car_class|as_crispy_field }}
-                        </div>
-                    </div>
-                </div>
-                <button type="submit" class="btn general-button">Vroom my car!</button> -->
             </fieldset>
         </form>
     </div>
