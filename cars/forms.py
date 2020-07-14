@@ -1,14 +1,42 @@
 from django import forms
-# from django.contrib.auth.models import User
-# from django.contrib.auth.forms import UserCreationForm
 from django.forms import ModelForm
 from .models import Car
-# from django.core.exceptions import ValidationError
 
 
 class CarRegistrationForm(ModelForm):
 
-    guidelines = forms.CharField(widget=forms.Textarea)
+    price = forms.DecimalField(label='Rental price',
+                               widget=forms.TextInput(attrs={
+                                   'placeholder': 'i.e. 500'
+                                   }))
+    brand = forms.CharField(label='Brand',
+                            widget=forms.TextInput(attrs={
+                                'placeholder': 'Brand of your car'
+                                }))
+    model = forms.CharField(label='Model',
+                            widget=forms.TextInput(attrs={
+                                'placeholder': 'Model of the car'
+                                }))
+    displacement = forms.DecimalField(label='Engine displacement',
+                                      widget=forms.TextInput(attrs={
+                                          'placeholder': 'i.e. 3.2'
+                                          }))
+    passengers = forms.DecimalField(label='Seats',
+                                    widget=forms.TextInput(attrs={
+                                        'placeholder': 'i.e. 5'
+                                        }))
+    doors = forms.DecimalField(label='Number of doors',
+                               widget=forms.TextInput(attrs={
+                                   'placeholder': 'i.e. 2'
+                                   }))
+    image1 = forms.ImageField(label='Image 1')
+    image2 = forms.ImageField(label='Image 2')
+    image3 = forms.ImageField(label='Image 3')
+    image4 = forms.ImageField(label='Image 4')
+    image5 = forms.ImageField(label='Image 5')
+    guidelines = forms.CharField(widget=forms.Textarea(attrs={
+                                          'placeholder': "Tell other users about the car and set some guidelines to improve everyone's experience"
+                                          }))
 
     class Meta:
         model = Car
