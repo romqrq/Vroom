@@ -5,6 +5,10 @@
     z-index: 1;
     color: white;
     border: 1px solid $bright-orange;
+    i {
+        font-size: 4rem;
+        margin-bottom: 1rem;
+    }
 }
 .index-boxes-img {
     max-height: 105%;
@@ -15,7 +19,7 @@
     z-index: -1;
 }
 .index-boxes-row {
-    background-color: black;
+    // background-color: black;
     max-width: 100%;
     margin: 0;
 }
@@ -63,15 +67,40 @@
 // .vroom-my-car .index-boxes-img {
 //     width: initial;
 // }
-.track-day {
+.track-day-box {
     padding: 0;
     background-image: url("../images/index/trackdaydriver2.jpg");
     overflow: hidden;
     background-size: cover;
     background-position: center;
 }
-.track-day .index-boxes-img {
-    height: initial;
+.insurance-box {
+    padding: 0;
+    background-image: url("../images/index/index_insurance.jpg");
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+}
+.private-driver-box {
+    padding: 0;
+    background-image: url("../images/index/private_driver_index.jpg");
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+}
+.track-day-box,
+.insurance-box,
+.private-driver-box {
+    height: 50vh;
+    p{
+        margin: 0;
+    }
+}
+// .track-day .index-boxes-img {
+//     height: initial;
+// }
+.track-day-box {
+    
 }
 .using-vroom {
     padding: 0;
@@ -83,10 +112,15 @@
 }
 .using-vroom-item {
     margin: 1rem auto;
-
-    i {
-        font-size: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    p {
+        margin: 0;
     }
+    // i {
+    //     font-size: 4rem;
+    // }
 }
 // .using-vroom .index-boxes-img {
 //     width: initial;
