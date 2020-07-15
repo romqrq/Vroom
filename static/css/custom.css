@@ -362,21 +362,17 @@ input#id_image5 {
   padding: 1rem;
 }
 
-.cart-item {
-  margin: 1rem 0;
-  padding: 0;
-  border: 1px solid #ff7b00;
+.cart-items-row h5, .cart-items-row p {
+  margin: 0;
 }
 
 .cart-item-line {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
-  -ms-flex-wrap: wrap-reverse;
-      flex-wrap: wrap-reverse;
+  margin: 0;
+  padding: 0;
+  border: 1px solid #ff7b00;
 }
 
 .cart-line1-col {
@@ -386,7 +382,8 @@ input#id_image5 {
 }
 
 .item-line-2 {
-  padding: 0 0.5rem 1rem;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem 0.5rem 1rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -398,35 +395,8 @@ input#id_image5 {
           flex: 4;
 }
 
-.cart-item-image {
-  height: 5rem;
-  width: 5rem;
-  overflow: hidden;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-flex: 4;
-      -ms-flex: 4;
-          flex: 4;
-}
-
-.cart-item-image img {
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-  min-width: 130%;
-  max-width: 130%;
-}
-
-.cart-item-description {
-  -webkit-box-flex: 8;
-      -ms-flex: 8;
-          flex: 8;
+.item-line-1 {
+  padding: 0.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -437,13 +407,9 @@ input#id_image5 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.cart-item-description h5, .cart-item-description p {
-  margin: 0;
+  background-color: #252525;
+  color: white;
+  text-shadow: -1px 2px 3px #7d7979;
 }
 
 .cart-form-inline {
@@ -455,7 +421,7 @@ input#id_image5 {
 .cart-form-inline > .cart-form-group {
   border: none;
   margin: 0;
-  padding: 1rem 0;
+  padding: 0.5rem;
 }
 
 .cart-form-inline > .general-button {

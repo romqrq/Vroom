@@ -112,7 +112,8 @@ class TrackDayAddon(models.Model):
     image = models.ImageField(upload_to='media/images')
 
     def __str__(self):
-        return f'{self.title} - {self.coverage}'
+        track_day_description = [str(self.title), str(self.coverage)]
+        return ' '.join(track_day_description)
 
 
 class InsuranceAddon(models.Model):
@@ -131,7 +132,8 @@ class InsuranceAddon(models.Model):
     image = models.ImageField(upload_to='media/images')
 
     def __str__(self):
-        return f'{self.title} - {self.coverage}'
+        insurance_description = [str(self.title), str(self.coverage)]
+        return ' '.join(insurance_description)
 
 
 class PrivateDriverAddon(models.Model):
@@ -149,4 +151,5 @@ class PrivateDriverAddon(models.Model):
     image = models.ImageField(upload_to='media/images')
 
     def __str__(self):
-        return f'{self.title} - {self.coverage}'
+        private_driver_description = [str(self.title), str(self.coverage)]
+        return ' '.join(private_driver_description)
