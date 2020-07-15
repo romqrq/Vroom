@@ -19,7 +19,11 @@ class Order(models.Model):
     date = models.DateField()
 
     def __str__(self):
-        return f'{self.id}-{self.date}-{self.customer.username}'
+        order_description = [
+            str(self.id),
+            str(self.date),
+            str(self.customer.username)]
+        return ' '.join(user_description)
 
 
 class OrderLineItem(models.Model):
