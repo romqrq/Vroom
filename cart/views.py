@@ -48,16 +48,37 @@ def add_to_cart(request, item_type, item_id):
                     })
 
 
-def adjust_cart(request, id):
+def adjust_cart(request, item_type, item_id):
     """Adjusts the number of days(quantity) to the specified amount"""
 
-    NumberOfDays = int(request.POST.get('quantity'))
+    numberOfDays = int(request.POST.get('quantity'))
     cart = request.session.get('cart', {})
 
-    if NumberOfDays > 0:
-        cart[id] = NumberOfDays
+    if numberOfDays > 0:
+        if item_type == 'car':
+            cart['car']['quantity'] = numberOfDays
+        elif item_type == 'track_day':
+            cart['track_day']['quantity'] = numberOfDays
+        elif item_type == 'insurance':
+            cart['insurance']['quantity'] = numberOfDays
+        elif item_type == 'private_driver':
+            cart['private_driver']['quantity'] = numberOfDays
+
+        # print(item.id)
+# quantity = cart['private_driver']['quantity']
+    # if numberOfDays > 0:
+    #     cart[id] = numberOfDays
     else:
-        cart.pop(id)
+        if item_type == 'car':
+            del(cart['car'])
+        elif item_type == 'track_day':
+            del(cart['track_day'])
+        elif item_type == 'insurance':
+            del(cart['insurance'])
+        elif item_type == 'private_driver':
+            # cart.pop(cart['private_driver'])
+            del(cart['private_driver'])
+        # cart.pop(id)
 
     request.session['cart'] = cart
     return redirect(reverse('view_cart'))

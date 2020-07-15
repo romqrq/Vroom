@@ -42,11 +42,13 @@ def cart_contents(request):
         item_total = quantity * item.price
         item_count += 1
         partial_value.append({
+            'item': item,
             'item_type': item_type,
             'id': id,
             'item_total': item_total
             })
         cart_items.append({
+            'item': item,
             'item_type': item_type,
             'id': id,
             'quantity': quantity,
