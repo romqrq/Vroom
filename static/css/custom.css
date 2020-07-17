@@ -36,6 +36,15 @@ i {
   font-size: 2.5rem;
 }
 
+.feedback-message {
+  color: #252525;
+  background-color: #ff7b00;
+  border-color: #ff7b00;
+  border-radius: 0;
+  -webkit-box-shadow: 0 0 6px black;
+          box-shadow: 0 0 6px black;
+}
+
 .content-container {
   padding: 0;
 }
