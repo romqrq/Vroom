@@ -7,14 +7,6 @@
 {% block title %}Vroom - Cart{% endblock %}
 
 {% block content %}
-<!-- <div class="row cart-items-row">
-    <div class="col-12">
-        {% for product in partial_value %}
-            <p>{{product.item.price}}</p>
-
-        {% endfor %}
-    </div>
-</div> -->
 <div class="row cart-items-row">
     <div class=" cart-item">
     {% for item in cart_items %}
@@ -42,6 +34,7 @@
                 {% endif %}
                 {% endfor %}
             </div>
+            {% if item.item_type != 'insurance' %}
             <div class="cart-line2-col">
                 <form class="form-inline cart-form-inline" method="POST" action="{% url 'adjust_cart' item.item_type item.id %}">
                     {% csrf_token %}
@@ -55,13 +48,22 @@
                     <button type="submit" class="btn general-button"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span>Update</button>
                 </form>
             </div>
+            {% endif %}
         </div>
         <div class="cart-item-line item-line-2 lg-screen">
             <div class="cart-line2-col">
                 <h6>per day</h6>
                 <h5><i class="fas fa-euro-sign"></i>{{ item.item.price }}</h5>
             </div>
+            {% if item.item_type != 'insurance' %}
             <div class="cart-line2-col">
+                <div class="form-quantity">{{ item.quantity }}
+                    {% if item.quantity > 1 %}
+                    days
+                    {% else %}
+                    day
+                    {% endif %}
+                </div>
                 <form class="form-inline cart-form-inline" method="POST" action="{% url 'adjust_cart' item.item_type item.id %}">
                     {% csrf_token %}
                     <div class="form-group cart-form-group">
@@ -78,10 +80,10 @@
                     <button type="submit" class="btn general-button"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span>Update</button>
                 </form>
             </div>
+            {% endif %}
             <div class="cart-line2-col lg-screen">
                 <h6>Partial</h6>
                 {% for key in partial_value %}
-                <!-- <p>{{key}}</p> -->
                 {% if key.item_type == item.item_type %}
                 <h5><i class="fas fa-euro-sign"></i>{{ key.item_total }}</h5>
                 {% endif %}
