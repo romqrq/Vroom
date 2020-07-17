@@ -41,6 +41,7 @@ def cart_contents(request):
         total_cart += quantity * item.price
         item_total = quantity * item.price
         item_count += 1
+
         partial_value.append({
             'item': item,
             'item_type': item_type,
@@ -53,5 +54,6 @@ def cart_contents(request):
             'id': id,
             'quantity': quantity,
             })
+
     return {'cart_items': cart_items, 'partial_value': partial_value,
             'total_cart': total_cart, 'item_count': item_count}
