@@ -1,4 +1,7 @@
 $(document).ready(function() {
+    $('.feedback-message').on( "load", function(){
+        $('.feedback-message').scrollIntoView();
+    });
     // Function to allow user to navigate from one part of the register form to the other
     // current_div => Currently displayed div ID - String
     // targetdiv_id => Id of div to be loaded - String
