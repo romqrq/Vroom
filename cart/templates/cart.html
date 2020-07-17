@@ -7,6 +7,23 @@
 {% block title %}Vroom - Cart{% endblock %}
 
 {% block content %}
+
+{% if not cart_items %}
+<div class="row">
+    <div class="col-12 header-strip profile-header">
+        <h4>Your cart is empty!</h4>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <h5>Let's change it!</h5>
+        <p>Have a look at our collection of cars and choose the one you like.</p>
+        <a href="{% url 'all_cars' %}" rel="noopener" aria-label="Link to all cars page">
+            <button type="button" class="btn general-button">Find a car</button>
+        </a>
+    </div>
+</div>
+{% else %}
 <div class="row cart-items-row">
     <div class=" cart-item">
     {% for item in cart_items %}
@@ -99,4 +116,5 @@
     <h5><i class="fas fa-euro-sign"></i>{{ total_cart }}</h5>
     <a href="{% url 'checkout' %}" class="btn general-button" role="button"><span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>Checkout</a>
 </div>
+{% endif %}
 {% endblock %}
