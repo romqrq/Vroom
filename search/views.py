@@ -19,7 +19,7 @@ def do_search(request):
         cars = Car.objects.filter(year__icontains=request.GET['search_value'])
     if search_key == 'Location':
         cars = Car.objects.filter(city__icontains=request.GET['search_value'])
-    
+
     if not cars:
         messages.error(request, "Sorry, there are no results for this search.")
 
