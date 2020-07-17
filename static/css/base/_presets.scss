@@ -30,6 +30,13 @@ i {
 // .lg-screen {
 //     display: none;
 // }
+.feedback-message {
+    color: $dark-grey;
+    background-color: $bright-orange;
+    border-color: $bright-orange;
+    border-radius: 0;
+    box-shadow: 0 0 6px black;
+}
 .content-container {
     padding: 0;
 }
