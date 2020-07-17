@@ -19,6 +19,11 @@ def add_to_cart(request, item_type, item_id):
 
     if item_type == 'car':
         item = Car.objects.get(pk=item_id)
+        cart['insurance'] = {
+            'item_type': 'insurance',
+            'item_id': 3,
+            'quantity': numberOfDays,
+        }
 
     elif item_type == 'track_day':
         item = TrackDayAddon.objects.get(pk=item_id)
@@ -64,21 +69,14 @@ def adjust_cart(request, item_type, item_id):
         elif item_type == 'private_driver':
             cart['private_driver']['quantity'] = numberOfDays
 
-        # print(item.id)
-# quantity = cart['private_driver']['quantity']
-    # if numberOfDays > 0:
-    #     cart[id] = numberOfDays
     else:
         if item_type == 'car':
             del(cart['car'])
+            del(cart['insurance'])
         elif item_type == 'track_day':
             del(cart['track_day'])
-        elif item_type == 'insurance':
-            del(cart['insurance'])
         elif item_type == 'private_driver':
-            # cart.pop(cart['private_driver'])
             del(cart['private_driver'])
-        # cart.pop(id)
 
     request.session['cart'] = cart
     return redirect(reverse('view_cart'))
