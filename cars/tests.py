@@ -1,47 +1,30 @@
-from django.test import TestCase, Client
-# from django.core.files.uploadedfile import SimpleUploadedFile
+from django.test import TestCase, SimpleTestCase
+from django.urls import reverse, resolve
 from django.contrib.auth.models import User
-from .forms import CarRegistrationForm, CarUpdateForm
-from .models import Car, TrackDayAddon, InsuranceAddon, PrivateDriverAddon
+from cars.views import all_cars, custom_classic_only, luxury_only, supersport_only, car_register, car_detail, car_edit_view, del_car, add_ons
+from cars.forms import CarRegistrationForm, CarUpdateForm
+from cars.models import Car, TrackDayAddon, InsuranceAddon, PrivateDriverAddon
 
 
-class SetupClass(TestCase):
-    """
-    Setting up user, car, track day, insurance and private driver instances
-    """
+# class SetupClass(TestCase):
+#     """
+#     Setting up user, car, track day, insurance and private driver instances
+#     """
 
-    def setUpCar(self):
-        instance = Car.objects.create(
-            car_class='Luxury', price=20, brand='Fiat', model='Panda',
-            year=1992, track_day='Yes', engine_type='Inline 4',
-            displacement=1.2, transmission='Manual', fuel='Petrol',
-            passengers='5', doors=4, accessories='Basic', city="Dublin",
-            county="Dublin", country='Ireland', image1="panda.jpg",
-            guidelines='Guidelines Test'
-        )
+#     def setUpCar(self):
+#         instance = Car.objects.create(
+#             car_class='Luxury', price=20, brand='Fiat', model='Panda',
+#             year=1992, track_day='Yes', engine_type='Inline 4',
+#             displacement=1.2, transmission='Manual', fuel='Petrol',
+#             passengers='5', doors=4, accessories='Basic', city="Dublin",
+#             county="Dublin", country='Ireland', image1="panda.jpg",
+#             guidelines='Guidelines Test'
+#         )
 
+# FORMS
 class CarRegistrationFormTest(TestCase):
     """Test ran agains Car registration form"""
 
-    # override settings for media dir
-    # @override_settings(MEDIA_ROOT=tempfile.gettempdir())
-    # def setUpUser(self):
-    #     self.user = User.objects.create(
-    #         username='testuser', first_name='test', last_name='user',
-    #         email='tu@test.com', password='123test'
-    #     )
-
-    # data={
-    #         'car_owner': user,
-    #         'car_class': 'Luxury', 'price': 20, 'brand': 'Fiat',
-    #         'model': 'Panda', 'year': 1992, 'track_day': 'Yes',
-    #         'engine_type': 'Inline 4', 'displacement': 1.2,
-    #         'transmission': 'Manual', 'fuel': 'Petrol', 'passengers': '5',
-    #         'doors': 4, 'accessories': 'Basic', 'city': "Dublin",
-    #         'county': "Dublin", 'country': 'Ireland',
-    #         'image1': 'static/images/index/business.jpg',
-    #         'guidelines': 'Guidelines Test'
-    #     }
     def test_CarRegisterForm_valid(self):
         user = User.objects.create(
             username='testuser', first_name='test', last_name='user',
@@ -80,6 +63,7 @@ class CarRegistrationFormTest(TestCase):
         self.assertFalse(form.is_valid())
 
 
+# MODELS
 class CarTests(TestCase):
     """Tests ran against the Car model"""
 
@@ -175,7 +159,8 @@ class InsuranceTests(TestCase):
 
     def test_fail_str(self):
         insurance_description = InsuranceAddon(coverage='Basic')
-        self.assertNotEqual(str(insurance_description), 'Insurance Full Coverage')
+        self.assertNotEqual(str(insurance_description),
+                            'Insurance Full Coverage')
 
     def test_full_insurance(self):
         insurance = InsuranceAddon.objects.create(
@@ -192,6 +177,7 @@ class InsuranceTests(TestCase):
             self.assertEqual(insurance.description, 'Insurance Description')
         with self.subTest():
             self.assertEqual(insurance.image, 'insurance.jpg')
+
 
 class PrivateDriverTests(TestCase):
     """Tests ran against the Insurance addon model"""
@@ -219,3 +205,43 @@ class PrivateDriverTests(TestCase):
             self.assertEqual(driver.description, 'Driver Description')
         with self.subTest():
             self.assertEqual(driver.image, 'driver.jpg')
+
+
+# URLS
+class TestUrls(SimpleTestCase):
+
+    def test_all_cars_url_is_resolved(self):
+        url = reverse('all_cars')
+        self.assertEqual(resolve(url).func, all_cars)
+
+    def test_custom_classic_only_url_is_resolved(self):
+        url = reverse('custom_classic_only')
+        self.assertEqual(resolve(url).func, custom_classic_only)
+
+    def test_luxury_only_url_is_resolved(self):
+        url = reverse('luxury_only')
+        self.assertEqual(resolve(url).func, luxury_only)
+
+    def test_supersport_only_url_is_resolved(self):
+        url = reverse('supersport_only')
+        self.assertEqual(resolve(url).func, supersport_only)
+
+    def test_car_register_url_is_resolved(self):
+        url = reverse('car_register')
+        self.assertEqual(resolve(url).func, car_register)
+
+    def test_car_detail_url_is_resolved(self):
+        url = reverse('car_detail', kwargs={'car_id': 2})
+        self.assertEqual(resolve(url).func, car_detail)
+
+    def test_edit_car_url_is_resolved(self):
+        url = reverse('edit_car', kwargs={'car_id': 2})
+        self.assertEqual(resolve(url).func, car_edit_view)
+
+    def test_delete_car_url_is_resolved(self):
+        url = reverse('delete_car', kwargs={'car_id': 2})
+        self.assertEqual(resolve(url).func, del_car)
+
+    def test_add_ons_url_is_resolved(self):
+        url = reverse('add_ons')
+        self.assertEqual(resolve(url).func, add_ons)
