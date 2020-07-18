@@ -36,6 +36,15 @@ i {
   font-size: 2.5rem;
 }
 
+.feedback-message {
+  color: #252525;
+  background-color: #ff7b00ad;
+  border-color: #ff7b00;
+  border-radius: 0;
+  -webkit-box-shadow: 0 0 6px black;
+          box-shadow: 0 0 6px black;
+}
+
 .content-container {
   padding: 0;
 }
@@ -789,6 +798,19 @@ footer {
 
 .form-group a {
   color: #ff7b00;
+}
+
+.form-message {
+  height: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media (min-width: 992px) {
