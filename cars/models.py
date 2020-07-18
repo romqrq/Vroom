@@ -84,10 +84,10 @@ class Car(models.Model):
                               blank=True)
     country = models.CharField(max_length=10, choices=COUNTRY_CHOICES)
     image1 = models.ImageField(upload_to='media/images')
-    image2 = models.ImageField(upload_to='media/images', blank=True)
-    image3 = models.ImageField(upload_to='media/images', blank=True)
-    image4 = models.ImageField(upload_to='media/images', blank=True)
-    image5 = models.ImageField(upload_to='media/images', blank=True)
+    image2 = models.ImageField(upload_to='media/images', null=True)
+    image3 = models.ImageField(upload_to='media/images', null=True)
+    image4 = models.ImageField(upload_to='media/images', null=True)
+    image5 = models.ImageField(upload_to='media/images', null=True)
     guidelines = models.TextField(max_length=500)
 
     def __str__(self):
