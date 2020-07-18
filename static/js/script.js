@@ -1,4 +1,5 @@
 $(document).ready(function() {
+    
     $('.feedback-message').on( "load", function(){
         $('.feedback-message').scrollIntoView();
     });
@@ -31,7 +32,8 @@ $(document).ready(function() {
 
             // Searching the array to make sure that there aren't empty fields left 
             if( ($.inArray("", all_inputs) !== -1 ) || ($.inArray(null, all_inputs) !== -1) ) {
-                alert("Please fill all required fields.");
+                $('.form-message').removeClass('d-none').html("Please fill all required fields.");
+                $('.car-register-row').get(0).scrollIntoView()
             }
             else{
                 $('.form-box').not('.d-none').addClass('d-none');
