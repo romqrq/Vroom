@@ -6,7 +6,7 @@ from .models import Car
 class CarRegistrationForm(ModelForm):
 
     price = forms.DecimalField(label='Rental price',
-                               widget=forms.TextInput(attrs={
+                               widget=forms.NumberInput(attrs={
                                    'placeholder': 'i.e. 500'
                                    }))
     brand = forms.CharField(label='Brand',
@@ -18,22 +18,22 @@ class CarRegistrationForm(ModelForm):
                                 'placeholder': 'Model of the car'
                                 }))
     displacement = forms.DecimalField(label='Engine displacement',
-                                      widget=forms.TextInput(attrs={
+                                      widget=forms.NumberInput(attrs={
                                           'placeholder': 'i.e. 3.2'
                                           }))
     passengers = forms.DecimalField(label='Seats',
-                                    widget=forms.TextInput(attrs={
+                                    widget=forms.NumberInput(attrs={
                                         'placeholder': 'i.e. 5'
                                         }))
     doors = forms.DecimalField(label='Number of doors',
-                               widget=forms.TextInput(attrs={
+                               widget=forms.NumberInput(attrs={
                                    'placeholder': 'i.e. 2'
                                    }))
     image1 = forms.ImageField(label='Image 1')
-    image2 = forms.ImageField(label='Image 2')
-    image3 = forms.ImageField(label='Image 3')
-    image4 = forms.ImageField(label='Image 4')
-    image5 = forms.ImageField(label='Image 5')
+    image2 = forms.ImageField(label='Image 2', required=False)
+    image3 = forms.ImageField(label='Image 3', required=False)
+    image4 = forms.ImageField(label='Image 4', required=False)
+    image5 = forms.ImageField(label='Image 5', required=False)
     guidelines = forms.CharField(widget=forms.Textarea(attrs={
                                           'placeholder': "Tell other users about the car and set some guidelines to improve everyone's experience"
                                           }))
