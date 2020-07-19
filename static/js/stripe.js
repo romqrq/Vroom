@@ -35,6 +35,7 @@ $(function() {
             $("#stripe-error-message").text(response.error.message);
             // changes the status of that div in checkout.html to display the error
             $("#credit-card-errors").show();
+            $('.payment-form-row').get(0).scrollIntoView();
             $("#validate_card_btn").attr("disabled", false);
         }
     });
