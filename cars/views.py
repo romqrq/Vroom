@@ -46,7 +46,7 @@ def car_register(request):
             car_reg_form.car_owner = request.user
             form.save()
 
-            messages.error(request, "Your car is ready to Vroom!")
+            messages.success(request, "Your car is ready to Vroom!")
             return redirect(reverse('index'))
         else:
             messages.error(

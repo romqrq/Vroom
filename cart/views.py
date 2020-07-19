@@ -1,3 +1,4 @@
+from django.contrib import messages
 from django.shortcuts import render, redirect, reverse
 from cars.models import Car, TrackDayAddon, InsuranceAddon, PrivateDriverAddon
 
@@ -45,6 +46,7 @@ def add_to_cart(request, item_type, item_id):
     track_day = TrackDayAddon.objects.all()
     insurance = InsuranceAddon.objects.all()
     private_driver = PrivateDriverAddon.objects.all()
+    messages.success(request, "Successfully added to cart!")
     return redirect(reverse('add_ons'),
                     {
                         'track_day': track_day,
@@ -62,10 +64,9 @@ def adjust_cart(request, item_type, item_id):
     if numberOfDays > 0:
         if item_type == 'car':
             cart['car']['quantity'] = numberOfDays
+            cart['insurance']['quantity'] = numberOfDays
         elif item_type == 'track_day':
             cart['track_day']['quantity'] = numberOfDays
-        elif item_type == 'insurance':
-            cart['insurance']['quantity'] = numberOfDays
         elif item_type == 'private_driver':
             cart['private_driver']['quantity'] = numberOfDays
 
@@ -79,4 +80,5 @@ def adjust_cart(request, item_type, item_id):
             del(cart['private_driver'])
 
     request.session['cart'] = cart
+    messages.success(request, "Cart successfully updated!")
     return redirect(reverse('view_cart'))
