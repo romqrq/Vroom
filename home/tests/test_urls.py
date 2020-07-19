@@ -1,9 +1,8 @@
-from django.test import TestCase, SimpleTestCase
+from django.test import SimpleTestCase
 from django.urls import reverse, resolve
 from home.views import about_view, faqs_view, contact_view
 
 
-# URLS
 class TestHomeUrls(SimpleTestCase):
 
     def test_about_url_is_resolved(self):
