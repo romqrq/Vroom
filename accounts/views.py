@@ -108,6 +108,9 @@ def register(request):
 
             else:
                 messages.error(request, "Unable to register at this time!")
+        else:
+            messages.error(request,
+                           "Please fill the required fields correctly")
     else:
         user_form = UserRegistrationForm()
 
