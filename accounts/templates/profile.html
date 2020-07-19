@@ -20,9 +20,11 @@
         <p>{{ user.email }}</p>
         <h5>Member since:</h5>
         <p>{{ user.date_joined }}</p>
+        {% if user.id == request.user.id %}
         <a href="{% url 'edit_user' user.id %}" rel="noopener" aria-label="Button to allow user to edit personal information">
             <button type="button" class="btn general-button card-button">Edit</button>
         </a>
+        {% endif %}
     </div>
 </div>
 {% if cars %}
