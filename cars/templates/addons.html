@@ -26,7 +26,6 @@
             <a href="{% url 'all_cars' %}" rel="noopener" aria-label="Link to find a car to rent">
                 <button type="button" class="btn general-button">Find a Car</button>
             </a>
-
             {% elif cart_items %}
             <form method="POST" action="" id="track_day">
                 {% csrf_token %}
