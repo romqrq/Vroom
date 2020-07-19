@@ -37,7 +37,7 @@ $(document).ready(function() {
             }
             else{
                 $('.form-box').not('.d-none').addClass('d-none');
-                $(`#${targetdiv_id}`).removeClass('d-none');
+                $(`#${targetdiv_id}`).removeClass('d-none').get(0).scrollIntoView()
             }
         }
     });
