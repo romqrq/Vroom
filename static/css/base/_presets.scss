@@ -48,12 +48,16 @@ i {
     font-size: inherit;
 }
 .header-strip {
+    margin: 1rem 0;
     padding: 0.5rem 0;
     background-color: $dark-grey;
     color: white;
     text-shadow: $header-shadow-darkbg;
     box-shadow: -1px 4px 10px black;
 }
+// .top-header-strip {
+//     margin: 1rem 0;
+// }
 .cards-row {
     max-width: 100%;
     padding: 0;

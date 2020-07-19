@@ -6,6 +6,11 @@
 {% block title %}Vroom - Edit My Car{% endblock %}
 
 {% block content %}
+{% if user.id != request.user.id %}
+
+{% include 'unauthorised.html' %}
+
+{% else %}
 <div class="form-box">
     <form enctype="multipart/form-data" method="POST" action="{% url 'edit_car' car.id %}">
         <fieldset class="form-group">
@@ -26,4 +31,5 @@
         </fieldset>
     </form>
 </div>
+{% endif %}
 {% endblock %}
