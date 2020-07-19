@@ -6,6 +6,11 @@
 {% block title %}Vroom - Edit Profile{% endblock %}
 
 {% block content %}
+{% if user.id != request.user.id %}
+
+{% include 'unauthorised.html' %}
+
+{% else %}
 <div class="form-box">
     <form enctype="multipart/form-data" method="POST" action="{% url 'edit_user' user.id %}">
         <fieldset class="form-group">
@@ -27,4 +32,5 @@
         </fieldset>
     </form>
 </div>
+{% endif %}
 {% endblock %}
