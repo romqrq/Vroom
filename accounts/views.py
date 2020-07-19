@@ -69,14 +69,14 @@ def profile(request):
     return render(request, 'profile.html', {'cars': user_cars})
 
 
-def visit_profile(request, userid):
+def visit_profile(request, user_id):
     """Function to allow a user to visit other users' profile pages"""
 
     # all_users = User.objects.all()
     # all_cars = Car.objects.all()
     # user_cars = []
     # user_cars = Car.objects.get(car_owner__id__in=(userid))
-    visited_user = User.objects.get(pk=userid)
+    visited_user = User.objects.get(pk=user_id)
     user_cars = Car.objects.filter(car_owner=visited_user)
 
     # for user in all_users:
