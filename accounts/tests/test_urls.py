@@ -1,28 +1,8 @@
-from django.test import TestCase, SimpleTestCase
+from django.test import SimpleTestCase
 from django.urls import reverse, resolve
-from django.contrib.auth.models import User
 from accounts.views import register, profile, edit_user_view, del_user, visit_profile, login, logout
-from .forms import UserLoginForm, UserRegistrationForm, EditUserForm, EditUserPasswordForm
 
 
-class UserRegistrationFormTest(TestCase):
-    """Test run against user registration form"""
-
-    def test_UserRegistrationForm_valid(self):
-        # user = User.objects.create(
-        #     username='testuser', first_name='test', last_name='user',
-        #     email='tu@test.com', password1='123test', password2='123test'
-        #     )
-        form = UserRegistrationForm(data={
-            'username': 'testuser', 'first_name': 'test', 'last_name': 'user',
-            'email': 'tu@test.com', 'password1': '123test',
-            'password2': '123test'
-            })
-        # form = UserRegistrationForm(instance=user)
-        self.assertTrue(form.is_valid())
-
-
-# URLS
 class TestAccountsUrls(SimpleTestCase):
 
     def test_register_url_is_resolved(self):
