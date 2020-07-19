@@ -11,6 +11,11 @@
     .container {
         max-width: 80vw;
     }
+    .unauthorised-box {
+        .card-button {
+            max-width: 12vw;
+        }
+    }
 }
 
 @media (max-width: 991.98px) {

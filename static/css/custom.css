@@ -59,6 +59,7 @@ i {
 }
 
 .header-strip {
+  margin: 1rem 0;
   padding: 0.5rem 0;
   background-color: #252525;
   color: white;
@@ -525,12 +526,16 @@ input#id_image5 {
   margin: 0;
 }
 
-.profile-header {
+.profile-info {
+  margin-top: 1rem;
+}
+
+.unauthorised-box h4 {
   margin: 1rem 0;
 }
 
-.profile-info {
-  margin-top: 1rem;
+.unauthorised-box .card-button {
+  margin: 0 1rem 2rem;
 }
 
 .general-button {
@@ -825,6 +830,9 @@ footer {
   }
   .container {
     max-width: 80vw;
+  }
+  .unauthorised-box .card-button {
+    max-width: 12vw;
   }
 }
 
