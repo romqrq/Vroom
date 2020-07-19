@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% load bootstrap_tags %}
+
+{% block meta_description %}Vroom. Edit details of your car.{% endblock %}
+
+{% block title %}Vroom - Edit My Car{% endblock %}
+
+{% block content %}
+{% if user.id != request.user.id %}
+
+{% include 'unauthorised.html' %}
+
+{% else %}
+<div class="form-box">
+    <form enctype="multipart/form-data" method="POST" action="{% url 'edit_car' car.id %}">
+        <fieldset class="form-group">
+            <h2>Edit my car</h2>
+            {% csrf_token %}
+            {{  car_edit_form | as_bootstrap }}
+            <button type="submit" class="btn general-button">Update</button>
+        </fieldset>
+    </form>
+</div>
+<div class="form-box">
+    <form method="POST" action="{% url 'delete_car' car.id %}">
+        <fieldset class="form-group">
+            <h2>Delete this car</h2>
+            {% csrf_token %}
+            <p>Once you press the delete button, this car will be permanently deleted</p>
+            <button type="submit" class="btn general-button">Delete</button>
+        </fieldset>
+    </form>
+</div>
+{% endblock %}
