@@ -70,7 +70,7 @@ def car_detail(request, car_id):
     return render(request, 'cardetail.html', {'car': car})
 
 
-def car_edit_view(request, car_id):
+def edit_car(request, car_id):
     """Function to allow user to edit their own cars"""
 
     instance = get_object_or_404(Car, id=car_id)
@@ -95,11 +95,10 @@ def car_edit_view(request, car_id):
             )
 
     else:
-        # car_edit_form = CarUpdateForm(instance=this_car)
-        form = CarUpdateForm()
+        form = CarUpdateForm(instance=instance)
 
     args = {'car_edit_form': form, 'car': instance}
-    return render(request, 'careditform.html', args)
+    return render(request, 'editcar.html', args)
 
 
 def del_car(request, car_id):

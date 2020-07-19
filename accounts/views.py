@@ -69,6 +69,7 @@ def profile(request):
     return render(request, 'profile.html', {'cars': user_cars})
 
 
+@login_required
 def visit_profile(request, user_id):
     """Function to allow a user to visit other users' profile pages"""
 
@@ -114,6 +115,7 @@ def register(request):
     return render(request, 'register.html', args)
 
 
+@login_required
 def edit_user_view(request, user_id):
     """Function to allow user to edit their own profile"""
 
@@ -172,6 +174,7 @@ def edit_user_view(request, user_id):
     return render(request, 'editprofile.html', args)
 
 
+@login_required
 def del_user(request, user_id):
     """Function to allow users to delete their own profile"""
 
