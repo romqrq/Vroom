@@ -1,9 +1,8 @@
-from django.test import TestCase, SimpleTestCase
+from django.test import SimpleTestCase
 from django.urls import reverse, resolve
 from cart.views import view_cart, add_to_cart, adjust_cart
 
 
-# URLS
 class TestCartUrls(SimpleTestCase):
 
     def test_view_cart_url_is_resolved(self):
