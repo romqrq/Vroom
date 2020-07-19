@@ -6,6 +6,7 @@
 {% block title %}Vroom - Register{% endblock %}
 
 {% block content %}
+<div class="col-12 col-md-6 offset-md-3">
     <form method="post" action="{% url 'register' %}" class="accountform">
         <fieldset class="form-group">
             <h2>Create a new account</h2>
@@ -15,4 +16,5 @@
             <button type="submit" class="btn general-button">Create account</button>
         </fieldset>
     </form>
+</div>
 {% endblock %}

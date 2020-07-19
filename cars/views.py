@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.core.urlresolvers import reverse
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from .models import Car, TrackDayAddon, InsuranceAddon, PrivateDriverAddon
 from .forms import CarRegistrationForm, CarUpdateForm
 
@@ -33,6 +34,7 @@ def supersport_only(request):
     return render(request, "findcar.html", {"cars": SS})
 
 
+@login_required
 def car_register(request):
     """Function to allow users to add their cars to the database"""
 
@@ -70,6 +72,7 @@ def car_detail(request, car_id):
     return render(request, 'cardetail.html', {'car': car})
 
 
+@login_required
 def edit_car(request, car_id):
     """Function to allow user to edit their own cars"""
 
@@ -101,6 +104,7 @@ def edit_car(request, car_id):
     return render(request, 'editcar.html', args)
 
 
+@login_required
 def del_car(request, car_id):
     """Function to allow users to delete their own profile"""
 
