@@ -1,34 +1,107 @@
-from django.test import SimpleTestCase
-from django.urls import reverse, resolve
-from accounts.views import register, profile, edit_user_view, del_user, visit_profile, login, logout
+from django.test import Client, RequestFactory, TestCase
+from django.contrib.auth.models import User
 
 
-class TestAccountsUrls(SimpleTestCase):
+class RegisterViewTests(TestCase):
+    """
+    Tests for user registration view
+    """
 
-    def test_register_url_is_resolved(self):
-        url = reverse('register')
-        self.assertEqual(resolve(url).func, register)
+    def setUp(self):
+        """ Creates instance of user in test database """
+        self.factory = RequestFactory()
+        self.user = User.objects.create_user(
+            username='testuser', email='ts@test.com', password="testpass"
+        )
 
-    def test_profile_url_is_resolved(self):
-        url = reverse('profile')
-        self.assertEqual(resolve(url).func, profile)
+    def test_view_not_logged_in(self):
+        """Test if user can access the page when not logged in"""
 
-    def test_edit_user_view_url_is_resolved(self):
-        url = reverse('edit_user', kwargs={'user_id': 2})
-        self.assertEqual(resolve(url).func, edit_user_view)
+        user = Client()
 
-    def test_delete_user_url_is_resolved(self):
-        url = reverse('delete_user', kwargs={'user_id': 2})
-        self.assertEqual(resolve(url).func, del_user)
+        response = user.get('/accounts/register/')
+        self.assertEqual(response.status_code, 200)
 
-    def test_visit_profile_is_resolved(self):
-        url = reverse('visit_profile', kwargs={'user_id': 2})
-        self.assertEqual(resolve(url).func, visit_profile)
+    def test_view_logged_in_redirect(self):
+        """Test if logged in usr is redirected to index"""
 
-    def test_login_url_is_resolved(self):
-        url = reverse('login')
-        self.assertEqual(resolve(url).func, login)
+        user = Client()
+        user.login(username='testuser', password='testpass')
 
-    def test_logout_url_is_resolved(self):
-        url = reverse('logout')
-        self.assertEqual(resolve(url).func, logout)
+        response = user.get('/accounts/register/')
+
+        self.assertEqual(response.url, '/')
+        self.assertEqual(response.status_code, 302)
+
+
+class ProfileViewTests(TestCase):
+    """
+    Tests for user Profile view
+    """
+
+    def setUp(self):
+        """ Creates instance of user in test database """
+        self.factory = RequestFactory()
+        self.user = User.objects.create_user(
+            username='testuser', email='ts@test.com', password="testpass"
+        )
+
+    def test_view_not_logged_in_redirect(self):
+        """Test if user is redirected when not logged in"""
+
+        user = Client()
+
+        response = user.get('/accounts/profile/')
+
+        self.assertEqual(
+            response.url,
+            '/accounts/login/?next=/accounts/profile/'
+            )
+        self.assertEqual(response.status_code, 302)
+
+    def test_view_logged_in(self):
+        """Test if logged in user can access the page"""
+
+        user = Client()
+        user.login(username='testuser', password='testpass')
+
+        response = user.get('/accounts/profile/')
+
+        self.assertEqual(response.status_code, 200)
+
+
+class EditProfileViewTests(TestCase):
+    """
+    Tests for user Edit Profile view
+    """
+
+    def setUp(self):
+        """ Creates instance of user in test database """
+        self.factory = RequestFactory()
+        self.user = User.objects.create_user(
+            id=99, username='testuser', email='ts@test.com',
+            password="testpass"
+        )
+
+    def test_view_not_logged_in_redirect(self):
+        """Test if user is redirected when not logged in"""
+
+        user = Client()
+
+        response = user.get('/accounts/edit_profile/99')
+
+        self.assertEqual(
+            response.url,
+            '/accounts/login/?next=/accounts/edit_profile/99'
+            )
+        self.assertEqual(response.status_code, 302)
+
+    def test_view_logged_in(self):
+        """Test if logged in user can access the page"""
+
+        user = Client()
+        user.login(username='testuser', password='testpass')
+
+        response = user.get('/accounts/edit_profile/99')
+
+        self.assertEqual(response.status_code, 200)
