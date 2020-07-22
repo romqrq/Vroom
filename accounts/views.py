@@ -1,14 +1,10 @@
-from django.shortcuts import render, redirect, HttpResponseRedirect, get_object_or_404
+from django.shortcuts import render, redirect, HttpResponseRedirect
 from django.contrib import messages, auth
 from django.core.urlresolvers import reverse
 from .forms import UserLoginForm, UserRegistrationForm, EditUserForm, EditUserPasswordForm
 from cars.models import Car
 from django.contrib.auth.models import User
-# from django.template.context_processors import csrf
 from django.contrib.auth.decorators import login_required
-
-
-# Create your views here.
 
 
 def logout(request):
@@ -50,22 +46,9 @@ def login(request):
 def profile(request):
     """A view that displays the profile page of a logged in user"""
 
-    # all_users = User.objects.all()
-
-    # if userid:
-    #     for user in all_users:
-    #         if user.id == int(userid):
-    #             visited_user = user
-    #             return render(request, 'profile.html', {'user': visited_user})
-    # else:
-    # all_cars = Car.objects.all()
-    # user_cars = []
     car_owner = request.user
     user_cars = Car.objects.filter(car_owner=car_owner)
 
-    # for car in all_cars:
-    #     if car.car_owner.id == uid:
-    #         user_cars.append(car)
     return render(request, 'profile.html', {'cars': user_cars})
 
 
@@ -73,19 +56,8 @@ def profile(request):
 def visit_profile(request, user_id):
     """Function to allow a user to visit other users' profile pages"""
 
-    # all_users = User.objects.all()
-    # all_cars = Car.objects.all()
-    # user_cars = []
-    # user_cars = Car.objects.get(car_owner__id__in=(userid))
     visited_user = User.objects.get(pk=user_id)
     user_cars = Car.objects.filter(car_owner=visited_user)
-
-    # for user in all_users:
-    #     if user.id == int(userid):
-    #         visited_user = user
-    # for car in all_cars:
-    #     if car.user_id == visited_user.id:
-    #         user_cars.append(car)
 
     return render(request, 'profile.html',
                   {'user': visited_user, 'cars': user_cars})
@@ -93,6 +65,10 @@ def visit_profile(request, user_id):
 
 def register(request):
     """A view that manages the registration form"""
+
+    if request.user.is_authenticated():
+        messages.success(request, "You are already registered")
+        return redirect(reverse('index'))
     if request.method == 'POST':
         user_form = UserRegistrationForm(request.POST)
         if user_form.is_valid():
@@ -144,9 +120,7 @@ def edit_user_view(request, user_id):
 
         if pwform.is_valid():
             if pwform['password1'].value() and pwform['password2'].value():
-                print('values there')
                 if pwform['password1'].value() == pwform['password2'].value():
-                    print('values there and equal')
                     u = User.objects.get(pk=user_id)
                     u.set_password(pwform['password2'].value())
                     u.save()
@@ -159,9 +133,7 @@ def edit_user_view(request, user_id):
                         request,
                         "Make sure the password is the same on both fields"
                     )
-
             if pwform['password1'].value() != pwform['password2'].value():
-                print('values there and different')
                 messages.error(
                     request,
                     "Make sure the password is the same on both fields"
