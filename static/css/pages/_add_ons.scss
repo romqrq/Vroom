@@ -1,3 +1,18 @@
+// Addons
+
+.addon-row {
+    width: 100%;
+    justify-content: center;
+}
+.form-control-plaintext {
+    width: 3rem;
+    display: inline;
+    text-align: center;
+    padding-left: 0.3rem;
+    color: white;
+    font-size: 2rem;
+    text-shadow: $header-shadow-darkbg;
+}
 .addon-track-box {
     background-image: url("../images/addons/track_day_car1.jpg");
     overflow: hidden;
@@ -17,5 +32,22 @@
     background-position: center;
 }
 .addon-box {
-    background-color: $dark-grey;
+    background-color: #ff7b00c7;
+    color: black;
+}
+.addon-radio {
+    min-height: 21vh;
+    padding: 1rem 0.5rem 0;
+    margin: 1rem 0 !important;
+    border: none;
+    border-radius: 0.3rem !important;
+    box-shadow: $inner-shadow-dark;
+    h3{
+        margin-bottom: 1rem;
+    }
+}
+#carouselTrackTestimonials,
+#carouselInsuranceTestimonials,
+#carouselDriverTestimonials {
+    margin-bottom: 2rem;
 }

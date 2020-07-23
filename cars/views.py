@@ -115,20 +115,34 @@ def del_car(request, car_id):
     return redirect(reverse('index'))
 
 
-def add_ons(request):
+def add_ons(request, item_type):
     """Function to add other products to their cart after choosing a car"""
 
-    track = TrackDayAddon.objects.all()
-    pdriver = PrivateDriverAddon.objects.all()
-    insurance = InsuranceAddon.objects.all()
+    # track = TrackDayAddon.objects.all()
+    # pdriver = PrivateDriverAddon.objects.all()
+    # insurance = InsuranceAddon.objects.all()
+    if item_type == 'car':
+        addon = InsuranceAddon.objects.all()
+        itype = 'track_day'
+    elif item_type == 'track_day':
+        addon = TrackDayAddon.objects.all()
+        itype = item_type
+    elif item_type == 'insurance':
+        addon = InsuranceAddon.objects.all()
+        itype = item_type
+    elif item_type == 'private_driver':
+        addon = PrivateDriverAddon.objects.all()
+        itype = item_type
     # cart = request.session.get('cart', {})
     # print(cart)
     return render(
                   request,
                   'addons.html',
                   {
-                      'track_day': track,
-                      'private_driver': pdriver,
-                      'insurance': insurance,
+                    'addon': addon,
+                    'itype': itype
+                    #   'track_day': track,
+                    #   'private_driver': pdriver,
+                    #   'insurance': insurance,
                   }
                  )
