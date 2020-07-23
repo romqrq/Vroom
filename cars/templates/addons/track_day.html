@@ -1,0 +1,92 @@
+<!-- Track day experience -->
+<div class="col-12 header-title">
+    <h2>Adrenaline is what I need</h2>
+</div>
+<div class="col-12 content-boxes addon-track-box">
+    <div class="index-content-boxes">
+        <h3 class="secondary-title-light">Track Day Experience</h3>
+        <p>We offer great options for track day driving. You can choose between morning, afternoon or a full track day.</p>
+        <p>Your track experience fee includes a coach to help you having fun and exploring the cars potential while staying safe.</p>
+        
+        {% if not cart_items %}    
+        <p>Before choosing the track experience:</p>
+        <ol>
+            <li>Choose a car that is elegible for track days</li>
+            <li>You will be directed to a page where you can add your Track Day Experience and more.</li>
+            <li>Once the payment is through, you are all set!</li>
+        </ol>
+        <p>Click on the button below to find the car you desire.</p>
+        <a href="{% url 'all_cars' %}" rel="noopener" aria-label="Link to find a car to rent">
+            <button type="button" class="btn general-button">Find a Car</button>
+        </a>
+        {% elif cart_items %}
+        <form method="POST" action="" id="track_day">
+            {% csrf_token %}
+            <div class="row btn-group btn-group-toggle addon-row" data-toggle="buttons">
+                {% for item in addon %}
+                <label class="col-12 col-md-4 btn content-boxes addon-box addon-radio" value="track_day" id="{{ item.id }}">
+                    <input type="radio" name="options" id="{{ item.title }}_{{ item.coverage }}" autocomplete="off">
+                    <h3>{{ item.coverage }} Track Experience</h3>
+                    <h4>€{{ item.price }}</h4>
+                    <p>per day</p>
+                    <p>{{ item.description }}</p>
+                </label>
+                {% endfor %}
+            </div>
+            <div class="row">
+                <div class="col-12 add-on-form-box">                                
+                    <div class="input-area mt-3">
+                        <input name="quantity" type="number" min="1" max="999" class="form-control" placeholder="How many days?">
+                        <button class="btn general-button card-button addon-submit" type="submit">Add to cart</button> 
+                        <a href="{% url 'add_ons' 'insurance' %}" rel="noopener" aria-label="Button to insurance addon page">
+                            <button type="button" class="btn general-button card-button">Skip</button>
+                        </a>
+                    </div>
+                </div>   
+            </div> 
+        </form>
+        {% endif %}
+    </div>
+</div>
+   <!-- Carousel of Track Day testimonials     -->
+<div class="col-12 header-title">
+    <h2>What our Track Experience users have to say</h2>
+</div>
+<div id="carouselTrackTestimonials" class="carousel slide content-boxes testimonials-carousel" data-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item testimonial-carousel-item active">
+            <div class="row testimonials-carousel-row">
+                <div class="col-8 testimonials-carousel-text">
+                    <h4 class="secondary-title-light">Jane Doe</h4>
+                    <hr class="testimonials-carousel-hr">
+                    <p>Easy to book and the track coach makes all the difference! By the end of my track weekend I feel I've improved SO MUCH! Can't wait to go again!</p>
+                </div>
+                <div class="col-4 testimonials-carousel-img jane-doe">
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item testimonial-carousel-item">
+            <div class="row testimonials-carousel-row">
+                <div class="col-4 testimonials-carousel-img joanne-doe">
+                </div>
+                <div class="col-8 testimonials-carousel-text">
+                    <h4 class="secondary-title-light">Joanne Doe</h4>
+                    <hr class="testimonials-carousel-hr">
+                    <p>Rented a Porshe 911 and got the full track day package. It's safe to say I am totally hooked!</p>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item testimonial-carousel-item">
+            <div class="row testimonials-carousel-row">
+                <div class="col-8 testimonials-carousel-text">
+                    <h4 class="secondary-title-light">Joe Doe</h4>
+                    <hr class="testimonials-carousel-hr">
+                    <p>I had some experience on the track but never in a Ferrari and never had a track coach. With the coaching, I improved so much that by the end of the day I was driving with the fast guys!</p>
+                </div>
+                <div class="col-4 testimonials-carousel-img joe-doe">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div> 

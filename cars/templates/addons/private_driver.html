@@ -1,0 +1,93 @@
+<!-- Private Driver experience -->
+<div class="col-12 header-title">
+    <h2>Leave the driving with us</h2>
+</div>
+<div class="col-12 content-boxes addon-driver-box">
+    <div class="index-content-boxes">
+        <h3 class="secondary-title-light">Private Driver Experience</h3>
+        <p>Let our highly trained professionals deal with the driving while you focus on what is important.</p>
+        <p>Have your driving needs covered 24h. Our drivers will rotate seamlessly to assure you have a driver at all times when hiring our service.</p>
+        <p>Our drivers are trained locally to know all the streets and roads, helping you getting where you need when you need.</p>
+        
+        {% if not cart_items %}  
+        <p>Before choosing the private driver experience:</p>
+        <ol>
+            <li>Choose the car you want to rent.</li>
+            <li>You will be directed to a page where you can add your private driver service and more.</li>
+            <li>Once the payment is through, you are all set!</li>
+        </ol>
+        <p>Click on the button below to find the car you desire.</p>
+        <a href="{% url 'all_cars' %}" rel="noopener" aria-label="Link to find a car to rent">
+            <button type="button" class="btn general-button">Find a Car</button>
+        </a>
+
+        {% elif cart_items %}
+        <form method="POST" action="{% url 'checkout' %}" id="private_driver">
+            {% csrf_token %}
+            <div class="row btn-group btn-group-toggle addon-row" data-toggle="buttons">
+                {% for item in addon %}
+                <label class="col-12 col-md-6 offset-md-3 btn content-boxes addon-box addon-radio" value="private_driver" id="{{ item.id }}">
+                    <input type="radio" name="options" id="{{ item.title }}_{{ item.coverage }}" autocomplete="off" checked>
+                    <h3>{{ item.title }} - {{ item.coverage }}</h3>
+                    <h4>€{{ item.price }}</h4>
+                    <p>per day</p>
+                    <p>{{ item.description }}</p>
+                </label>
+                {% endfor %} 
+            </div>
+            <div class="row">
+                <div class="col-12 add-on-form-box">                                
+                    <div class="input-area mt-3">
+                        <input name="quantity" type="number" min="1" max="999" class="form-control" placeholder="How many days?">
+                        <button class="btn general-button card-button addon-submit" type="submit">Add to cart and Checkout</button> 
+                        <a href="{% url 'checkout' %}" rel="noopener" aria-label="Button to checkout page">
+                            <button type="button" class="btn general-button card-button">Skip and Checkout</button>
+                        </a>
+                    </div>
+                </div>   
+            </div> 
+        </form>
+        {% endif %}
+    </div>
+</div>
+<!-- Carousel of Private Driver testimonials     -->
+<div class="col-12 header-title">
+    <h2>What our private driver experience users have to say</h2>
+</div>
+<div id="carouselDriverTestimonials" class="carousel slide content-boxes testimonials-carousel" data-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item testimonial-carousel-item active">
+            <div class="row testimonials-carousel-row">
+                <div class="col-8 testimonials-carousel-text">
+                    <h4 class="secondary-title-light">Jane Doe</h4>
+                    <hr class="testimonials-carousel-hr">
+                    <p>Never been in Dublin before but with the private driver there was absolutely no hassle! Very friendly staff and they knew their way around. Totally recommended!</p>
+                </div>
+                <div class="col-4 testimonials-carousel-img jane-doe">
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item testimonial-carousel-item">
+            <div class="row testimonials-carousel-row">
+                <div class="col-4 testimonials-carousel-img joanne-doe">
+                </div>
+                <div class="col-8 testimonials-carousel-text">
+                    <h4 class="secondary-title-light">Joanne Doe</h4>
+                    <hr class="testimonials-carousel-hr">
+                    <p>Great service! Hired them for one of my associates going abroad and the hours saved on getting lost and traffic were converted in very productive hours. Brilliant idea, I recommend!</p>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item testimonial-carousel-item">
+            <div class="row testimonials-carousel-row">
+                <div class="col-8 testimonials-carousel-text">
+                    <h4 class="secondary-title-light">Joe Doe</h4>
+                    <hr class="testimonials-carousel-hr">
+                    <p>Rented a Rolls Royce Phantom and the driver for our wedding and that was the best idea E-V-E-R! One thing less to stress on our wedding day!</p>
+                </div>
+                <div class="col-4 testimonials-carousel-img joe-doe">
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 
