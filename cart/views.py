@@ -22,18 +22,26 @@ def add_to_cart(request, item_type, item_id):
         item = Car.objects.get(pk=item_id)
         cart['insurance'] = {
             'item_type': 'insurance',
-            'item_id': 3,
+            'item_id': 2,
             'quantity': numberOfDays,
         }
+        addon = InsuranceAddon.objects.all()
+        itype = 'track_day'
 
     elif item_type == 'track_day':
         item = TrackDayAddon.objects.get(pk=item_id)
+        addon = TrackDayAddon.objects.all()
+        itype = item_type
 
     elif item_type == 'insurance':
         item = InsuranceAddon.objects.get(pk=item_id)
+        addon = InsuranceAddon.objects.all()
+        itype = item_type
 
     elif item_type == 'private_driver':
         item = PrivateDriverAddon.objects.get(pk=item_id)
+        addon = PrivateDriverAddon.objects.all()
+        itype = item_type
 
     cart[item_type] = {
             'item_type': item_type,
@@ -43,16 +51,21 @@ def add_to_cart(request, item_type, item_id):
 
     request.session['cart'] = cart
 
-    track_day = TrackDayAddon.objects.all()
-    insurance = InsuranceAddon.objects.all()
-    private_driver = PrivateDriverAddon.objects.all()
+    # track_day = TrackDayAddon.objects.all()
+    # insurance = InsuranceAddon.objects.all()
+    # private_driver = PrivateDriverAddon.objects.all()
     messages.success(request, "Successfully added to cart!")
-    return redirect(reverse('add_ons'),
+    return redirect(reverse('add_ons', args=(itype,)),
                     {
-                        'track_day': track_day,
-                        'insurance': insurance,
-                        'private_driver': private_driver
+                        'addoin': addon,
+                        'itype': itype,
                     })
+
+    # {
+    #     'track_day': track_day,
+    #     'insurance': insurance,
+    #     'private_driver': private_driver
+    # })
 
 
 def adjust_cart(request, item_type, item_id):
