@@ -1,0 +1,100 @@
+<!-- Insurance -->
+<div class="col-12 header-title">
+    <h2>We look after you</h2>
+</div>
+<div class="col-12 content-boxes addon-insurance-box">
+    <div class="index-content-boxes">
+        <h3 class="secondary-title-light">Car Insurance</h3>
+        <p>Here you will most definitely find the insurance package that suits your needs.</p>
+        <p>Offering the pinacle of cars universe, we couldn't offer you nothing less than the best insurances covers in the world.</p>
+        <p>Because of our partnerships, here you will get the lowest prices on the market for the same policies.</p>
+        <p>The length of your insurance coverage will automatically be the same as the car rental.</p>
+        
+        {% if not cart_items %}  
+        <p>Before choosing your insurance package:</p>
+        <ol>
+            <li>Choose the car you want to rent.</li>
+            <li>You will be directed to a page where you can add your insurance and more.</li>
+            <li>Once the payment is through, you are all set!</li>
+        </ol>
+        <p>Click on the button below to find the car you desire.</p>
+        <a href="{% url 'all_cars' %}" rel="noopener" aria-label="Link to find a car to rent">
+            <button type="button" class="btn general-button">Find a Car</button>
+        </a>
+        
+        {% elif cart_items %}
+        <form method="POST" action="" id="insurance">
+            {% csrf_token %}
+            <div class="row btn-group btn-group-toggle addon-row" data-toggle="buttons">
+                {% for item in addon %}
+                <label class="col-12 col-md-4 btn content-boxes addon-box addon-radio" value="insurance" id="{{ item.id }}">
+                    <input type="radio" name="options" id="{{ item.title }}_{{ item.coverage }}" autocomplete="off">
+                    <h3>{{ item.title }} - {{ item.coverage }}</h3>
+                    <h4>€{{ item.price }}</h4>
+                    <p>per day</p>
+                    <p>{{ item.description }}</p>
+                </label>
+                {% endfor %}
+            </div>
+            <div class="row">
+                <div class="col-12 add-on-form-box">    
+                {% for item in cart_items %}
+                {% if item.item_type == 'car' %}                        
+                    <div class="input-area mt-3">
+                        <h4>For 
+                        <input readonly name="quantity" value="{{ item.quantity }}" type="number" min="1" max="999" class="form-control-plaintext">
+                        Days</h4>
+                        <button class="btn general-button card-button addon-submit" type="submit">Add to cart</button> 
+                        <a href="{% url 'add_ons' 'private_driver' %}" rel="noopener" aria-label="Button to private driver addon page">
+                            <button type="button" class="btn general-button card-button">Skip</button>
+                        </a>
+                    </div>
+                {% endif %}
+                {% endfor %}
+                </div>   
+            </div> 
+        </form>
+        {% endif %}
+    </div>
+</div>
+<!-- Carousel of Private Driver testimonials     -->
+<div class="col-12 header-title">
+    <h2>What our insurance users have to say</h2>
+</div>
+<div id="carouselInsuranceTestimonials" class="carousel slide content-boxes testimonials-carousel" data-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item testimonial-carousel-item active">
+            <div class="row testimonials-carousel-row">
+                <div class="col-8 testimonials-carousel-text">
+                    <h4 class="secondary-title-light">Janet Doe</h4>
+                    <hr class="testimonials-carousel-hr">
+                    <p>Got the full insurance and it saved me a lot of money after someone scratched the car I had rented.</p>
+                </div>
+                <div class="col-4 testimonials-carousel-img jane-doe">
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item testimonial-carousel-item">
+            <div class="row testimonials-carousel-row">
+                <div class="col-4 testimonials-carousel-img joanne-doe">
+                </div>
+                <div class="col-8 testimonials-carousel-text">
+                    <h4 class="secondary-title-light">Joanne Doe</h4>
+                    <hr class="testimonials-carousel-hr">
+                    <p>It's amazing how we get a basic free coverage when we rent! No extra hidden fees!</p>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item testimonial-carousel-item">
+            <div class="row testimonials-carousel-row">
+                <div class="col-8 testimonials-carousel-text">
+                    <h4 class="secondary-title-light">Joe Doe</h4>
+                    <hr class="testimonials-carousel-hr">
+                    <p>Got a bit carried away with the driving and ran out of fuel! The lads got there in less than 15 minutes!</p>
+                </div>
+                <div class="col-4 testimonials-carousel-img joe-doe">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
