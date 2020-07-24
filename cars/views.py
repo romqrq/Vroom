@@ -105,7 +105,7 @@ def edit_car(request, car_id):
 
 
 @login_required
-def del_car(request, car_id):
+def delete_car(request, car_id):
     """Function to allow users to delete their own profile"""
 
     c = Car.objects.get(pk=car_id)
