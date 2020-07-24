@@ -4,6 +4,15 @@ $(document).ready(function() {
         $('.feedback-message').scrollIntoView();
     });
 
+    $('#searchTextInput').on( "change", function(){
+        if($(this).val() == ""){
+            $('#searchSubmitBtn').not('.disabled-button').addClass('disabled-button').prop("disabled", true);
+        } else {
+            $('#searchSubmitBtn').removeClass('disabled-button').prop("disabled", false);
+        }
+        
+    });
+    
     // Function to allow user to navigate from one part of the register form to the other
     // current_div => Currently displayed div ID - String
     // targetdiv_id => Id of div to be loaded - String
