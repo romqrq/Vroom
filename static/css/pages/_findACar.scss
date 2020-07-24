@@ -14,23 +14,43 @@
     input {
         border: 1px solid $dark-grey;
         border-radius: 0.25rem;
-        width: 74%;
+        // width: 74%;
         height: 2rem;
         margin-top: 0.2rem;
     }
-    button {
-        font-family: "Audiowide", sans-serif;
-        border: 3px solid $bright-orange;
-        background-color: $bright-orange;
-        color: black;
-        box-shadow: -1px 4px 9px 1px black;
-        padding: 0 0.5rem;
-        border-radius: 0.25rem;
-    }
+
+}
+.search-box {
+    padding: 0;
 }
 .search-form {
     width: 100%;
 }
+.text-input-box {
+    padding-right: 0.25rem;
+}
+.search-text-input {
+    width: 100%;
+}
+.search-button-box {
+    padding-top: 0.25rem;
+}
+.search-button {
+    font-family: "Audiowide", sans-serif;
+    border: 3px solid $bright-orange;
+    background-color: $bright-orange;
+    color: $dark-grey;
+    box-shadow: -1px 4px 9px 1px black;
+    padding: 0 0.5rem;
+    border-radius: 0.25rem;
+}
+.disabled-button{
+    border: 3px solid $dark-grey;
+    background-color: $dark-grey;
+    color: white;
+
+}
+
 .car-cards-row {
     margin-top: 1.5rem;
 }
