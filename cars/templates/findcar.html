@@ -18,17 +18,27 @@
     </div>
 </div>
 <div class="row search-row">
-    <form class="search-form" action="{% url 'search' %}" method="get">
-        <label for="search_select">Search by:</label>
-        <select class="form-control" name="search_key" id="search_select">
-            <option>Brand</option>
-            <option>Location</option>
-            <option>Model</option>
-            <option>Year</option>
-        </select>
-        <input type="text" name="search_value">
-        <button type="submit">Search</button>
-    </form>
+    <div class="col-12 search-box">
+        <form class="search-form" action="{% url 'search' %}" method="get">
+            <div class="row">
+                <div class="col-12 col-md-6 offset-md-3 search-box">
+                    <label for="search_select">Search by:</label>
+                    <select class="form-control" name="search_key" id="search_select">
+                        <option>Brand</option>
+                        <option>Location</option>
+                        <option>Model</option>
+                        <option>Year</option>
+                    </select>
+                </div>
+                <div class="col-9 col-md-4 offset-md-3 search-box text-input-box">
+                    <input id="searchTextInput" class="search-text-input" type="text" name="search_value" placeholder="Search here">
+                </div>
+                <div class="col-3 col-md-2 search-box search-button-box">
+                    <button id="searchSubmitBtn" class="search-button disabled-button" type="submit" disabled>Search</button>
+                </div>
+            </div>
+        </form>
+    </div>
 </div>
 
 <div class="row cards-row car-cards-row">
