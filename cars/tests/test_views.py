@@ -224,23 +224,65 @@ class AddonsViewTests(TestCase):
             username='testuser', email='ts@test.com', password="testpass"
         )
 
-    def test_view_not_logged_in(self):
+    def test_track_day_view_not_logged_in(self):
         """
         Test if user can access the page when not logged in
         """
 
         user = Client()
 
-        response = user.get('/cars/add_ons/')
+        response = user.get('/cars/add_ons/track_day/')
 
         self.assertEqual(response.status_code, 200)
 
-    def test_view_logged_in(self):
+    def test_insurance_view_not_logged_in(self):
+        """
+        Test if user can access the page when not logged in
+        """
+
+        user = Client()
+
+        response = user.get('/cars/add_ons/insurance/')
+
+        self.assertEqual(response.status_code, 200)
+
+    def test_private_driver_view_not_logged_in(self):
+        """
+        Test if user can access the page when not logged in
+        """
+
+        user = Client()
+
+        response = user.get('/cars/add_ons/private_driver/')
+
+        self.assertEqual(response.status_code, 200)
+
+    def test_track_day_view_logged_in(self):
         """Test if logged in user can access the page"""
 
         user = Client()
         user.login(username='testuser', password='testpass')
 
-        response = user.get('/cars/add_ons/')
+        response = user.get('/cars/add_ons/track_day/')
+
+        self.assertEqual(response.status_code, 200)
+
+    def test_insurance_view_logged_in(self):
+        """Test if logged in user can access the page"""
+
+        user = Client()
+        user.login(username='testuser', password='testpass')
+
+        response = user.get('/cars/add_ons/insurance/')
+
+        self.assertEqual(response.status_code, 200)
+
+    def test_private_driver_view_logged_in(self):
+        """Test if logged in user can access the page"""
+
+        user = Client()
+        user.login(username='testuser', password='testpass')
+
+        response = user.get('/cars/add_ons/private_driver/')
 
         self.assertEqual(response.status_code, 200)

@@ -430,41 +430,36 @@ input#id_image5 {
   border: 1px solid #ff7b00;
 }
 
-.cart-line1-col {
-  background-color: #252525;
-  color: white;
-  text-shadow: -1px 2px 3px #7d7979;
-}
-
-.item-line-2 {
-  margin-bottom: 0.5rem;
-  padding: 0.5rem 0.5rem 1rem;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.cart-line2-col {
-  -webkit-box-flex: 4;
-      -ms-flex: 4;
-          flex: 4;
+.cart-item {
+  padding: 0;
+  margin-bottom: 1rem;
+  border: 1px solid #ff7b00;
 }
 
 .item-line-1 {
   padding: 0.5rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: #252525;
   color: white;
   text-shadow: -1px 2px 3px #7d7979;
+}
+
+.delete-button-box {
+  padding: 0;
+}
+
+.delete-button-box .general-button {
+  margin: 0;
+}
+
+.item-line-2 {
+  margin: 0;
+  padding: 0.5rem 0.5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .cart-form-inline {
