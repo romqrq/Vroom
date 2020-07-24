@@ -373,24 +373,45 @@ h1, h2, h3, h4, h5, h6 {
 .search-row input {
   border: 1px solid #252525;
   border-radius: 0.25rem;
-  width: 74%;
   height: 2rem;
   margin-top: 0.2rem;
 }
 
-.search-row button {
+.search-box {
+  padding: 0;
+}
+
+.search-form {
+  width: 100%;
+}
+
+.text-input-box {
+  padding-right: 0.25rem;
+}
+
+.search-text-input {
+  width: 100%;
+}
+
+.search-button-box {
+  padding-top: 0.25rem;
+}
+
+.search-button {
   font-family: "Audiowide", sans-serif;
   border: 3px solid #ff7b00;
   background-color: #ff7b00;
-  color: black;
+  color: #252525;
   -webkit-box-shadow: -1px 4px 9px 1px black;
           box-shadow: -1px 4px 9px 1px black;
   padding: 0 0.5rem;
   border-radius: 0.25rem;
 }
 
-.search-form {
-  width: 100%;
+.disabled-button {
+  border: 3px solid #252525;
+  background-color: #252525;
+  color: white;
 }
 
 .car-cards-row {
