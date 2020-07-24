@@ -1,3 +1,5 @@
+// Cart
+
 .cart-items-row {
     padding: 1rem;
     h5, p {
@@ -15,19 +17,40 @@
 //     align-items: stretch;
 //     flex-wrap: wrap-reverse;
 // }
-.cart-line1-col {
+.cart-item {
+    padding: 0;
+    margin-bottom: 1rem;
+    border: $orange-border;
+}
+.item-line-1 {
+    padding: 0.5rem;
+    // display: flex;
+    // flex-direction: column;
+    align-items: center;
     background-color: $dark-grey;
     color: white;
     text-shadow: $header-shadow-darkbg;
 }
+.delete-button-box {
+    padding: 0;
+
+    .general-button {
+        margin: 0;
+    }
+}
+// .cart-line1-col {
+//     background-color: $dark-grey;
+//     color: white;
+//     text-shadow: $header-shadow-darkbg;
+// }
 .item-line-2 {
-    margin-bottom: 0.5rem;
-    padding: 0.5rem 0.5rem 1rem;
+    margin: 0;
+    padding: 0.5rem 0.5rem;
     align-items: center;
 }
-.cart-line2-col {
-    flex: 4;
-}
+// .cart-line2-col {
+//     flex: 4;
+// }
 // .cart-item-image {
 //     height: 5rem;
 //     width: 5rem;
@@ -43,15 +66,7 @@
 //         max-width: 130%;
 //     }
 // }
-.item-line-1 {
-    padding: 0.5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: $dark-grey;
-    color: white;
-    text-shadow: $header-shadow-darkbg;
-}
+
 .cart-form-inline {
     justify-content: center;
 }
