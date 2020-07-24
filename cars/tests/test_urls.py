@@ -1,6 +1,6 @@
 from django.test import SimpleTestCase
 from django.urls import reverse, resolve
-from cars.views import all_cars, custom_classic_only, luxury_only, supersport_only, car_register, car_detail, edit_car, del_car, add_ons
+from cars.views import all_cars, custom_classic_only, luxury_only, supersport_only, car_register, car_detail, edit_car, delete_car, add_ons
 
 
 class TestCarsUrls(SimpleTestCase):
@@ -35,8 +35,8 @@ class TestCarsUrls(SimpleTestCase):
 
     def test_delete_car_url_is_resolved(self):
         url = reverse('delete_car', kwargs={'car_id': 2})
-        self.assertEqual(resolve(url).func, del_car)
+        self.assertEqual(resolve(url).func, delete_car)
 
     def test_add_ons_url_is_resolved(self):
-        url = reverse('add_ons')
+        url = reverse('add_ons', kwargs={'item_type': 'car'})
         self.assertEqual(resolve(url).func, add_ons)
