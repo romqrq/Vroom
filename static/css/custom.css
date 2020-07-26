@@ -718,8 +718,14 @@ nav {
 }
 
 .navbar {
+  position: fixed;
   z-index: 20;
+  width: 100%;
   padding: 0 1rem;
+}
+
+.nav-compensation-div {
+  height: 5.2rem;
 }
 
 .logo-nav {
@@ -945,6 +951,15 @@ footer {
   }
   .unauthorised-box .card-button {
     max-width: 12vw;
+  }
+  .car-card {
+    max-width: 47%;
+    padding: 0;
+    margin: 0 1.5%;
+    margin-bottom: 2rem;
+  }
+  .cards-row {
+    margin: 0;
   }
 }
 
