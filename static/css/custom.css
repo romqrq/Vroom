@@ -18,6 +18,15 @@ a:hover {
   text-decoration: none;
 }
 
+.btn-group > .btn.active,
+.btn-group > .btn:active,
+.btn-group > .btn:focus,
+.btn-group > .btn:focus-within {
+  background-color: #ffa400 !important;
+  -webkit-box-shadow: inset -2px 2px 7px 0px black !important;
+          box-shadow: inset -2px 2px 7px 0px black !important;
+}
+
 .body-link {
   color: #ff7b00;
   text-shadow: -1px 1px 2px #000000ab;
@@ -409,9 +418,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .disabled-button {
-  border: 3px solid #252525;
-  background-color: #252525;
-  color: white;
+  border: 3px solid #252525 !important;
+  background-color: #252525 !important;
+  color: white !important;
 }
 
 .car-cards-row {
