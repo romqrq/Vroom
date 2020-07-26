@@ -6,11 +6,11 @@
 
 {% block content %} 
 
-{% if itype == 'track_day' %}
+{% if item_type == 'track_day' %}
     {% include 'addons/track_day.html' %}
-{% elif itype == 'insurance' %}
+{% elif item_type == 'insurance' %}
     {% include 'addons/insurance.html' %}
-{% elif itype == 'private_driver' %}
+{% elif item_type == 'private_driver' %}
     {% include 'addons/private_driver.html' %}
 {% endif %}
 

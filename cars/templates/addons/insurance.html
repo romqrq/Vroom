@@ -23,12 +23,17 @@
         </a>
         
         {% elif cart_items %}
+        <h3>Choose one of the options below and add to cart</h3>
         <form method="POST" action="" id="insurance">
             {% csrf_token %}
             <div class="row btn-group btn-group-toggle addon-row" data-toggle="buttons">
                 {% for item in addon %}
                 <label class="col-12 col-md-4 btn content-boxes addon-box addon-radio" value="insurance" id="{{ item.id }}">
+                    {% if item.coverage == 'Basic' %}
+                    <input type="radio" name="options" id="{{ item.title }}_{{ item.coverage }}" autocomplete="off" checked>
+                    {% else %}
                     <input type="radio" name="options" id="{{ item.title }}_{{ item.coverage }}" autocomplete="off">
+                    {% endif %}
                     <h3>{{ item.title }} - {{ item.coverage }}</h3>
                     <h4>€{{ item.price }}</h4>
                     <p>per day</p>
@@ -37,12 +42,12 @@
                 {% endfor %}
             </div>
             <div class="row">
-                <div class="col-12 add-on-form-box">    
+                <div class="col-12 col-md-6 offset-md-3 add-on-form-box">    
                 {% for item in cart_items %}
                 {% if item.item_type == 'car' %}                        
                     <div class="input-area mt-3">
                         <h4>For 
-                        <input readonly name="quantity" value="{{ item.quantity }}" type="number" min="1" max="999" class="form-control-plaintext">
+                        <input readonly name="quantity" value="{{ item.quantity }}" type="number" min="1" max="999" class="form-control-plaintext addon-input">
                         Days</h4>
                         <button class="btn general-button card-button addon-submit" type="submit">Add to cart</button> 
                         <a href="{% url 'add_ons' 'private_driver' %}" rel="noopener" aria-label="Button to private driver addon page">
