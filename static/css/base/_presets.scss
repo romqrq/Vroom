@@ -15,6 +15,13 @@ a {
 a:hover {
     text-decoration: none;
 }
+.btn-group>.btn.active,
+.btn-group>.btn:active,
+.btn-group>.btn:focus,
+.btn-group>.btn:focus-within {
+    background-color: #ffa400 !important;
+    box-shadow: inset -2px 2px 7px 0px black !important;
+}
 .body-link {
     color: $bright-orange;
     text-shadow: -1px 1px 2px #000000ab;
