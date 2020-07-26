@@ -2,8 +2,13 @@ nav {
     background-color: $dark-grey;
 }
 .navbar {
+    position: fixed;
     z-index: 20;
+    width: 100%;
     padding: 0 1rem;
+}
+.nav-compensation-div {
+    height: 5.2rem;
 }
 .logo-nav {
     margin: 0;
