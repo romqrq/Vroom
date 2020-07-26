@@ -1,0 +1,22 @@
+// Car details
+
+.header-car-details {
+    padding: 1rem;
+}
+.car-details-carousel-img {
+    height: 100%;
+}
+.car-info-row {
+    padding: 1rem !important;
+}
+.car-detail {
+    padding: 0;
+    h5 {
+        margin-bottom: 0.5rem;
+        line-height: 2rem;
+        background-color: $dark-grey;
+        color: white;
+        text-shadow: $header-shadow-darkbg;
+        box-shadow: 0px 1px 5px black;
+    }
+}
