@@ -6,33 +6,33 @@
 
 {% block content %}
 <div class="row">
-    <div class="col-12 header-strip profile-header">
+    <div class="col-12 header-strip">
         <h4>Details</h4>
     </div>
 </div>
 <div class="row">
-    <div class="col-12 header-strip">
-        <h4>{{ car.brand|upper }} {{ car.model|upper }} {{ car.year }}</h4>
+    <div class="col-12 header-title header-car-details">
+        <h3>{{ car.brand|upper }} {{ car.model|upper }} {{ car.year }}</h3>
     </div>
 </div>
-<div class="row profile-row">
+<div class="row">
     <div class="col-12">
-        <div id="{{ car.brand }}{{ car.id }}" class="carousel slide" data-interval="false">
-            <div class="carousel-inner">
+        <div id="{{ car.brand }}{{ car.id }}" class="carousel orange-border slide" data-interval="false">
+            <div class="carousel-inner black-bg">
                 <div class="carousel-item active">
-                    <img src="{{ MEDIA_URL }}{{ car.image1 }}" class="car-carousel-img" alt="image of a {{ car.year }} {{ car.brand }} {{ car.model }}">
+                    <img src="{{ MEDIA_URL }}{{ car.image1 }}" class="car-details-carousel-img" alt="image of a {{ car.year }} {{ car.brand }} {{ car.model }}">
                 </div>
                 <div class="carousel-item">
-                    <img src="{{ MEDIA_URL }}{{ car.image2 }}" class="car-carousel-img" alt="image of a {{ car.year }} {{ car.brand }} {{ car.model }}">
+                    <img src="{{ MEDIA_URL }}{{ car.image2 }}" class="car-details-carousel-img" alt="image of a {{ car.year }} {{ car.brand }} {{ car.model }}">
                 </div>
                 <div class="carousel-item">
-                    <img src="{{ MEDIA_URL }}{{ car.image3 }}" class="car-carousel-img" alt="image of a {{ car.year }} {{ car.brand }} {{ car.model }}">
+                    <img src="{{ MEDIA_URL }}{{ car.image3 }}" class="car-details-carousel-img" alt="image of a {{ car.year }} {{ car.brand }} {{ car.model }}">
                 </div>
                 <div class="carousel-item">
-                    <img src="{{ MEDIA_URL }}{{ car.image4 }}" class="car-carousel-img" alt="image of a {{ car.year }} {{ car.brand }} {{ car.model }}">
+                    <img src="{{ MEDIA_URL }}{{ car.image4 }}" class="car-details-carousel-img" alt="image of a {{ car.year }} {{ car.brand }} {{ car.model }}">
                 </div>
                 <div class="carousel-item">
-                    <img src="{{ MEDIA_URL }}{{ car.image5 }}" class="car-carousel-img" alt="image of a {{ car.year }} {{ car.brand }} {{ car.model }}">
+                    <img src="{{ MEDIA_URL }}{{ car.image5 }}" class="car-details-carousel-img" alt="image of a {{ car.year }} {{ car.brand }} {{ car.model }}">
                 </div>
             </div>
             <a class="carousel-control-prev" href="#{{ car.brand }}{{ car.id }}" role="button" data-slide="prev">
@@ -45,34 +45,62 @@
             </a>
         </div>
     </div>
-    <div class="col-12 profile-info">
-        <h5>Class:</h5>
+</div>
+<div class="row car-info-row">
+    <div class="col-6 col-md-3 car-detail">
+        <h5>Class</h5>
         <p>{{ car.car_class }}</p>
-        <h5>Price:</h5>
+    </div>
+    <div class="col-6 col-md-3 car-detail">
+        <h5>Price</h5>
         <p>{{ car.price }}€ per day</p>
-        <h5>Brand:</h5>
+    </div>
+    <div class="col-6 col-md-3 car-detail">
+        <h5>Brand</h5>
         <p>{{ car.brand }}</p>
-        <h5>Model:</h5>
+    </div>
+    <div class="col-6 col-md-3 car-detail">
+        <h5>Model</h5>
         <p>{{ car.model }}</p>
-        <h5>Year:</h5>
+    </div>
+    <div class="col-6 col-md-3 car-detail">
+        <h5>Year</h5>
         <p>{{ car.year }}</p>
-        <h5>Engine:</h5>
+    </div>
+    <div class="col-6 col-md-3 car-detail">
+        <h5>Engine</h5>
         <p>{{ car.engine_type }}</p>
-        <h5>Displacement:</h5>
+    </div>
+    <div class="col-6 col-md-3 car-detail">
+        <h5>Displacement</h5>
         <p>{{ car.displacement }}L</p>
-        <h5>Transission:</h5>
+    </div>
+    <div class="col-6 col-md-3 car-detail">
+        <h5>Transission</h5>
         <p>{{ car.transmission }}</p>
-        <h5>Fuel:</h5>
+    </div>
+    <div class="col-6 col-md-3 car-detail">
+        <h5>Fuel</h5>
         <p>{{ car.fuel }}</p>
-        <h5>Passengers:</h5>
+    </div>
+    <div class="col-6 col-md-3 car-detail">
+        <h5>Passengers</h5>
         <p>{{ car.passengers }}</p>
-        <h5>Doors:</h5>
+    </div>
+    <div class="col-6 col-md-3 car-detail">
+        <h5>Doors</h5>
         <p>{{ car.doors }}</p>
-        <h5>Location:</h5>
+    </div>
+    <div class="col-6 col-md-3 car-detail">
+        <h5>Location</h5>
         <p>{{ car.city }} - {{ car.country }}</p>
-        <h5>Guidelines:</h5>
+    </div>
+    <div class="col-12 car-detail">
+        <h5>Guidelines</h5>
         <p>{{ car.guidelines }}</p>
     </div>
+</div>
+<div class="row">
     {% if user.id == car.car_owner.id %}
     <div class="col-12">
         <a href="{% url 'edit_car' car.id %}" rel="noopener" aria-label="Button to to edit car information">
@@ -80,13 +108,33 @@
         </a>
     </div>
     {% endif %}
+    <div class="col-12 car-detail">
+        <h5>Rent this car now</h5>
+    </div>
+    <div class="col-12 col-md-6 offset-md-3">
+        <form method="POST" action="{% url 'add_to_cart' 'car' car.id %}">
+            {% csrf_token %}
+            <div class="input-area mt-3">
+                <input name="quantity" type="number" min="1" max="999" class="form-control" placeholder="How many days?">
+                <button class="btn general-button card-button" type="submit">Vroom!</button> 
+            </div>
+        </form>
+    </div>
 </div>
-<div class="row">
-    <div class="col-12 profile-info">
-        <h5>Owner:</h5>
+<!-- CHECK HERE -->
+<div class="row mb-1">
+    <div class="col-12 car-detail">
+        <h5>Meet the owner</h5>
+    </div>
+    <div class="col-12 col-md-6 car-detail">
+        <h5>Owner</h5>
         <p>{{ car.car_owner.username }}</p>
-        <h5>Member since:</h5>
+    </div>
+    <div class="col-12 col-md-6 car-detail">
+        <h5>Member since</h5>
         <p>{{ car.car_owner.date_joined }}</p>
+    </div>
+    <div class="col-12 col-md-6 offset-md-3">
         <a href="{% url 'visit_profile' car.car_owner.id %}" rel="noopener" aria-label="Button to allow user to edit personal information">
             <button type="button" class="btn general-button card-button">View profile</button>
         </a>
