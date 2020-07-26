@@ -16,6 +16,15 @@
             max-width: 12vw;
         }
     }
+    .car-card {
+        max-width: 47%;
+        padding: 0;
+        margin: 0 1.5%;
+        margin-bottom: 2rem;
+    }
+    .cards-row {
+        margin: 0;
+    }
 }
 
 @media (max-width: 991.98px) {
