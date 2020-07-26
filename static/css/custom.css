@@ -143,7 +143,7 @@ i {
 
 .menu-nav {
   font-family: "Russo One", sans-serif;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 300;
   color: white;
 }
@@ -771,7 +771,7 @@ nav {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  padding: 0 0.4rem;
+  padding: 0.5rem;
 }
 
 footer {
