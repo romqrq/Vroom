@@ -7,13 +7,24 @@ $(document).ready(function() {
     });
 
     /**
-     * Function to change search button depending on text input field being empty or not
+     * Function to activate search button depending on text input field being empty or not
      */
     $('#searchTextInput').on( "change", function(){
         if($(this).val() == ""){
             $('#searchSubmitBtn').not('.disabled-button').addClass('disabled-button').prop("disabled", true);
         } else {
             $('#searchSubmitBtn').removeClass('disabled-button').prop("disabled", false);
+        }
+    });
+
+    /**
+     * Function to activate add to cart button depending on number input field being empty or not
+     */
+    $('.addon-input').on( "change", function(){
+        if($(this).val() == ""){
+            $('.addon-submit').not('.disabled-button').addClass('disabled-button').prop("disabled", true);
+        } else {
+            $('.addon-submit').removeClass('disabled-button').prop("disabled", false);
         }
     });
     

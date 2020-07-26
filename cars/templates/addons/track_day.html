@@ -20,6 +20,7 @@
             <button type="button" class="btn general-button">Find a Car</button>
         </a>
         {% elif cart_items %}
+        <h3>Choose one of the options below, the number of days and add to cart</h3>
         <form method="POST" action="" id="track_day">
             {% csrf_token %}
             <div class="row btn-group btn-group-toggle addon-row" data-toggle="buttons">
@@ -34,10 +35,10 @@
                 {% endfor %}
             </div>
             <div class="row">
-                <div class="col-12 add-on-form-box">                                
+                <div class="col-12 col-md-6 offset-md-3 add-on-form-box">                                
                     <div class="input-area mt-3">
-                        <input name="quantity" type="number" min="1" max="999" class="form-control" placeholder="How many days?">
-                        <button class="btn general-button card-button addon-submit" type="submit">Add to cart</button> 
+                        <input name="quantity" type="number" min="1" max="999" class="form-control addon-input" placeholder="How many days?">
+                        <button class="btn general-button card-button addon-submit disabled-button" type="submit" disabled>Add to cart</button> 
                         <a href="{% url 'add_ons' 'insurance' %}" rel="noopener" aria-label="Button to insurance addon page">
                             <button type="button" class="btn general-button card-button">Skip</button>
                         </a>
@@ -89,4 +90,4 @@
         </div>
     </div>
 </div>
-</div> 
+<!-- </div>  -->
