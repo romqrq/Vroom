@@ -41,6 +41,53 @@
     </div>
 </div>
 
+{% if not cars %}
+<div class="row content-boxes-title-row">
+    <div class="col-12 header-title">
+        <h1>No cars to display</h1>
+    </div>
+    <div class="col-12">
+        <p>Your search returned no results</p>
+        <p>Have a look at our categories below to find the car you are looking for!</p>
+    </div>
+</div>
+<div class="row content-boxes-content-row box-shadow">
+    <div class="col-12 col-md-4 content-boxes luxury-box">
+        <div class="index-content-boxes">
+            <h3 class="secondary-title-light">Go Luxury</h3>
+            <p>Comfort, exclusiveness and finesse.</p>
+            <p>Go around with comfort and confidence.</p>
+            <p>A portfolio that includes Rolls Royce, Bentley and more.</p>
+            <a href="{% url 'luxury_only' %}" rel="noopener" aria-label="Link to Luxury cars page">
+                <button type="button" class="btn general-button">Show more</button>
+            </a>
+        </div>
+    </div>
+    <div class="col-12 col-md-4 content-boxes custom-classic-box">
+        <div class="index-content-boxes">
+            <h3 class="secondary-title-light">Go Custom Classic</h3>
+            <p>Tradition, memories and uniqueness.</p>
+            <p>Perfect for especial occasions.</p>
+            <p>A portfolio that includes Chevy, Porshe and more.</p>
+            <a href="{% url 'custom_classic_only' %}" rel="noopener" aria-label="Link to Custom Classic cars page">
+                <button type="button" class="btn general-button">Show more</button>
+            </a>
+        </div>
+    </div>
+    <div class="col-12 col-md-4 content-boxes supersport-box">
+        <div class="index-content-boxes">
+            <h3 class="secondary-title-light">Go Supersport</h3>
+            <p>Speed, power and technology.</p>
+            <p>Experience the most desired track machines made street legal.</p>
+            <p>A portfolio that includes Ferrari, Lamborghini and more.</p>
+            <a href="{% url 'supersport_only' %}" rel="noopener" aria-label="Link to Supersport cars page">
+                <button type="button" class="btn general-button">Show more</button>
+            </a>
+        </div>
+    </div>
+</div>
+{% endif%}
+
 <div class="row cards-row car-cards-row">
 {% for car in cars %}
     <div class="card col-12 col-md-6 col-lg-4 car-card">
