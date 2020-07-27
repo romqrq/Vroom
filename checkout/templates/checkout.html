@@ -24,43 +24,54 @@
     <div class="col-12 order-summary-header">
         <h5>Order Summary</h5>
     </div>
-    <div class="col-12 order-item order-item-header">
-        <div class="item-description-col7">
+    <div class="row order-item-header lg-screen">
+        <div class="col-7 item-description-title">
             <h6>Item</h6>
         </div>
-        <div class="item-days-col2">
+        <div class="col-2 days-description-title">
             <h6>Days</h6>
         </div>
-        <div class="item-total-col3">
+        <div class="col-3 total-description-title">
             <h6>Total</h6>
         </div>
     </div>
+    <div class="row order-item-line">
     <!-- Loop to display each of the items in the cart -->
     {% for item in cart_items %}
-    <div class="col-12 order-item">
-        <div class="item-description-col7">
-            <h6>{{ item.car.year }} {{ item.car.brand }} {{ item.car.model }}</h6>
+        {% if item.item_type == 'car' %}
+        <div class="col-12 col-md-7 item-description">
+            <h5>{{ item.item.year }} {{ item.item.brand|upper }} {{ item.item.model|upper }}</h5>
         </div>
-        <div class="item-days-col2">
-            <h6>{{ item.quantity }}</h6>
+        {% else %}
+        <div class="col-12 col-md-7 item-description">
+            <h5>{{ item.item.title|upper }} {{ item.item.coverage }}</h5>
         </div>
-        <div class="item-total-col3">
-            <h6>{{ item.car.price }}</h6>
+        {% endif %}
+        <div class="col-12 col-md-2 item-days">
+            <p>{{ item.quantity }} {% if item.quantity > 1 %}days {% else %}day {% endif %}</p>
         </div>
-    </div>
+        <div class="col-12 col-md-3 item-total">
+            {% for key in partial_value %}
+            {% if key.item_type == item.item_type %}
+            <h6><i class="fas fa-euro-sign"></i> {{ key.item_total }}</h6>
+            {% endif %}
+            {% endfor %}
+        </div>
     {% endfor %}
+    </div>
     <div class="row order-total">
-        <div class="col-8 text-left total-text">
-            <h5>TOTAL</h5>
+        <div class="col-12 col-md-9 text-left">
+            <h3>TOTAL</h3>
         </div>
-        <div class="col-4 total-value">
-            <h5>{{ total_cart }}</h5>
+        <div class="col-12 col-md-3">
+            <h3><i class="fas fa-euro-sign"></i> {{ total_cart }}</h3>
         </div>
     </div>
 </div>
 
 <div class="row payment-form-row">
     <form class="payment-form" role="form" method="post" id="payment-form" action="{% url 'checkout' %}">
+        {% csrf_token %}
         <div class="col-12 order-summary-header">
             <h5>Payment Details</h5>
         </div>
@@ -69,16 +80,22 @@
             <div class="alert-message block-message error" id="stripe-error-message"></div>
         </div>
 
-        <div class="col-12 col-md-6 form-group outter-form-group">
-            {{ order_form | as_bootstrap }}
-        </div>
-
-        <div class="col-12 col-md-6 form-group outter-form-group">
-            {{ payment_form | as_bootstrap }}
-        </div>
-
-        {% csrf_token %}
-        <div class="col-12 form-group outter-form-group">
+        <!-- <div class="col-12 outter-form-group"> -->
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="header-title header-form-title">Order Details</h2>
+                    <p>Please fill the fields with your order details.</p>
+                </div>
+                {% include 'forms/order_form.html' %}
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="header-title header-form-title">Payment Details</h2>
+                    <p>Please fill the fields with your payment details.</p>
+                </div>
+                {% include 'forms/order_form.html' %}
+            </div>
+        <div class="col-12 outter-form-group">
             <input class=" btn general-button" id="submit_payment_btn" name="commit" type="submit" value="Submit Payment">
         </div>
     </form>
