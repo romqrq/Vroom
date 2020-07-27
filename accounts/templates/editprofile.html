@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% load bootstrap_tags %}
+{% load crispy_forms_tags %}
 
 {% block meta_description %}Vroom. Edit your profile information.{% endblock %}
 
@@ -14,21 +14,51 @@
 <div class="form-box">
     <form enctype="multipart/form-data" method="POST" action="{% url 'edit_user' user.id %}">
         <fieldset class="form-group">
-            <h2>Edit my Profile</h2>
-            {% csrf_token %}
-            {{  edit_user_form | as_bootstrap }}
-            {{  edit_pw_form | as_bootstrap }}
-            <button type="submit" class="btn general-button">Update</button>
+            <div class="row">
+                <div class="col-12 header-title edit-user-title">
+                    <h2>Edit my Profile</h2>
+                </div>
+                {% csrf_token %}
+                <div class="col-12 col-md-6 edit-user-forms">
+                    {{ edit_user_form.username|as_crispy_field }}
+                </div>
+                <div class="col-12 col-md-6 edit-user-forms">
+                    {{ edit_user_form.email|as_crispy_field }}
+                </div>
+                <div class="col-12 col-md-6 edit-user-forms">
+                    {{ edit_user_form.first_name|as_crispy_field }}
+                </div>
+                <div class="col-12 col-md-6 edit-user-forms">
+                    {{ edit_user_form.last_name|as_crispy_field }}
+                </div>
+                <div class="col-12 col-md-6 edit-user-forms">
+                    {{ edit_pw_form.password1|as_crispy_field }}
+                </div>
+                <div class="col-12 col-md-6 edit-user-forms">
+                    {{ edit_pw_form.password2|as_crispy_field }}
+                </div>
+                <div class="col-12 edit-user-forms">
+                    <button type="submit" class="btn general-button">Update</button>
+                </div>
+            </div>
         </fieldset>
     </form>
 </div>
 <div class="form-box">
     <form method="POST" action="{% url 'delete_user' user.id %}">
         <fieldset class="form-group">
-            <h2>Delete my profile</h2>
-            {% csrf_token %}
-            <p>Once you press the delete button, your account will be permanently deleted</p>
-            <button type="submit" class="btn general-button">Delete</button>
+        {% csrf_token %}
+            <div class="row">
+                <div class="col-12 header-title">
+                    <h2>Delete my profile</h2>
+                </div>
+                <div class="col-12">
+                    <p>Once you press the delete button, your account will be permanently deleted</p>
+                </div>
+                <div class="col-12">
+                    <button type="submit" class="btn general-button">Delete</button>
+                </div>
+            </div>
         </fieldset>
     </form>
 </div>
