@@ -2,7 +2,7 @@
 
 @media (min-width: 992px){
     .lg-screen {
-        display: inline-block;
+        display: initial;
     }
     .sm-md-screen {
         display: none;
@@ -27,6 +27,37 @@
     .cards-row {
         margin: 0;
     }
+    .edit-car-form-images {
+        .form-control-file {
+            width: 50%;
+            margin: auto;
+        }
+    }
+    .order-item-header {
+        display: flex;
+    }
+    .item-description-title,
+    .item-description {
+        text-align: left;
+    }
+    .item-description-title,
+    .days-description-title,
+    .total-description-title,
+    .item-description,
+    .item-days,
+    .item-total {
+        padding: 0.5rem 1rem;
+    }
+    .item-total{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+    }
+    .checkout-form-field {
+        padding: 0 0.5rem !important;
+        margin-top: 1rem;
+    }
 }
 
 @media (max-width: 991.98px) {
@@ -41,5 +72,10 @@
     }
     .lg-screen {
         display: none;
+    }
+    .edit-car-form-images {
+        .form-group {
+            overflow-x: scroll;
+        }
     }
 }
