@@ -102,7 +102,7 @@
 </div>
 <div class="row">
     {% if user.id == car.car_owner.id %}
-    <div class="col-12">
+    <div class="col-12 col-md-6 offset-md-3">
         <a href="{% url 'edit_car' car.id %}" rel="noopener" aria-label="Button to to edit car information">
             <button type="button" class="btn general-button card-button">Edit car</button>
         </a>
