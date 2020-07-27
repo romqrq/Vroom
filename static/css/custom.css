@@ -134,6 +134,14 @@ i {
   background-color: #252525;
 }
 
+.no-padding {
+  padding: 0;
+}
+
+.header-form-title {
+  padding-top: 1rem;
+}
+
 .logo-nav {
   font-family: "Audiowide", sans-serif;
   font-size: 3rem;
@@ -473,7 +481,6 @@ input#id_image5 {
   display: flex;
   margin: 0;
   padding: 0;
-  border: 1px solid #ff7b00;
 }
 
 .cart-item {
@@ -483,6 +490,7 @@ input#id_image5 {
 }
 
 .item-line-1 {
+  text-align: left;
   padding: 0.5rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -494,6 +502,11 @@ input#id_image5 {
 
 .delete-button-box {
   padding: 0;
+}
+
+.delete-button-box .cart-form-inline {
+  float: right;
+  padding-right: 1rem;
 }
 
 .delete-button-box .general-button {
@@ -539,45 +552,30 @@ input#id_image5 {
   color: white;
   text-shadow: -1px 2px 3px #7d7979;
   padding: 0.5rem 0;
-  margin-bottom: 0.5rem;
 }
 
 .order-item-header {
+  width: 100%;
   border-bottom: 1px solid #ff7b00;
   padding-bottom: 0.25rem;
 }
 
-.order-item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 0.25rem 0;
-}
-
-.order-item p {
+.order-item-line {
+  width: 100%;
   margin: 0;
 }
 
-.item-description-col7 {
-  -webkit-box-flex: 7;
-      -ms-flex: 7;
-          flex: 7;
-  text-align: left;
+.order-item-line p {
+  margin: 0;
 }
 
-.item-days-col2 {
-  -webkit-box-flex: 2;
-      -ms-flex: 2;
-          flex: 2;
+.item-description {
+  padding: 0;
 }
 
-.item-total-col3 {
-  -webkit-box-flex: 3;
-      -ms-flex: 3;
-          flex: 3;
+.item-total {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #ff7b00;
 }
 
 .order-total {
@@ -586,16 +584,21 @@ input#id_image5 {
   text-shadow: -1px 2px 3px #7d7979;
   border-top: 1px solid #ff7b00;
   min-width: 100%;
-  margin-top: 0.5rem;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0rem;
 }
 
 .order-total h5 {
   margin: 0;
 }
 
-.total-text, .total-value {
+.header-form-title {
+  margin: 3rem 0 1rem;
+}
+
+.checkout-form-field .form-group {
+  border: none;
   padding: 0;
+  margin: 1rem 0;
 }
 
 .payment-form {
@@ -608,12 +611,19 @@ input#id_image5 {
   padding: 1rem;
 }
 
-.payment-form .form-group {
-  margin: 0;
-}
-
 .profile-info {
   margin-top: 1rem;
+  padding: 0;
+}
+
+.profile-info h5 {
+  margin-bottom: 0.5rem;
+  line-height: 2rem;
+  background-color: #252525;
+  color: white;
+  text-shadow: -1px 2px 3px #7d7979;
+  -webkit-box-shadow: 0px 1px 5px black;
+          box-shadow: 0px 1px 5px black;
 }
 
 .unauthorised-box h4 {
@@ -648,6 +658,20 @@ input#id_image5 {
   text-shadow: -1px 2px 3px #7d7979;
   -webkit-box-shadow: 0px 1px 5px black;
           box-shadow: 0px 1px 5px black;
+}
+
+.edit-user-forms .form-group {
+  margin: 0;
+  padding: 0.5rem;
+}
+
+.edit-user-title {
+  margin: 1rem 0 2rem;
+}
+
+.edit-car-form-images .form-group > label {
+  font-weight: 600;
+  font-size: 1.1rem;
 }
 
 .general-button {
@@ -938,7 +962,7 @@ footer {
 
 @media (min-width: 992px) {
   .lg-screen {
-    display: inline-block;
+    display: initial;
   }
   .sm-md-screen {
     display: none;
@@ -961,6 +985,43 @@ footer {
   .cards-row {
     margin: 0;
   }
+  .edit-car-form-images .form-control-file {
+    width: 50%;
+    margin: auto;
+  }
+  .order-item-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .item-description-title,
+  .item-description {
+    text-align: left;
+  }
+  .item-description-title,
+  .days-description-title,
+  .total-description-title,
+  .item-description,
+  .item-days,
+  .item-total {
+    padding: 0.5rem 1rem;
+  }
+  .item-total {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border: none;
+  }
+  .checkout-form-field {
+    padding: 0 0.5rem !important;
+    margin-top: 1rem;
+  }
 }
 
 @media (max-width: 991.98px) {
@@ -975,5 +1036,8 @@ footer {
   }
   .lg-screen {
     display: none;
+  }
+  .edit-car-form-images .form-group {
+    overflow-x: scroll;
   }
 }

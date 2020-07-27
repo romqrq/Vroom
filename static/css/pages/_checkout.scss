@@ -1,38 +1,36 @@
+// Checkout
+
 .order-summary-row, .payment-form-row {
     margin: 1rem;
     border: $orange-border;
 }
-//convert this to card
 .order-summary-header {
     border-bottom: $orange-border;
     background-color: $dark-grey;
     color: white;
     text-shadow: $header-shadow-darkbg;
     padding: 0.5rem 0;
-    margin-bottom: 0.5rem;
 }
 .order-item-header {
+    width: 100%;
     border-bottom: $orange-border;
     padding-bottom: 0.25rem;
 }
-.order-item {
-    display: flex;
-    align-items: center;
-    margin: 0.25rem 0;
+.order-item-line {
+    width: 100%;
+    margin: 0;
 
     p {
         margin: 0;
     }
 }
-.item-description-col7 {
-    flex:7;
-    text-align: left;
+.item-description {
+    padding: 0;
+ 
 }
-.item-days-col2 {
-    flex:2;
-}
-.item-total-col3 {
-    flex:3;
+.item-total{
+    padding-bottom: 1rem;
+    border-bottom: 1px solid $bright-orange;
 }
 .order-total {
     background-color: $dark-grey;
@@ -40,15 +38,21 @@
     text-shadow: $header-shadow-darkbg;
     border-top: $orange-border;
     min-width: 100%;
-    margin-top: 0.5rem;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 0rem;
 
     h5 {
         margin: 0;
     }
 }
-.total-text, .total-value {
-    padding: 0;
+.header-form-title {
+    margin: 3rem 0 1rem;
+}
+.checkout-form-field {
+    .form-group {
+        border: none;
+        padding: 0;
+        margin: 1rem 0;
+    }
 }
 .payment-form {
     min-width: 100%;
@@ -59,7 +63,7 @@
         padding: 1rem;
     }
 
-    .form-group {
-        margin: 0;
-    }
+    // .form-group {
+    //     margin: 0;
+    // }
 }
