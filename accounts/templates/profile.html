@@ -14,18 +14,26 @@
     <div class="col-12 profile-info">
         <h5>First name:</h5>
         <p>{{ user.first_name }}</p>
+    </div>
+    <div class="col-12 profile-info">
         <h5>Last name:</h5>
         <p>{{ user.last_name }}</p>
+    </div>
+    <div class="col-12 profile-info">
         <h5>Email:</h5>
         <p>{{ user.email }}</p>
+    </div>
+    <div class="col-12 profile-info">
         <h5>Member since:</h5>
         <p>{{ user.date_joined }}</p>
-        {% if user.id == request.user.id %}
-        <a href="{% url 'edit_user' user.id %}" rel="noopener" aria-label="Button to allow user to edit personal information">
-            <button type="button" class="btn general-button card-button">Edit</button>
-        </a>
-        {% endif %}
     </div>
+    {% if user.id == request.user.id %}
+    <div class="col-12 col-md-4 offset-md-4">
+        <a href="{% url 'edit_user' user.id %}" rel="noopener" aria-label="Button to allow user to edit personal information">
+            <button type="button" class="btn general-button card-button">Edit Profile</button>
+        </a>
+    </div>
+    {% endif %}
 </div>
 {% if cars %}
 <div class="row">
