@@ -103,8 +103,8 @@
 <div class="row">
     {% if user.id == car.car_owner.id %}
     <div class="col-12 col-md-6 offset-md-3">
-        <a href="{% url 'edit_car' car.id %}" rel="noopener" aria-label="Button to to edit car information">
-            <button type="button" class="btn general-button card-button">Edit car</button>
+        <a href="{% url 'edit_car' car.id %}" class="btn general-button card-button" rel="noopener" aria-label="Button to to edit car information">
+        Edit car
         </a>
     </div>
     {% endif %}
@@ -121,7 +121,6 @@
         </form>
     </div>
 </div>
-<!-- CHECK HERE -->
 <div class="row mb-1">
     <div class="col-12 car-detail">
         <h5>Meet the owner</h5>
@@ -135,8 +134,8 @@
         <p>{{ car.car_owner.date_joined }}</p>
     </div>
     <div class="col-12 col-md-6 offset-md-3">
-        <a href="{% url 'visit_profile' car.car_owner.id %}" rel="noopener" aria-label="Button to allow user to edit personal information">
-            <button type="button" class="btn general-button card-button">View profile</button>
+        <a href="{% url 'visit_profile' car.car_owner.id %}" class="btn general-button card-button" rel="noopener" aria-label="Button to allow user to edit personal information">
+        View profile
         </a>
     </div>
 </div>
