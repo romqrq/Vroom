@@ -140,6 +140,13 @@ i {
 
 .header-form-title {
   padding-top: 1rem;
+  margin: 3rem 0 1rem;
+}
+
+.custom-hr {
+  margin-top: 2rem;
+  width: 100%;
+  border: 1px solid #ff7b00;
 }
 
 .logo-nav {
@@ -591,10 +598,6 @@ input#id_image5 {
   margin: 0;
 }
 
-.header-form-title {
-  margin: 3rem 0 1rem;
-}
-
 .checkout-form-field .form-group {
   border: none;
   padding: 0;
@@ -672,6 +675,22 @@ input#id_image5 {
 .edit-car-form-images .form-group > label {
   font-weight: 600;
   font-size: 1.1rem;
+}
+
+.home-titles {
+  padding: 1rem 0 2rem;
+}
+
+.home-row {
+  margin-bottom: 2rem;
+}
+
+.home-img-box {
+  margin-bottom: 1rem;
+}
+
+.home-images {
+  max-width: 100%;
 }
 
 .general-button {
