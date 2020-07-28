@@ -693,6 +693,10 @@ input#id_image5 {
   max-width: 100%;
 }
 
+.faqs-button {
+  width: 90%;
+}
+
 .general-button {
   font-family: "Audiowide", sans-serif;
   border: 3px solid #ff7b00;
