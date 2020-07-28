@@ -19,3 +19,16 @@
 .faqs-button {
     width: 90%;
 }
+
+// Contact
+
+.contact-form {
+    border: $orange-border;
+    margin: 1rem 0 2rem;
+    padding-bottom: 1rem;
+
+    .form-group {
+        border: none;
+        padding: 0;
+    }
+}
