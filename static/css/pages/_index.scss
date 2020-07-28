@@ -1,3 +1,5 @@
+// Index
+
 .content-boxes {
     height: fit-content;
     overflow: hidden;
@@ -19,7 +21,6 @@
     z-index: -1;
 }
 .content-boxes-row {
-    // background-color: black;
     max-width: 100%;
     margin: 0;
 }
@@ -46,6 +47,11 @@
     background-size: cover;
     background-position: center;
 }
+.supersport-box,
+.luxury-box,
+.custom-classic-box {
+    height: initial;
+}
 .supersport-box {
     background-image: url("../images/index/supersport2.jpeg");
     overflow: hidden;
@@ -60,13 +66,6 @@
     background-size: cover;
     background-position: center;
 }
-// .using-vroom-image {
-//     background-image: url("../images/index/usingvroom.jpg");
-
-// }
-// .vroom-my-car .content-boxes-img {
-//     width: initial;
-// }
 .track-day-box {
     padding: 0;
     background-image: url("../images/index/trackdaydriver2.jpg");
@@ -96,12 +95,6 @@
         margin: 0;
     }
 }
-// .track-day .content-boxes-img {
-//     height: initial;
-// }
-.track-day-box {
-    
-}
 .using-vroom {
     padding: 0;
     height: fit-content;
@@ -118,11 +111,7 @@
     p {
         margin: 0;
     }
-    // i {
-    //     font-size: 4rem;
-    // }
 }
-// .using-vroom .content-boxes-img {
-//     width: initial;
-//     left: -4rem;
-// }
+.addons-button {
+    padding: 1rem;
+}

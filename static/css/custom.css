@@ -149,6 +149,12 @@ i {
   border: 1px solid #ff7b00;
 }
 
+.link-button {
+  min-width: 7rem;
+  max-width: 50%;
+  margin: 1rem auto !important;
+}
+
 .logo-nav {
   font-family: "Audiowide", sans-serif;
   font-size: 3rem;
@@ -249,6 +255,12 @@ h1, h2, h3, h4, h5, h6 {
   background-position: center;
 }
 
+.supersport-box,
+.luxury-box,
+.custom-classic-box {
+  height: initial;
+}
+
 .supersport-box {
   background-image: url("../images/index/supersport2.jpeg");
   overflow: hidden;
@@ -327,6 +339,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .using-vroom-item p {
   margin: 0;
+}
+
+.addons-button {
+  padding: 1rem;
 }
 
 .addon-row {
@@ -697,6 +713,17 @@ input#id_image5 {
   width: 90%;
 }
 
+.contact-form {
+  border: 1px solid #ff7b00;
+  margin: 1rem 0 2rem;
+  padding-bottom: 1rem;
+}
+
+.contact-form .form-group {
+  border: none;
+  padding: 0;
+}
+
 .general-button {
   font-family: "Audiowide", sans-serif;
   border: 3px solid #ff7b00;
@@ -887,6 +914,7 @@ footer {
 }
 
 .testimonials-carousel {
+  width: 100%;
   padding: 0;
   background-color: #252525;
 }
@@ -1044,6 +1072,12 @@ footer {
   .checkout-form-field {
     padding: 0 0.5rem !important;
     margin-top: 1rem;
+  }
+  .testimonial-carousel-item {
+    height: 50vh;
+  }
+  .header-form-title {
+    margin: 0rem 0 1rem;
   }
 }
 
