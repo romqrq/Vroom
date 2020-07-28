@@ -10,14 +10,12 @@
         
         {% if not cart_items %}    
         <p>Before choosing the track experience:</p>
-        <dl>
-            <li>Choose a car that is elegible for track days</li>
-            <li>You will be directed to a page where you can add your Track Day Experience and more.</li>
-            <li>Once the payment is through, you are all set!</li>
-        </dl>
-        <p>Click on the button below to find the car you desire.</p>
-        <a href="{% url 'all_cars' %}" rel="noopener" aria-label="Link to find a car to rent">
-            <button type="button" class="btn general-button">Find a Car</button>
+        <p>Choose a car that is elegible for track days</p>
+        <p>1- You will be directed to a page where you can add your Track Day Experience and more.</p>
+        <p>2- Once the payment is through, you are all set!</p>
+        <p>3- Click on the button below to find the car you desire.</p>
+        <a href="{% url 'all_cars' %}" class="btn general-button link-button" rel="noopener" aria-label="Link to find a car to rent">
+        Find a Car
         </a>
         {% elif cart_items %}
         <h3>Choose one of the options below, the number of days and add to cart</h3>
@@ -39,8 +37,8 @@
                     <div class="input-area mt-3">
                         <input name="quantity" type="number" min="1" max="999" class="form-control addon-input" placeholder="How many days?">
                         <button class="btn general-button card-button addon-submit disabled-button" type="submit" disabled>Add to cart</button> 
-                        <a href="{% url 'add_ons' 'insurance' %}" rel="noopener" aria-label="Button to insurance addon page">
-                            <button type="button" class="btn general-button card-button">Skip</button>
+                        <a href="{% url 'add_ons' 'insurance' %}" class="btn general-button card-button" rel="noopener" aria-label="Button to insurance addon page">
+                        Skip
                         </a>
                     </div>
                 </div>   
