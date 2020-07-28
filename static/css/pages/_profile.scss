@@ -1,3 +1,12 @@
 .profile-info {
-    margin-top: 1rem;   
+    margin-top: 1rem;  
+    padding: 0;
+    h5 {
+        margin-bottom: 0.5rem;
+        line-height: 2rem;
+        background-color: $dark-grey;
+        color: white;
+        text-shadow: $header-shadow-darkbg;
+        box-shadow: 0px 1px 5px black;
+    }
 }

@@ -9,7 +9,7 @@
 <div class="col-12 col-md-6 offset-md-3">
     <form method="post" action="{% url 'register' %}" class="accountform">
         <fieldset class="form-group">
-            <h2>Create a new account</h2>
+            <h2 class="header-title header-form-title">Create a new account</h2>
             <p>Already got an account? <a href="{% url 'login' %}">Sign In</a></p>
             {% csrf_token %}
             {{  user_form | as_bootstrap }}

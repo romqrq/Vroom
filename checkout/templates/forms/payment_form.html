@@ -1,0 +1,14 @@
+{% load crispy_forms_tags %}
+
+<div class="col-12 col-md-6 checkout-form-field">
+    {{ payment_form.credit_card_number|as_crispy_field }}
+</div>
+<div class="col-12 col-md-6 checkout-form-field">
+    {{ payment_form.cvv|as_crispy_field }}
+</div>
+<div class="col-12 col-md-6 checkout-form-field">
+    {{ payment_form.expiry_month|as_crispy_field }}
+</div>
+<div class="col-12 col-md-6 checkout-form-field">
+    {{ payment_form.expiry_year|as_crispy_field }}
+</div>

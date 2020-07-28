@@ -1,0 +1,34 @@
+// Home
+
+// About
+.home-titles {
+    padding: 1rem 0 2rem;
+}
+.home-row {
+    margin-bottom: 2rem;
+}
+.home-img-box {
+    margin-bottom: 1rem;
+}
+.home-images {
+    max-width: 100%;
+}
+
+// FAQs
+
+.faqs-button {
+    width: 90%;
+}
+
+// Contact
+
+.contact-form {
+    border: $orange-border;
+    margin: 1rem 0 2rem;
+    padding-bottom: 1rem;
+
+    .form-group {
+        border: none;
+        padding: 0;
+    }
+}

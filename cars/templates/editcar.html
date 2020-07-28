@@ -1,5 +1,4 @@
 {% extends "base.html" %}
-{% load bootstrap_tags %}
 
 {% block meta_description %}Vroom. Edit details of your car.{% endblock %}
 
@@ -11,20 +10,13 @@
 {% include 'unauthorised.html' %}
 
 {% else %}
-<div class="form-box">
-    <form enctype="multipart/form-data" method="POST" action="{% url 'edit_car' car.id %}">
-        <fieldset class="form-group">
-            <h2>Edit my car</h2>
-            {% csrf_token %}
-            {{  car_edit_form | as_bootstrap }}
-            <button type="submit" class="btn general-button">Update</button>
-        </fieldset>
-    </form>
+<div class="col-12 col-md-10 offset-md-1 form-box">
+    {% include 'forms/edit_car_form.html' %}
 </div>
-<div class="form-box">
+<div class="col-12 col-md-10 offset-md-1 form-box">
     <form method="POST" action="{% url 'delete_car' car.id %}">
         <fieldset class="form-group">
-            <h2>Delete this car</h2>
+            <h2 class="header-title header-form-title">Delete this car</h2>
             {% csrf_token %}
             <p>Once you press the delete button, this car will be permanently deleted</p>
             <button type="submit" class="btn general-button">Delete</button>
