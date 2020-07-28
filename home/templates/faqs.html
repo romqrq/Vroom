@@ -12,7 +12,7 @@
 </div>
 <div class="row">
     <div class="col-12 col-lg-6">
-        <button class="btn general-button faqs-button" type="button" data-toggle="collapse" data-target="#whatIsVroom" aria-expanded="false" aria-controls="collapseExample">
+        <button class="btn general-button faqs-button" type="button" data-toggle="collapse" data-target="#whatIsVroom" aria-expanded="false" aria-controls="whatIsVroom">
             What is Vroom?
         </button>
         <div class="collapse" id="whatIsVroom">
@@ -23,7 +23,7 @@
         </div>
     </div>
     <div class="col-12 col-lg-6">
-        <button class="btn general-button faqs-button" type="button" data-toggle="collapse" data-target="#usingVroom" aria-expanded="false" aria-controls="collapseExample">
+        <button class="btn general-button faqs-button" type="button" data-toggle="collapse" data-target="#usingVroom" aria-expanded="false" aria-controls="usingVroom">
             What can I use Vroom for?
         </button>
         <div class="collapse" id="usingVroom">
@@ -33,21 +33,21 @@
         </div>
     </div>
     <div class="col-12 col-lg-6">
-        <button class="btn general-button faqs-button" type="button" data-toggle="collapse" data-target="#rentMyCar" aria-expanded="false" aria-controls="collapseExample">
+        <button class="btn general-button faqs-button" type="button" data-toggle="collapse" data-target="#rentMyCar" aria-expanded="false" aria-controls="rentMyCar">
             How can I put my car for rent?
         </button>
         <div class="collapse" id="rentMyCar">
             <div class="card card-body">
                 <p>If you own one of the desired cars, Vroom is a chance for you to share your experience with others and also make a profit while your car is fully insured.</p>
                 <p>You can get started straight away pressing the button below.</p>
-                <a href="{% url 'car_register' %}" rel="noopener" aria-label="Link to rent my car with Vroom">
-                    <button type="button" class="btn general-button">Vroom my car</button>
+                <a href="{% url 'car_register' %}" class="btn general-button" rel="noopener" aria-label="Link to rent my car with Vroom">
+                Vroom my car
                 </a>
             </div>
         </div>
     </div>
     <div class="col-12 col-lg-6">
-        <button class="btn general-button faqs-button" type="button" data-toggle="collapse" data-target="#trackDay" aria-expanded="false" aria-controls="collapseExample">
+        <button class="btn general-button faqs-button" type="button" data-toggle="collapse" data-target="#trackDay" aria-expanded="false" aria-controls="trackDay">
             How does the track day package work?
         </button>
         <div class="collapse" id="trackDay">
@@ -55,14 +55,14 @@
                 <p>You can choose between morning, afternoon or a full track day.</p>
                 <p>All the sessions are overlooked by a qualified track trainer that will be there to support you.</p>
                 <p>Click the button below to find a car and get a track day experience!</p>
-                <a href="{% url 'all_cars' %}" rel="noopener" aria-label="Link to rent my car with Vroom">
-                    <button type="button" class="btn general-button">Find c car</button>
+                <a href="{% url 'all_cars' %}" class="btn general-button" rel="noopener" aria-label="Link to rent my car with Vroom">
+                Find a car
                 </a>
             </div>
         </div>
     </div>
     <div class="col-12 col-lg-6">
-        <button class="btn general-button faqs-button" type="button" data-toggle="collapse" data-target="#insurance" aria-expanded="false" aria-controls="collapseExample">
+        <button class="btn general-button faqs-button" type="button" data-toggle="collapse" data-target="#insurance" aria-expanded="false" aria-controls="insurance">
             Do I need personal insurance to rent a car with Vroom?
         </button>
         <div class="collapse" id="insurance">
@@ -74,7 +74,7 @@
         </div>
     </div>
     <div class="col-12 col-lg-6">
-        <button class="btn general-button faqs-button" type="button" data-toggle="collapse" data-target="#pDriver" aria-expanded="false" aria-controls="collapseExample">
+        <button class="btn general-button faqs-button" type="button" data-toggle="collapse" data-target="#pDriver" aria-expanded="false" aria-controls="pDriver">
             What is included in the private driver package?
         </button>
         <div class="collapse" id="pDriver">
@@ -90,8 +90,8 @@
     <div class="col-12 home-content-box">
         <h3 class="header-title home-titles">Can't find the answer you're looking for?</h3>
         <p>Contact our team and we will get back to you as soon as possible!</p>
-        <a href="{% url 'contact' %}" rel="noopener" aria-label="Link to rent my car with Vroom">
-            <button type="button" class="btn general-button">Contact us</button>
+        <a href="{% url 'contact' %}" class="btn general-button" rel="noopener" aria-label="Link to rent my car with Vroom">
+        Contact us
         </a>
     </div>
 </div>
