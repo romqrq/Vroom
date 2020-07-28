@@ -72,9 +72,6 @@ i {
     text-shadow: $header-shadow-darkbg;
     box-shadow: -1px 4px 10px black;
 }
-// .top-header-strip {
-//     margin: 1rem 0;
-// }
 .cards-row {
     max-width: 100%;
     padding: 0;
@@ -120,4 +117,9 @@ i {
     margin-top: 2rem;
     width: 100%;
     border: $orange-border;
+}
+.link-button {
+    min-width: 7rem;
+    max-width: 50%;
+    margin: 1rem auto !important;
 }
