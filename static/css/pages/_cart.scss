@@ -10,7 +10,7 @@
     display: flex;
     margin: 0;
     padding: 0;
-    border: $orange-border;
+    // border: $orange-border;
 }
 // .cart-item-line {
 //     display: flex;
@@ -23,6 +23,7 @@
     border: $orange-border;
 }
 .item-line-1 {
+    text-align: left;
     padding: 0.5rem;
     // display: flex;
     // flex-direction: column;
@@ -33,7 +34,10 @@
 }
 .delete-button-box {
     padding: 0;
-
+    .cart-form-inline {
+        float: right;
+        padding-right: 1rem;
+    }
     .general-button {
         margin: 0;
     }

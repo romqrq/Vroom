@@ -12,14 +12,12 @@
         
         {% if not cart_items %}  
         <p>Before choosing your insurance package:</p>
-        <ol>
-            <li>Choose the car you want to rent.</li>
-            <li>You will be directed to a page where you can add your insurance and more.</li>
-            <li>Once the payment is through, you are all set!</li>
-        </ol>
+        <p>1- Choose the car you want to rent.</p>
+        <p>2- You will be directed to a page where you can add your insurance and more.</p>
+        <p>3- Once the payment is through, you are all set!</p>
         <p>Click on the button below to find the car you desire.</p>
-        <a href="{% url 'all_cars' %}" rel="noopener" aria-label="Link to find a car to rent">
-            <button type="button" class="btn general-button">Find a Car</button>
+        <a href="{% url 'all_cars' %}" class="btn general-button link-button" rel="noopener" aria-label="Link to find a car to rent">
+        Find a Car
         </a>
         
         {% elif cart_items %}
@@ -50,8 +48,8 @@
                         <input readonly name="quantity" value="{{ item.quantity }}" type="number" min="1" max="999" class="form-control-plaintext addon-input">
                         Days</h4>
                         <button class="btn general-button card-button addon-submit" type="submit">Add to cart</button> 
-                        <a href="{% url 'add_ons' 'private_driver' %}" rel="noopener" aria-label="Button to private driver addon page">
-                            <button type="button" class="btn general-button card-button">Skip</button>
+                        <a href="{% url 'add_ons' 'private_driver' %}" class="btn general-button card-button" rel="noopener" aria-label="Button to private driver addon page">
+                        Skip
                         </a>
                     </div>
                 {% endif %}

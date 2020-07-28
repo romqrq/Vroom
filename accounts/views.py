@@ -124,7 +124,7 @@ def edit_user_view(request, user_id):
                     u = User.objects.get(pk=user_id)
                     u.set_password(pwform['password2'].value())
                     u.save()
-                    messages.error(
+                    messages.success(
                         request,
                         "Your password was successfully updated!"
                     )

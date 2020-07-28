@@ -10,16 +10,16 @@
 
 {% if not cart_items %}
 <div class="row">
-    <div class="col-12 header-strip"
+    <div class="col-12 header-strip">
         <h4>Your cart is empty!</h4>
     </div>
 </div>
 <div class="row">
     <div class="col-12">
-        <h5>Let's change it!</h5>
+        <h5 class="header-title header-form-title">Let's change it!</h5>
         <p>Have a look at our collection of cars and choose the one you like.</p>
-        <a href="{% url 'all_cars' %}" rel="noopener" aria-label="Link to all cars page">
-            <button type="button" class="btn general-button">Find a car</button>
+        <a href="{% url 'all_cars' %}" class="btn general-button" rel="noopener" aria-label="Link to all cars page">
+        Find a car
         </a>
     </div>
 </div>
@@ -58,8 +58,7 @@
             {% endif %}
         </div>
         <div class="row cart-item-line item-line-2">
-            <div class="col-12 sm-md-screen">
-                <!-- <div class="cart-line2-col"> -->
+            <div class="col-12 col-md-6">
                 {% for key in partial_value %}
                 {% if key.item_type == item.item_type %}
                 <h5><i class="fas fa-euro-sign"></i>{{ key.item_total }}</h5>
@@ -68,7 +67,7 @@
                 {% endfor %}
             </div>
             {% if item.item_type != 'insurance' %}
-            <div class="col-12">
+            <div class="col-12 col-md-6">
                 <form class="form-inline cart-form-inline" method="POST" action="{% url 'adjust_cart' item.item_type item.id %}">
                     {% csrf_token %}
                     <p class="text-muted small">Change quantity</p>
@@ -81,46 +80,6 @@
                 </form>
             </div>
             {% endif %}
-            <div class="cart-item-line item-line-2 lg-screen">
-                <div class="cart-line2-col">
-                    <h6>per day</h6>
-                    <h5><i class="fas fa-euro-sign"></i>{{ item.item.price }}</h5>
-                </div>
-                {% if item.item_type != 'insurance' %}
-                <div class="cart-line2-col">
-                    <div class="form-quantity">{{ item.quantity }}
-                        {% if item.quantity > 1 %}
-                        days
-                        {% else %}
-                        day
-                        {% endif %}
-                    </div>
-                    <form class="form-inline cart-form-inline" method="POST" action="{% url 'adjust_cart' item.item_type item.id %}">
-                        {% csrf_token %}
-                        <div class="form-group cart-form-group">
-                            <div class="form-quantity">{{ item.quantity }}
-                                {% if item.quantity > 1 %}
-                                days
-                                {% else %}
-                                day
-                                {% endif %}
-                            </div>
-                            <label for="updateQuantity" class="sr-only">New Qty</label>
-                            <input name="quantity" type="number" min="0" max="999" class="form-control">
-                        </div>
-                        <button type="submit" class="btn general-button"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span>Update</button>
-                    </form>
-                </div>
-                {% endif %}
-                <div class="cart-line2-col lg-screen">
-                    <h6>Partial</h6>
-                    {% for key in partial_value %}
-                    {% if key.item_type == item.item_type %}
-                    <h5><i class="fas fa-euro-sign"></i>{{ key.item_total }}</h5>
-                    {% endif %}
-                    {% endfor %}
-                </div>
-            </div>
         </div>
     </div>
     {% endfor %}

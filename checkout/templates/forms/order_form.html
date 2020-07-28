@@ -1,0 +1,29 @@
+{% load crispy_forms_tags %}
+
+<div class="col-12 col-md-6 checkout-form-field">
+    {{ order_form.first_name|as_crispy_field }}
+</div>
+<div class="col-12 col-md-6 checkout-form-field">
+    {{ order_form.last_name|as_crispy_field }}
+</div>
+<div class="col-12 col-md-6 checkout-form-field">
+    {{ order_form.phone_number|as_crispy_field }}
+</div>
+<div class="col-12 col-md-6 checkout-form-field">
+    {{ order_form.address1|as_crispy_field }}
+</div>
+<div class="col-12 col-md-6 checkout-form-field">
+    {{ order_form.address2|as_crispy_field }}
+</div>
+<div class="col-12 col-md-6 checkout-form-field">
+    {{ order_form.postcode|as_crispy_field }}
+</div>
+<div class="col-12 col-md-6 checkout-form-field">
+    {{ order_form.city|as_crispy_field }}
+</div>
+<div class="col-12 col-md-6 checkout-form-field">
+    {{ order_form.county|as_crispy_field }}
+</div>
+<div class="col-12 col-md-6 checkout-form-field">
+    {{ order_form.country|as_crispy_field }}
+</div>
