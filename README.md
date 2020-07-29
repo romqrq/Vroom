@@ -178,12 +178,12 @@ Vroom website has an overall **modern, sporty, clean feel** with emphasis on cre
 
 - The brand colours for this project were chosen because the **Black** and **Eerie Black** offer a high contrast to white. The choice for **Black**, **Eerie Black** and **white** also are based on these colours neutrality helping to **pull the colours of the site together with the product photographs**.
 
-- The **Heat Wave** was chosen for it's natural attention-grabbing property while creating a sporty feel and highlighting links, buttons and other areas where user can take actions.
+- The **Heat Wave** was chosen for it's **natural attention-grabbing** property while creating a **sporty feel** and highlighting links, buttons and other areas where user can take actions.
 
 ### Styling
 
 - Subtle **box shadowing** and **curved corners** were applied to elements that needed a little extra **emphasis, separation from the background and style**. For example on **buttons, forms and cards**.
-- In cases where an area is clickable, for example product images or call to action buttons, the shadow size is more evident and buttons are animated to when the user hovers over that element, this was done to make the area more tempting to click.
+- In cases where an area is **clickable**, for example product images or call to action buttons, the shadow size is more evident and buttons are animated to when the user hovers over that element, this was done to make the area more tempting to click.
 - Curved corner styling was chosen for its **easy-in-the-eye** property and as it is a common stylistic choice of bootstrap it blends well with styles used from that library on this project.
 
 ## Wireframes
