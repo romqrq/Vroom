@@ -1,10 +1,8 @@
 [![Build Status](https://Travis-ci.org/romqrq/Vroom.svg?branch=master)](https://travis-ci.org/romqrq/Vroom)
 
 <div align="center">
-    <img src="../images/readme/general/vroom_banner.jpg" href="https://vroom-heroku.herokuapp.com/" target="_blank" rel="noopener" alt="Vroom - rent a car or rent yours to someone else" aria-label="Vroom - rent a car or rent yours to someone else" />
+    <img src="https://vroom-s3.s3-eu-west-1.amazonaws.com/readme/general/vroom_banner.jpg" href="https://vroom-heroku.herokuapp.com/" target="_blank" rel="noopener" alt="Vroom - rent a car or rent yours to someone else" aria-label="Vroom - rent other users' cars or rent yours to them" />
 </div>
-
-![Home page](different screens images)
 
 [Vroom](https://vroom-heroku.herokuapp.com/) was designed, built and deployed by Romulo Albuquerque as his final project for the Code Institute Full Stack Web Development diploma. The purpose of Vroom is to allow more people to experience a wide variety of high end cars owned by other users. This website is designed to allow users to navigate effortlessly and intuitively. Vroom is aimed towards users that have a stronger connection to cars than the average but also offering relevant information for more utilitarian users.
 
@@ -22,43 +20,43 @@
     - [Existing Features](#existing-features)
         - [Elements on every Page](#elements-on-every-page)
         - [Home Page](#home-page)
-        - [Listings Page](#listings-page)
-        - [Search Page](#search-page)
-        - [Listing Detail Page](#listing-detail-page)
+        - [Find a Car Page](#find-a-car-page)
+        - [Car Detail Page](#car-detail-page)
+        - [Edit Car Page](#edit-car-page)
+        - [Rent my Car Page](#rent-my-car-page)
         - [About Page](#about-page)
-        - [Frequently Asked Questions Page](#frequently-asked-questions-page)
+        - [FAQs Page](#FAQs-page)
         - [Contact Page](#contact-page)
         - [Register Page](#register-page)
         - [Login Page](#login-page)
-        - [Account Page](#account-page)
-        - [Logout Page](#log-out-page)
+        - [Reset Password Page](#reset-password-page)
+        - [Profile Page](#profile-page)
+        - [Edit Profile Page](#edit-profile-page)
         - [Cart Page](#cart-page)
         - [Checkout](#checkout)
-        - [Terms and Conditions / Privacy Policy pages](#terms-and-conditions-privacy-policy-pages)
     - [Features for Future Releases](#features-for-future-releases)
 
 3. [Information Architecture](#information-architecture)
     - [Database choice](#database-choice)
     - [Data Models](#data-models)
         - [User](#user)
-        - [Products App Model](#products-app-model)
-        - [Cart App Models](#cart-app-models)
+        - [Car App Model](#car-app-model)
+        - [Order Model](#order-model)
+        - [Order Item Model](#order-item-model)
 
 4. [Technologies Used](#technologies-used)
     - [Tools](#tools)
     - [Databases](#databases)
-    - [Libraries](#libraries)
+    - [Libraries and Frameworks](#libraries-and-frameworks)
     - [Languages](#languages)
 
 5. [Testing](#testing)
-    - See separate [TESTING.md](TESTING.md) file.
 
 6. [Deployment](#deployment)
     - [How to run this project locally](#how-to-run-this-project-locally)
     - [Heroku Deployment](#heroku-deployment)
 
 7. [Credits](#credits)
-    - [Content](#content)
     - [Images](#images)
     - [Code](#code)
     - [Acknowledgements](#acknowledgements)
@@ -76,44 +74,44 @@
 The central target audience for Vroom are:
 
 - People who want to rent a car including but not limited to:
-  - Tourists.
-  - People looking for a car to match especial occasions such as weddings, bachelors/hens party, communions and other.
-  - Drivers looking for exotic/sports car experiences.
-  - Business people looking for a luxurious transport while abroad or as a way to offer an exceptional experience to business partners.
+  - **Tourists**.
+  - People looking for a car to match **special occasions** such as **weddings**, **bachelors/hens party**, **communions** and other.
+  - Drivers looking for **exotic/sports car experiences**.
+  - **Business people** looking for **luxurious transportation** while **abroad** or as a way to offer an exceptional experience to **business partners**.
 - People who want to rent their car including but not limited to:
-  - People who subutilise their cars.
-  - people with luxurious/exotic/sports cars that are looking to share the experience attached to their vehicles.
-  - people with multiple cars and are looking for an alternative income.
+  - People who **subutilise** their cars.
+  - people with **luxurious/exotic/sports cars** that are looking to **share the experience** attached to their vehicles.
+  - people with **multiple cars** and are looking for an **alternative income**.
 
 User goals are:
 
-- Safely rent their own cars.
-- Find a simple way to rent a car when on holidays.
-- Rent a car as a solution to a momentary need such as a road trip.
-- To live or give as a gift to someone a unique experience renting a luxurious/exotic/sports car.
-- Be able to have insurance coverage and hire accessories such as GPS and car seats.
-- Be able to navigate the website easily, find what I need and make a safe and secure purchase.
-- To feel that I'm using a trustworthy online shop.
+- Safely **rent their own cars**.
+- Find a simple way to **rent a car when on holidays**.
+- Rent a car as a **solution** to a **momentary need** such as a road trip.
+- To **live or give as a gift** to someone a unique experience renting a luxurious/exotic/sports car.
+- Be able to have **insurance coverage**.
+- Be able to **navigate the website easily**, find what I need and make a **safe and secure purchase**.
+- To feel that I'm using a **trustworthy online shop**.
 
 Vroom is a great way to meet these needs because:
 
-- The website contains an wide variety of cars and prices, making easier for everyone to find what they are specifically looking for.
-- During the booking process, users will be allowed to change insurance packages and add extra accessories before the checkout.
-- The navigation fits with conventions of well laid out online shops, images are used as often as possible and easy to look through using carousels. All the information that the buyer needs is available and easy to find.
-- Vroom cars can be searched by category, brand, model, year and location using a combination of menu links and text search, making it easy for customers to find specific things or enjoy browsing categories that interest them.
+- The website contains an **wide variety of cars and prices**, making easier for everyone to find what they are specifically looking for.
+- During the booking process, users will be allowed to **change insurance** packages and **add extra products** before the checkout.
+- The navigation fits with **conventions** of well laid out online shops, **images** are used as often as possible and **easy to look through using carousels**. All the information that the buyer needs is **available and easy to find**.
+- Vroom cars can be searched by **category, brand, model, year and location** using a combination of menu links and text search, making it easy for customers to find specific things or enjoy browsing categories that interest them.
 
 ### Business Goals
 
 The Goals of Vroom as a business are:
 
-- Provide a professional online shop that helps users to feel that they are in a safe, respectful and trustworthy environment.
-- Build brand awareness by consistently utilizing colours, fonts and logo associated with Vroom.
-- Use the website as part of a promotion platform for social media channels.
-- Make hiring/renting a car as simple and safe as possible for both sides.
+- Provide a **professional online shop** that helps users to feel that they are in a **safe, respectful and trustworthy environment**.
+- Build **brand awareness** by consistently utilizing colours, fonts and logo associated with Vroom.
+- Use the website as part of a **promotion platform for social media channels**.
+- Make hiring/renting a car as **simple and safe** as possible for both sides.
 
 ## User Stories
 
-As a visitor to Vroom website I expect/want/need:
+As a visitor to Vroom website:
 
 1. To easily find what I am looking for, I want the layout of the site to make sense so I am not confused or put off using it.
 
@@ -149,45 +147,44 @@ As a visitor to Vroom website I expect/want/need:
 
 ## Design Choices
 
-Vroom website has an overall modern, sporty, clean feel with emphasis on creating a sense of exclusiveness, adrenaline rush and joy. The following design choices were made with this in mind:
+Vroom website has an overall **modern, sporty, clean feel** with emphasis on creating a sense of **exclusiveness, adrenaline rush and joy**. The following design choices were made with this in mind:
 
-<!-- <!-- ### Fonts -->
+### Fonts
 
 <div align="center">
-    <img src=LINK_FOR_FONTS_IMAGE alt="Fonts used on Vroom website" aria-label="Fonts used on Vroom website" />
+    <img src="https://vroom-s3.s3-eu-west-1.amazonaws.com/readme/general/font_audiowide.jpg" alt="Fonts used on Vroom website" aria-label="Fonts used on Vroom website" />
 </div>
 
-- The primary font 'Audiowide' was chosen for the main text of the site because of its clear readability, clean curvy style and it also matches well the brand name. This font also looks good in uppercase as it doesn't take too much space while still highly readable, and so it is also used as a sub heading as well.
+- The primary font **'Audiowide'** was chosen for the main text of the site because of its clear **readability, clean curvy style** and it also **matches well the brand name**. This font also looks good in **uppercase** as it **doesn't take too much space while still highly readable**, and so it is also used as a sub heading as well.
 
-- The secondary font 'Russo One' was chosen for the menu items because it is similar to the 'Audiowide' font while taking less horizontal space, offering a good readability and keeping a neutral feel.
+<div align="center">
+    <img src="https://vroom-s3.s3-eu-west-1.amazonaws.com/readme/general/font_russo_one.jpg" alt="Fonts used on Vroom website" aria-label="Fonts used on Vroom website" />
+</div>
+
+- The secondary font **'Russo One'** was chosen for the menu items because it is **similar** to the 'Audiowide' font while **taking less horizontal space**, offering a **good readability** and keeping a **neutral feel**.
 
 ### Icons
 
-- In order to keep the site uncluttered only a few icons were utilized. 
+- In order to keep the site **uncluttered** only a few icons were utilized.
 - The **search** icon and **shopping cart** icons were used in the navigation bar as they are conventionally used in this setting and would be what the user expects to see.
 - On the home page the 'what are users using Vroom for' section uses icons and simple text for quick assimilation of information.
-<!-- - **Star icons** are used in the testimonials section of the home page, to emphasize the high level of reviews. -->
 - The **social media** icons are included in the footer to lead visitors to Vroom social media pages.
 
 ### Colours
-<!-- <div align="center">
-    <img src=LINK_TO_BRAND_COLOURS_PALLETE alt="Vroom Brand Colours" aria-label="Vroom Brand colours" />
-</div> -->
 
-- Black: #000000
-- Dark Grey: ##252525
-- White: #FFFFFF
-- Orange: #ff7b00
+<div align="center">
+    <img src="https://vroom-s3.s3-eu-west-1.amazonaws.com/readme/general/vroom_colors.jpg" alt="Vroom Brand Colours" aria-label="Vroom Brand colours" />
+</div>
 
-- The brand colours for this project were chosen because the black and dark grey offer a high contrast to white. The choice for black, grey and white also are based on these colours neutrality helping to pull the colours of the site together with the product photographs.
+- The brand colours for this project were chosen because the **Black** and **Eerie Black** offer a high contrast to white. The choice for **Black**, **Eerie Black** and **white** also are based on these colours neutrality helping to **pull the colours of the site together with the product photographs**.
 
-- The orange was chosen for it's natural attention-grabbing property while creating a sporty feel and highlighting links, buttons and other areas where user can take actions.
+- The **Heat Wave** was chosen for it's natural attention-grabbing property while creating a sporty feel and highlighting links, buttons and other areas where user can take actions.
 
 ### Styling
 
-- Subtle box shadowing and curved corners were applied to elements that needed a little extra emphasis, separation from the background and style. For example on buttons, forms and cards.
+- Subtle **box shadowing** and **curved corners** were applied to elements that needed a little extra **emphasis, separation from the background and style**. For example on **buttons, forms and cards**.
 - In cases where an area is clickable, for example product images or call to action buttons, the shadow size is more evident and buttons are animated to when the user hovers over that element, this was done to make the area more tempting to click.
-- Curved corner styling was chosen for its easy-in-the-eye property and as it is a common stylistic choice of bootstrap it blends well with styles used from that library on this project.
+- Curved corner styling was chosen for its **easy-in-the-eye** property and as it is a common stylistic choice of bootstrap it blends well with styles used from that library on this project.
 
 ## Wireframes
 
@@ -225,7 +222,7 @@ These wireframes were created using [Pencil](https://pencil.evolus.vn/) during t
 
   - The indicator was chosen to mimic notification icons users are used to seeing in online shops and social media etc.
 
-  - The yellow color was chosen because it contrasts well with the black background of the navbar and draws the eye.
+  - The yellow color was chosen because it contrasts well with the **Eerie Black** background of the navbar and draws the eye.
 
   - The shopping cart counter works even for a user who is not logged in. This is because all the information about which products the user has added to their cart is stored in their session data. This makes it possible for a new user to add things to their cart before being asked to log in or register.
 
@@ -248,7 +245,7 @@ These wireframes were created using [Pencil](https://pencil.evolus.vn/) during t
 
 - Underneath the tagline is a list of the social media channels.
 
-- The footer background of dark grey was chosen to match the navbar, provide some contrast and obvious separation between the footer and the rest of the content on the page. The text is all displayed in white. When the user hovers over a link it turns orange.
+- The footer background of Eerie **Eerie Black** was chosen to match the navbar, provide some contrast and obvious separation between the footer and the rest of the content on the page. The text is all displayed in white. When the user hovers over a link it turns Heat Wave.
 
 - The footer features the copyright information for Vroom.
 
@@ -570,7 +567,7 @@ Rental Days | rental_days | blank=False| IntegerField
 - [PostgreSQL](https://www.postgresql.org/) for production database, provided by heroku.
 - [SQlite3](https://www.sqlite.org/index.html) for development database, provided by django.
 
-## Libraries
+## Libraries and Frameworks
 
 - [JQuery](https://jquery.com) to simplify DOM manipulation.
 - [Bootstrap](https://www.bootstrapcdn.com/) to simplify the structure of the website and make the website responsive easily.
