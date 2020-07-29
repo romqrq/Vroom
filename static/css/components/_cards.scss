@@ -1,12 +1,12 @@
 .car-card {
     padding: 0;
-    margin-bottom: 1rem;
+    margin: 1rem;
     border: $orange-border;
     box-shadow: -3px 5px 8px #0000009c;
-
-    .carousel {
-        border: $orange-border;
-    }
+}
+.car-carousel {
+    border: $orange-border;
+    width: 100%;
 }
 .car-carousel-img {
     width: 130%;

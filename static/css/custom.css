@@ -262,7 +262,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .supersport-box {
-  background-image: url("../images/index/supersport2.jpeg");
+  background-image: url("../images/index/supersport2.jpg");
   overflow: hidden;
   background-size: cover;
   background-position: center;
@@ -304,7 +304,7 @@ h1, h2, h3, h4, h5, h6 {
 .track-day-box,
 .insurance-box,
 .private-driver-box {
-  height: 50vh;
+  height: initial;
 }
 
 .track-day-box p,
@@ -470,8 +470,8 @@ h1, h2, h3, h4, h5, h6 {
   color: white !important;
 }
 
-.car-cards-row {
-  margin-top: 1.5rem;
+.car-input-area {
+  margin-top: 1rem;
 }
 
 .car-view-button {
@@ -630,6 +630,14 @@ input#id_image5 {
   padding: 1rem;
 }
 
+.payment-form #div_id_credit_card_number,
+.payment-form #div_id_cvv,
+.payment-form #div_id_expiry_month,
+.payment-form #div_id_expiry_year {
+  border: none;
+  width: 100%;
+}
+
 .profile-info {
   margin-top: 1rem;
   padding: 0;
@@ -737,14 +745,15 @@ input#id_image5 {
 
 .car-card {
   padding: 0;
-  margin-bottom: 1rem;
+  margin: 1rem;
   border: 1px solid #ff7b00;
   -webkit-box-shadow: -3px 5px 8px #0000009c;
           box-shadow: -3px 5px 8px #0000009c;
 }
 
-.car-card .carousel {
+.car-carousel {
   border: 1px solid #ff7b00;
+  width: 100%;
 }
 
 .car-carousel-img {
@@ -1027,14 +1036,8 @@ footer {
   .unauthorised-box .card-button {
     max-width: 12vw;
   }
-  .car-card {
-    max-width: 47%;
-    padding: 0;
-    margin: 0 1.5%;
-    margin-bottom: 2rem;
-  }
   .cards-row {
-    margin: 0;
+    margin: 1rem 0 1rem;
   }
   .edit-car-form-images .form-control-file {
     width: 50%;
@@ -1078,6 +1081,13 @@ footer {
   }
   .header-form-title {
     margin: 0rem 0 1rem;
+  }
+  #div_id_credit_card_number,
+  #div_id_cvv,
+  #div_id_expiry_month,
+  #div_id_expiry_year {
+    border: none;
+    width: 46.5%;
   }
 }
 
