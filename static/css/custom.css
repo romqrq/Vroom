@@ -636,6 +636,7 @@ input#id_image5 {
 .payment-form #div_id_expiry_year {
   border: none;
   width: 100%;
+  padding: 0;
 }
 
 .profile-info {
