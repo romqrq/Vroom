@@ -1,7 +1,7 @@
-[![Build Status](https://travis-ci.org/romqrq/Vroom.svg?branch=master)](https://travis-ci.org/romqrq/Vroom)
+[![Build Status](https://Travis-ci.org/romqrq/Vroom.svg?branch=master)](https://travis-ci.org/romqrq/Vroom)
 
 <div align="center">
-    <img src="" href="https://vroom-heroku.herokuapp.com/" target="_blank" rel="noopener" alt="Vroom - rent a car or rent yours to someone else" aria-label="Vroom - rent a car or rent yours to someone else" />
+    <img src="../images/readme/general/vroom_banner.jpg" href="https://vroom-heroku.herokuapp.com/" target="_blank" rel="noopener" alt="Vroom - rent a car or rent yours to someone else" aria-label="Vroom - rent a car or rent yours to someone else" />
 </div>
 
 ![Home page](different screens images)
@@ -78,11 +78,11 @@ The central target audience for Vroom are:
 - People who want to rent a car including but not limited to:
   - Tourists.
   - People looking for a car to match especial occasions such as weddings, bachelors/hens party, communions and other.
-  - Drivers looking for exoctic/sports car experiences.
+  - Drivers looking for exotic/sports car experiences.
   - Business people looking for a luxurious transport while abroad or as a way to offer an exceptional experience to business partners.
 - People who want to rent their car including but not limited to:
   - People who subutilise their cars.
-  - people with luxurious/exoctic/sports cars that are looking to share the experience attached to their vehicles.
+  - people with luxurious/exotic/sports cars that are looking to share the experience attached to their vehicles.
   - people with multiple cars and are looking for an alternative income.
 
 User goals are:
@@ -90,7 +90,7 @@ User goals are:
 - Safely rent their own cars.
 - Find a simple way to rent a car when on holidays.
 - Rent a car as a solution to a momentary need such as a road trip.
-- To live or give as a gift to someone a unique experience renting a luxurious/exoctic/sports car.
+- To live or give as a gift to someone a unique experience renting a luxurious/exotic/sports car.
 - Be able to have insurance coverage and hire accessories such as GPS and car seats.
 - Be able to navigate the website easily, find what I need and make a safe and secure purchase.
 - To feel that I'm using a trustworthy online shop.
@@ -121,7 +121,7 @@ As a visitor to Vroom website I expect/want/need:
 
 3. The ability to search through small amounts of information to find what I need, and then be able to easily click to get more detailed information when I need it.
 
-4. The site to be easily navigable from any device, desktop, tablet or phone. For the content to look good and be useable on all of these devices.
+4. To be able to use the website in any device, desktop, tablet or phone. For the content to look good and be useable on all of these devices.
 
 5. To learn more about the business and how it works, so that I can be assured I am covered and/or have directions on dealing with other users.
 
@@ -135,19 +135,17 @@ As a visitor to Vroom website I expect/want/need:
 
 10. A text search function so that I can quickly narrow down my search when looking for something specific.
 
-11. A clear terms and conditions and privacy policy.
+11. There to be a frequently asked questions page for any further questions I might have about how to deal with some situations.
 
-12. There to be a frequently asked questions page for any further questions I might have about how to deal with some situations.
+12. That once I am logged in I can access my account details and update them if I need to.
 
-13. That once I am logged in I can access my account details and update them if I need to.
+13. To be able to find information on my bookings and how to cancel or change them.
 
-14. To be able to find information on my bookings and how to cancel or change them.
+14. To be able to connect to the businesses social media channels to keep up to date with new listings on the site.
 
-15. To be able to connect to the businesses social media channels, to keep up to date with new listings on the site.
+15. To be able to easily get in contact with the customer service via a contact form.
 
-16. To be able to easily get in contact with the customer service via a contact form.
-
-17. Feedback from the website I am using when I interact with it, I expect pto see messages to inform me when my forms have been completed and sent correctly. Or to let me know when an error has ocurred and what to do next.
+16. Feedback from the website I am using when I interact with it, I expect to see messages to inform me when my forms have been completed and sent correctly. Or to let me know when an error has occurred and what to do next.
 
 ## Design Choices
 
@@ -256,43 +254,37 @@ These wireframes were created using [Pencil](https://pencil.evolus.vn/) during t
 
 ### Home Page
 
-**Carousel**
+#### Carousel
 
 - The home page carousel features 4 slides of promotional images from Vroom.
 
-**Introduction and brief pitch**
-
-- Below the carousel is a concise introduction to Vroom, what it is, who created it and what their mission is.
-- A "learn more" button leads a user to the About page where they can read the story behind Vroom.
-- The information here is deliberately short and to the point, as this page is most likely where a brand new customer would land first and it is important to use this space effectively to help convert sales.
-
-**Find the car of your dreams**
-
-![Find the car of your dreams](FIND CAR IMG LINK)
-
-- Below the site introduction are 3 cards containing the categories of cars available, displayed with beautiful product photographs, clear headings, descriptive text and 'Show more' button. The user can click on the button to go for the specific section where they will find further information and more specific cars.
-
-**I want to rent my car**
-
-![I want to rent my car](RENT MY CAR IMG LINK)
-
-- Below the find a car section, this section is where users can access more information and form to put their own car up for rental. The text is as short as possible while attempting to create a connection with the user and offering possible situations where the user would possibly want to put their car for rent.
-
-**Track day experience**
-
-![Track day experience](TRACK DAY IMG LINK)
-
-- Below the rent my car section, the track day experience offers an add on where, after choosing a car for rental, the user can add the track day package during the checkout process.
-- When the user clicks on the 'Learn more' button, it brings the user to the track day page where there's important information about joining a track day.
-
-**What are users using Vroom for**
+#### What are users using Vroom for
 
 ![What are users using Vroom for](USING VROOM IMG LINK)
 
 - Below the track day section, this section illustrates ways Vroom is being used by our users.
 - Icons and minimal text are used in this section to reduce the amount of information while still keeping it intuitive, easy to understand and relevant to give users ideas on how to use Vroom beyond mere car-hiring.
 
-**Testimonials carousel**
+#### Find the car of your dreams
+
+![Find the car of your dreams](FIND CAR IMG LINK)
+
+- Below the site introduction are 3 cards containing the categories of cars available, displayed with beautiful product photographs, clear headings, descriptive text and 'Show more' button. The user can click on the button to go for the specific section where they will find further information and more specific cars.
+
+#### I want to rent my car
+
+![I want to rent my car](RENT MY CAR IMG LINK)
+
+- Below the find a car section, this section is where users can access more information and form to put their own car up for rental. The text is as short as possible while attempting to create a connection with the user and offering possible situations where the user would possibly want to put their car for rent.
+
+#### Addons
+
+![Addons](TRACK DAY IMG LINK)
+
+- Below the rent my car section, the track day experience offers an add on where, after choosing a car for rental, the user can add the track day package during the checkout process.
+- When the user clicks on the 'Learn more' button, it brings the user to the track day page where there's important information about joining a track day.
+
+#### Testimonials carousel
 
 ![Testimonials carousel](TESTIMONIALS IMG LINK)
 
@@ -340,14 +332,14 @@ These wireframes were created using [Pencil](https://pencil.evolus.vn/) during t
 
 ![Edit Car](EDIT CAR IMG LINK)
 
-**Page description text**
+#### Page description text
 
 - A short text is displayed to clarify to the user what they will encounter on the page and offer instructions on how to update their car information and its implications.
 
-**Edit Car Form**
+#### Edit Car Form
 
 - The form will ask the user for the same fields as during car registration but this time, the fields left blank won't be updated.
-<!-- - The fields are pre-populated with the current car details -->
+- The fields are pre-populated with the current car details
 - At the bottom of the form, the user will have the option to Update the cars information or to delete the car.
 - In case the user presses the delete button, a modal comes up to confirm that the user really wants to delete the car.
 
@@ -356,7 +348,7 @@ These wireframes were created using [Pencil](https://pencil.evolus.vn/) during t
 ![Rent my Car](RENT MY CAR IMG LINK)
 
 - The rent my car page at the top displays a text about users renting their cars through vroom and giving instructions about the registration form.
-- Registration form contains clear title, field labels and submition button. The fields are validated and form errors are raised through messages to give user feedback and orientation on how to fix the problem.
+- Registration form contains clear title, field labels and submission button. The fields are validated and form errors are raised through messages to give user feedback and orientation on how to fix the problem.
 
 ### About Page
 
@@ -427,14 +419,14 @@ These wireframes were created using [Pencil](https://pencil.evolus.vn/) during t
 
 ![Edit Profile Page](EDIT PROFILE IMG LINK)
 
-**Page description text**
+#### Page description text
 
 - A short text is displayed to clarify to the user what they will encounter on the page and offer instructions on how to update their profile information and its implications.
 
-**Edit Car Form**
+#### Edit Car Form
 
 - The form will ask the user for the same fields as during their user registration but this time, the fields left blank won't be updated.
-<!-- - The fields are pre-populated with the current car details -->
+- The fields are pre-populated with the current car details
 - At the bottom of the form, the user will have the option to update or delete their profile.
 - In case the user presses the delete button, a modal comes up to confirm that the user really wants to delete their profile.
 
@@ -455,8 +447,7 @@ These wireframes were created using [Pencil](https://pencil.evolus.vn/) during t
 ![Checkout Page](CHECKOUT IMG LINK)
 
 - The checkout page features an order summary, which lists all the items in the users cart, title, price and quantity.
-  <!-- - A link is provided at the top of this for the user to return to the cart page to make changes to the order. -->
-  - On mobile devices this order summary is part of a closed accordian, the top part of which displays the total cost. It can be clicked to open the full order details. This was done to save space on a smaller screen.
+  - On mobile devices this order summary is part of a closed accordion, the top part of which displays the total cost. It can be clicked to open the full order details. This was done to save space on a smaller screen.
   - On tablet devices and larger screens, the order summary is displayed in full on the right side of the screen on all checkout pages.
 - Below the order summary, the user will find a form where they can input their details to make the payment using a credit or debit card.
   - Messages are displayed to the user when the payment succeeds or otherwise helping the user to understand what went wrong.
@@ -465,10 +456,12 @@ These wireframes were created using [Pencil](https://pencil.evolus.vn/) during t
 
 1. **Coupons and discount codes.**
     - Checkout pages to include a field for customers to enter discount codes or coupons to adjust their final payment cost.
-    - The goal is to allow the page to deal with different codes and give the users differents amounts of discount.
+    - The goal is to allow the page to deal with different codes and give the users different amounts of discount.
     - This feature can be used as tool for partnerships with other companies.
 2. **Featured Cars**
     - This feature can be an extra source of revenue for the website and wasn't introduced at this time due to time constraints.
+3. **Pagination on search**
+    - In case of many results, the pagination will help keeping the page short.
 
 # Information Architecture
 
@@ -487,7 +480,7 @@ The User model utilized for this project is the standard one provided by `django
 
 Within the `cars` app, the **Car** model holds all the data for the cars.
 
-**Car model**
+##### Car model
 
 | Name | Key in db | Validation | Field Type |
 --- | --- | --- | ---
@@ -503,7 +496,7 @@ Transmission | transmission | max_length=20, choices=TRANSMISSION_CHOICES | Char
 Fuel | fuel | max_length=50, choices=FUEL_CHOICES | CharField
 Passengers | passengers | max_digits=10, decimal_places=0, choices=PASSENGER_CHOICES | DecimalField
 Doors | doors | max_digits=10, decimal_places=0, choices=DOORS_CHOICES | DecimalField
-Accessiories | accessories | max_length=20, choices=ACCESSORIES_CHOICES | CharField
+Accessories | accessories | max_length=20, choices=ACCESSORIES_CHOICES | CharField
 City | city | max_length=30, choices=CITY_CHOICES | CharField
 County | county | max_length=30, choices=COUNTY_CHOICES | CharField
 Country | country | max_length=30, choices=COUNTRY_CHOICES | CharField
@@ -512,12 +505,12 @@ Image 2 | image2 |  | ImageField
 Image 3 | image3 |  | ImageField
 Image 4 | image4 |  | ImageField
 Image 5 | image5 |  | ImageField
-Guidelines | guideliines | max_length=500 | TextField
+Guidelines | guidelines | max_length=500 | TextField
 
 - Category choices are defined within the Product model.
 - The Product model uses Pillow to store all image files in an AWS S3 bucket.
 
-**Order model**
+#### Order model
 
 | Name | Key in db | Validation | Field Type |
 --- | --- | --- | ---
@@ -534,7 +527,7 @@ Date User Joined | date |  | DateField
 
 - An instance of the Order model is created before any OrderItems, as the latter relies on the former for a ForeignKey.
 
-**OrderItem model**
+#### OrderItem model
 
 | Name | Key in db | Validation | Field Type |
 --- | --- | --- | ---
@@ -546,7 +539,7 @@ Rental Days | rental_days | blank=False| IntegerField
 
 # Technologies Used
 
-### Tools
+## Tools
 
 - [Gitpod](https://www.gitpod.io/) is the IDE used for developing this project.
 - [Django](https://www.djangoproject.com/) as python web framework for rapid development and clean design.
@@ -564,25 +557,32 @@ Rental Days | rental_days | blank=False| IntegerField
 - [PIP](https://pip.pypa.io/en/stable/installing/) for installation of tools needed in this project.
 - [Git](https://gist.github.com/derhuerst/1b15ff4652a867391f03) to handle version control.
 - [GitHub](https://github.com/) to store and share all project code remotely.
-- [Browserstack](https://www.browserstack.com/) to test functionality on all browsers and devices.
+- [Power Mapper](https://www.powermapper.com/) to test functionality on all browsers and devices.
 - [Heroku](https://www.heroku.com/) to deploy the project.
 - [Pencil](https://pencil.evolus.vn/) to create the wireframes for this project.
+- [Am I Responsive](https://http://ami.responsivedesign.is/) to generate responsive images of page in different devices
+- [Jspell](https://www.jspell.com/) to spell check readme file.
+- [Compress or die](https://compress-or-die.com/) website used to compress image files.
+- [GIMP](https://www.gimp.org/) to edit, crop and save images.
 
-### Databases
+## Databases
 
 - [PostgreSQL](https://www.postgresql.org/) for production database, provided by heroku.
 - [SQlite3](https://www.sqlite.org/index.html) for development database, provided by django.
 
-### Libraries
+## Libraries
 
 - [JQuery](https://jquery.com) to simplify DOM manipulation.
 - [Bootstrap](https://www.bootstrapcdn.com/) to simplify the structure of the website and make the website responsive easily.
 - [FontAwesome](https://www.bootstrapcdn.com/fontawesome/) to provide icons for Vroom.
 - [Google Fonts](https://fonts.google.com/) to style the website fonts.
 
-### Languages
+## Languages
 
-- This project uses HTML, CSS, JavaScript and Python programming languages.
+- [HTML](https://html.com/)
+- [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
+- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- [Python](https://www.python.org/)
 
 # Testing
 
@@ -611,7 +611,7 @@ Please click the links above for documentation on how to set these up and retrie
 
 ## Instructions
 
-1. Save a copy of the github repository located at https://github.com/romqrq/Vroom by clicking the "download zip" button at the top of the page and extracting the zip file to your chosen folder. If you have Git installed on your system, you can clone the repository with the following command 
+1. Save a copy of the github repository located at https://github.com/romqrq/Vroom by clicking the "download zip" button at the top of the page and extracting the zip file to your chosen folder. If you have Git installed on your system, you can clone the repository with the following command
 
     ```
     git clone https://github.com/romqrq/Vroom
@@ -664,6 +664,9 @@ Please click the links above for documentation on how to set these up and retrie
         "AWS_ACCESS_KEY_ID": "<enter key here>",
         "AWS_SECRET_ACCESS_KEY": "<enter key here>",
         "AWS_STORAGE_BUCKET_NAME": "<enter bucket name here>",
+
+        "EMAIL_ADDRESS": "<enter email address here>",
+        "EMAIL_PASSWORD": "<enter password here>",
     }
     ```
 
@@ -696,8 +699,7 @@ Please click the links above for documentation on how to set these up and retrie
     python manage.py runserver
     ```
 
-12. Once the program is running, go to the local link provided and add `/admin` to the end of the url. Here log in with your superuser account and create instances of ShippingDestination and Product within the new database.
-
+12. Once the program is running, go to the local link provided and add `/admin` to the end of the url.
 13. Once instances of these items exist in your database your local site will run as expected.
 
 ## Heroku Deployment
@@ -733,6 +735,8 @@ STRIPE_CANCEL_URL | `<link to all-products page in your app>`
 STRIPE_PUBLISHABLE | `<your secret key>`
 STRIPE_SECRET | `<your secret key>`
 STRIPE_SUCCESS_URL | `<link to checkout/confirm page in your app>`
+EMAIL_ADDRESS | `<enter email address here>`
+EMAIL_PASSWORD | `<enter password here>`
 
 9. From the command line of your local IDE:
     - Enter the heroku postres shell
@@ -762,16 +766,18 @@ STRIPE_SUCCESS_URL | `<link to checkout/confirm page in your app>`
 ## Code
 
 - Many parts of the code came from the course lessons. I changed all that was necessary and because some parts of the code were the standard procedure, they remained unchanged.
-- More times than I can count I used resources from [Django Documentation](https://docs.djangoproject.com/en/3.0/) and despite being a different version from the one used for this project, it was still very helpful.
+- More times than I can count I used resources from [Django Documentation](https://docs.djangoproject.com/en/1.1/).
 - Other source of ideas was [Stock Overflow](https://stackoverflow.com/), where I could find answers where users faced similar problems.
 
 ## Acknowledgements
 
 Special thanks to my mentor [Simen Daehlin](https://github.com/Eventyret) who have literally changed my path through the course rescuing me from the "averageness", helping me getting out of my comfort zone and showing me I had (most of) the tools all along.
 
+Thanks to [Anna Greaves](https://github.com/AJGreaves) for the support as a Code Institute tutor and also for allowing me to use her amazing readme file as a reference to build mine.
+
 Thanks to all my friends and friends of friends that took a minute of their busy days to test the website and go through the trouble of sending me a feedback. Thanks, people!
 
-And last but definitely not least, I'd like to thank my family and my fiance Rebecca that has been so supportive, encouraging and so so so pacient! Thanks babe.
+And last but definitely not least, I'd like to thank my family and my fiancé Rebecca that has been so supportive, encouraging and so so so patient! Thanks babe.
 
 # Contact
 
