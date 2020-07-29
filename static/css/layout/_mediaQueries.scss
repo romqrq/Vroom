@@ -18,14 +18,8 @@
             max-width: 12vw;
         }
     }
-    .car-card {
-        max-width: 47%;
-        padding: 0;
-        margin: 0 1.5%;
-        margin-bottom: 2rem;
-    }
     .cards-row {
-        margin: 0;
+        margin: 1rem 0 1rem;
     }
     .edit-car-form-images {
         .form-control-file {
@@ -63,6 +57,13 @@
     }
     .header-form-title {
         margin: 0rem 0 1rem;
+    }
+    #div_id_credit_card_number,
+    #div_id_cvv,
+    #div_id_expiry_month,
+    #div_id_expiry_year {
+        border: none;
+        width: 46.5%;
     }
 }
 
