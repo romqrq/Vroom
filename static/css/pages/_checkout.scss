@@ -59,4 +59,12 @@
         border: none;
         padding: 1rem;
     }
+
+    #div_id_credit_card_number,
+    #div_id_cvv,
+    #div_id_expiry_month,
+    #div_id_expiry_year {
+        border: none;
+        width: 100%;
+    }
 }
