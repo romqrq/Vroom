@@ -1,7 +1,7 @@
-// index carousel
+// Carousels
 
 .index-carousel {
-    border: 2px solid $bright-orange;
+    border: 2px solid $heat-wave;
 }
 .carousel-item {
     height: 50vh;
@@ -41,7 +41,7 @@
 .testimonials-carousel{
     width: 100%;
     padding: 0;
-    background-color: $dark-grey;
+    background-color: $eerie-black;
 }
 .testimonial-carousel-item {
     height: 40vh;
@@ -79,13 +79,13 @@
 
 .jane-doe{
     background-image: url("../images/index/businesstestimonial.jpeg");
-    box-shadow: inset 4px 0px 5px $dark-grey;
+    box-shadow: inset 4px 0px 5px $eerie-black;
 }
 .joanne-doe{
     background-image: url("../images/index/traveltestimonial.jpg");
-    box-shadow: inset -4px 0px 5px $dark-grey;
+    box-shadow: inset -4px 0px 5px $eerie-black;
 }
 .joe-doe{
     background-image: url("../images/index/trackday.jpg");
-    box-shadow: inset 4px 0px 5px $dark-grey;
+    box-shadow: inset 4px 0px 5px $eerie-black;
 }

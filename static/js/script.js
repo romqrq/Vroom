@@ -2,7 +2,6 @@ $(document).ready(function() {
     $('.feedback-message').on( "load", function(){
         $('.feedback-message').scrollIntoView();
     });
-
     /**
      * Function to activate search button depending on text input field being empty or not
      */
@@ -11,9 +10,8 @@ $(document).ready(function() {
             $('#searchSubmitBtn').not('.disabled-button').addClass('disabled-button').prop("disabled", true);
         } else {
             $('#searchSubmitBtn').removeClass('disabled-button').prop("disabled", false);
-        }
+        };
     });
-
     /**
      * Function to activate add to cart button depending on number input field being empty or not
      */
@@ -66,7 +64,7 @@ $(document).ready(function() {
     });
 
     /** 
-     * Function to generate form action url dinamically following user choices
+     * Function to generate form action url dinamically following user choices 
      * item_id Id of selected item - String
      * addon_type Type of addon chosen - String
      */

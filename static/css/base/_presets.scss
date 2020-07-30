@@ -28,7 +28,7 @@ a:hover {
     height: 7vh;
 }
 .body-link {
-    color: $bright-orange;
+    color: $heat-wave;
     text-shadow: -1px 1px 2px #000000ab;
 }
 .body-link:hover {
@@ -36,21 +36,21 @@ a:hover {
     color: #007cff;
 }
 a:hover, .nav-icons:hover {
-    color: $bright-orange;
+    color: $heat-wave;
 }
 i {
     font-size: 2.5rem;
 }
 #stripe-error-message,
 .error-msg{
-    color: $bright-orange;
+    color: $heat-wave;
     font-weight: 700;
     text-shadow: -1px 1px 2px #00000069;
 }
 .feedback-message {
-    color: $dark-grey;
+    color: $eerie-black;
     background-color: #ff7b00ad;
-    border-color: $bright-orange;
+    border-color: $heat-wave;
     border-radius: 0;
     box-shadow: 0 0 6px black;
 }
@@ -67,7 +67,7 @@ i {
 .header-strip {
     margin: 1rem 0;
     padding: 0.5rem 0;
-    background-color: $dark-grey;
+    background-color: $eerie-black;
     color: white;
     text-shadow: $header-shadow-darkbg;
     box-shadow: -1px 4px 10px black;
@@ -80,7 +80,7 @@ i {
 .header-title {
     padding: 3rem 0.5rem 1rem;
     background-color: white;
-    color: $dark-grey;
+    color: $eerie-black;
     text-shadow: $header-shadow-lightbg;
 }
 .secondary-title-light {
@@ -104,7 +104,7 @@ i {
     box-shadow: -1px 3px 8px 0px #0000008a;
 }
 .black-bg {
-    background-color: $dark-grey;
+    background-color: $eerie-black;
 }
 .no-padding {
     padding: 0;

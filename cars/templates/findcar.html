@@ -94,19 +94,19 @@
     </div>
     <div id="{{ car.brand }}{{ car.id }}" class="carousel slide car-carousel" data-interval="false">
         <div class="carousel-inner black-bg">
-            <div class="carousel-item active">
+            <div class="carousel-item car-carousel-item active">
                 <img src="{{ MEDIA_URL }}{{ car.image1 }}" class="car-details-carousel-img" alt="image of a {{ car.year }} {{ car.brand }} {{ car.model }}">
             </div>
-            <div class="carousel-item">
+            <div class="carousel-item car-carousel-item">
                 <img src="{{ MEDIA_URL }}{{ car.image2 }}" class="car-details-carousel-img" alt="image of a {{ car.year }} {{ car.brand }} {{ car.model }}">
             </div>
-            <div class="carousel-item">
+            <div class="carousel-item car-carousel-item">
                 <img src="{{ MEDIA_URL }}{{ car.image3 }}" class="car-details-carousel-img" alt="image of a {{ car.year }} {{ car.brand }} {{ car.model }}">
             </div>
-            <div class="carousel-item">
+            <div class="carousel-item car-carousel-item">
                 <img src="{{ MEDIA_URL }}{{ car.image4 }}" class="car-details-carousel-img" alt="image of a {{ car.year }} {{ car.brand }} {{ car.model }}">
             </div>
-            <div class="carousel-item">
+            <div class="carousel-item car-carousel-item">
                 <img src="{{ MEDIA_URL }}{{ car.image5 }}" class="car-details-carousel-img" alt="image of a {{ car.year }} {{ car.brand }} {{ car.model }}">
             </div>
         </div>
@@ -135,12 +135,12 @@
             <form method="POST" action="{% url 'add_to_cart' 'car' car.id %}">
                 {% csrf_token %}
                 <div class="input-area car-input-area">
-                    <input name="quantity" type="number" min="1" max="999" class="form-control" placeholder="How many days?">
-                    <button class="btn general-button card-button" type="submit">Vroom!</button> 
+                    <input name="quantity" type="number" min="1" max="999" class="form-control addon-input" placeholder="How many days?">
+                    <button class="btn general-button card-button addon-submit disabled-button" type="submit">Vroom!</button> 
                 </div>
             </form>
             <a href="{% url 'car_detail' car.id %}" class="btn general-button card-button car-view-button" rel="noopener" aria-label="Link to page with car details">
-            View car
+            View Details
             </a>
         </div>
     </div>

@@ -56,8 +56,6 @@ def car_register(request):
 
     else:
         car_reg_form = CarRegistrationForm()
-    # SESSION CLEAR USED FOR TESTING ---- DELETE
-    # request.session.clear()
     args = {'crf': car_reg_form}
     return render(request, 'rentmycar.html', args)
 

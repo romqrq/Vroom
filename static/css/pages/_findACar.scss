@@ -3,7 +3,7 @@
     justify-content: center;
 
     .form-control {
-        border: 1px solid $dark-grey;
+        border: 1px solid $eerie-black;
     }
     label {
         font-family: "Audiowide", sans-serif;
@@ -12,7 +12,7 @@
         text-shadow: $header-shadow-lightbg;
     }
     input {
-        border: 1px solid $dark-grey;
+        border: 1px solid $eerie-black;
         border-radius: 0.25rem;
         // width: 74%;
         height: 2rem;
@@ -37,16 +37,16 @@
 }
 .search-button {
     font-family: "Audiowide", sans-serif;
-    border: 3px solid $bright-orange;
-    background-color: $bright-orange;
-    color: $dark-grey;
+    border: 3px solid $heat-wave;
+    background-color: $heat-wave;
+    color: $eerie-black;
     box-shadow: -1px 4px 9px 1px black;
     padding: 0 0.5rem;
     border-radius: 0.25rem;
 }
 .disabled-button{
-    border: 3px solid $dark-grey !important;
-    background-color: $dark-grey !important;
+    border: 3px solid $eerie-black !important;
+    background-color: $eerie-black !important;
     color: white !important;
 }
 .car-input-area {
