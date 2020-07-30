@@ -53,13 +53,14 @@ class OrderLineItem(models.Model):
     private_driver = models.ForeignKey(PrivateDriverAddon,
                                        on_delete=models.PROTECT, null=True)
     rental_days = models.IntegerField(blank=False)
-
+    
     if car:
         def __str__(self):
             return "{0} {1} {2} @ {3} per day".format(
-                self.rental_days, self.car.brand,
+                self.rental_days, self.car,
                 self.car.model, self.car.price
             )
+
     elif track_day:
         def __str__(self):
             return "{0} {1} {2} @ {3} per day".format(
