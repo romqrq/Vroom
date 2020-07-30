@@ -60,7 +60,7 @@ i {
 
 .feedback-message {
   color: #252525;
-  background-color: #ff7b00ad;
+  background-color: #ff7b00;
   border-color: #ff7b00;
   border-radius: 0;
   -webkit-box-shadow: 0 0 6px black;
@@ -153,6 +153,11 @@ i {
   min-width: 7rem;
   max-width: 50%;
   margin: 1rem auto !important;
+}
+
+.delete-item {
+  border: 1px solid #ff7b00;
+  padding: 1.5rem 0;
 }
 
 .logo-nav {
@@ -564,6 +569,13 @@ input#id_image5 {
   margin-bottom: 1rem;
 }
 
+.checkout-feedback-message {
+  position: fixed;
+  top: 5rem;
+  left: 0px;
+  z-index: 999;
+}
+
 .order-summary-row, .payment-form-row {
   margin: 1rem;
   border: 1px solid #ff7b00;
@@ -666,10 +678,6 @@ input#id_image5 {
   padding: 1rem;
 }
 
-.car-details-carousel-img {
-  height: 100%;
-}
-
 .car-info-row {
   padding: 1rem !important;
 }
@@ -700,6 +708,40 @@ input#id_image5 {
 .edit-car-form-images .form-group > label {
   font-weight: 600;
   font-size: 1.1rem;
+}
+
+.delete-form-row {
+  padding: 0 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.modal-content {
+  border: 1px solid #ff7b00;
+}
+
+.modal-content .form-group {
+  border: none;
+  margin: 0;
+}
+
+.modal-header {
+  border: 1px solid #ff7b00;
+  margin: 0;
+}
+
+.modal-title {
+  margin: 0 1rem;
+}
+
+.modal-header .close {
+  font-size: 2rem;
+  color: #ff7b00;
+  padding: 1rem 2rem;
+  outline: none;
+}
+
+.modal-body {
+  padding: 0;
 }
 
 .home-titles {
@@ -763,10 +805,7 @@ input#id_image5 {
 }
 
 .car-carousel-img {
-  width: 130%;
-  position: absolute;
-  top: -12%;
-  left: -15%;
+  height: 100%;
 }
 
 .card-header {
@@ -1088,15 +1127,9 @@ footer {
   .header-form-title {
     margin: 0rem 0 1rem;
   }
-  #div_id_credit_card_number,
-  #div_id_cvv,
-  #div_id_expiry_month,
-  #div_id_expiry_year {
-    border: none;
-    width: 46.5%;
-  }
-  .car-carousel-item {
-    height: 40vh;
+  .stripe-form-row .form-group {
+    width: 48% !important;
+    margin: 0.5rem auto;
   }
 }
 
