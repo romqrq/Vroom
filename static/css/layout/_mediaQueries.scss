@@ -58,15 +58,11 @@
     .header-form-title {
         margin: 0rem 0 1rem;
     }
-    #div_id_credit_card_number,
-    #div_id_cvv,
-    #div_id_expiry_month,
-    #div_id_expiry_year {
-        border: none;
-        width: 46.5%;
-    }
-    .car-carousel-item {
-        height: 40vh;
+    .stripe-form-row {
+        .form-group {
+            width: 48% !important;
+            margin: 0.5rem auto;
+        }
     }
 }
 
