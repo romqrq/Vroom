@@ -449,10 +449,10 @@ These wireframes were created using [Pencil](https://pencil.evolus.vn/) during t
 ### Edit Profile Page
 
 ![Edit Profile Page](https://vroom-s3.s3-eu-west-1.amazonaws.com/readme/general/edit_profile.jpg)
-<!-- 
+
 #### Page description text
 
-- A short text is displayed to clarify to the user what they will encounter on the page and offer instructions on how to update their profile information and its implications. -->
+- A short text is displayed to clarify to the user what they will encounter on the page and offer instructions on how to update their profile information and its implications.
 
 #### Edit Profile Form
 
