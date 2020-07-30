@@ -7,3 +7,30 @@
     }
     
 }
+.delete-form-row {
+    padding: 0 2.5rem;
+    margin-bottom: 2rem;
+}
+.modal-content {
+    border: $orange-border;
+    .form-group {
+        border: none;
+        margin: 0;
+    }
+}
+.modal-header {
+    border: $orange-border;
+    margin: 0;
+}
+.modal-title {
+    margin: 0 1rem;
+}
+.modal-header .close {
+    font-size: 2rem;
+    color: $heat-wave;
+    padding: 1rem 2rem;
+    outline: none;
+}
+.modal-body {
+    padding: 0;
+}

@@ -11,56 +11,76 @@
 {% include 'unauthorised.html' %}
 
 {% else %}
-<div class="form-box">
-    <form enctype="multipart/form-data" method="POST" action="{% url 'edit_user' user.id %}">
-        <fieldset class="form-group">
-            <div class="row">
-                <div class="col-12 header-title edit-user-title">
-                    <h2>Edit my Profile</h2>
+<div class="row">
+    <div class="col-12 col-md-10 offset-md-1 form-box">
+        <form enctype="multipart/form-data" method="POST" action="{% url 'edit_user' user.id %}">
+            <fieldset class="form-group">
+                <div class="row">
+                    <div class="col-12 header-title edit-user-title">
+                        <h2>Edit my Profile</h2>
+                    </div>
+                    {% csrf_token %}
+                    <div class="col-12 col-md-6 edit-user-forms">
+                        {{ edit_user_form.username|as_crispy_field }}
+                    </div>
+                    <div class="col-12 col-md-6 edit-user-forms">
+                        {{ edit_user_form.email|as_crispy_field }}
+                    </div>
+                    <div class="col-12 col-md-6 edit-user-forms">
+                        {{ edit_user_form.first_name|as_crispy_field }}
+                    </div>
+                    <div class="col-12 col-md-6 edit-user-forms">
+                        {{ edit_user_form.last_name|as_crispy_field }}
+                    </div>
+                    <div class="col-12 col-md-6 edit-user-forms">
+                        {{ edit_pw_form.password1|as_crispy_field }}
+                    </div>
+                    <div class="col-12 col-md-6 edit-user-forms">
+                        {{ edit_pw_form.password2|as_crispy_field }}
+                    </div>
+                    <div class="col-12 edit-user-forms">
+                        <button type="submit" class="btn general-button">Update</button>
+                    </div>
                 </div>
-                {% csrf_token %}
-                <div class="col-12 col-md-6 edit-user-forms">
-                    {{ edit_user_form.username|as_crispy_field }}
-                </div>
-                <div class="col-12 col-md-6 edit-user-forms">
-                    {{ edit_user_form.email|as_crispy_field }}
-                </div>
-                <div class="col-12 col-md-6 edit-user-forms">
-                    {{ edit_user_form.first_name|as_crispy_field }}
-                </div>
-                <div class="col-12 col-md-6 edit-user-forms">
-                    {{ edit_user_form.last_name|as_crispy_field }}
-                </div>
-                <div class="col-12 col-md-6 edit-user-forms">
-                    {{ edit_pw_form.password1|as_crispy_field }}
-                </div>
-                <div class="col-12 col-md-6 edit-user-forms">
-                    {{ edit_pw_form.password2|as_crispy_field }}
-                </div>
-                <div class="col-12 edit-user-forms">
-                    <button type="submit" class="btn general-button">Update</button>
-                </div>
-            </div>
-        </fieldset>
-    </form>
+            </fieldset>
+        </form>
+    </div>
 </div>
-<div class="form-box">
-    <form method="POST" action="{% url 'delete_user' user.id %}">
-        <fieldset class="form-group">
-        {% csrf_token %}
-            <div class="row">
-                <div class="col-12 header-title">
-                    <h2>Delete my profile</h2>
-                </div>
-                <div class="col-12">
-                    <p>Once you press the delete button, your account will be permanently deleted</p>
-                </div>
-                <div class="col-12">
-                    <button type="submit" class="btn general-button">Delete</button>
-                </div>
-            </div>
-        </fieldset>
-    </form>
+<div class="row delete-form-row">
+    <div class="col-12 col-md-10 offset-md-1 form-box delete-item">
+        <h2 class="header-title header-form-title">Delete my profile</h2>
+        <p>Be careful as this operation is irreversible.</p>
+        <button type="button" class="btn general-button" data-toggle="modal" data-target="#deleteProfile">
+        Delete Profile
+        </button>
+    </div>
 </div>
 {% endif %}
+
+<!-- Modal -->
+<div class="modal fade" id="deleteProfile" tabindex="-1" role="dialog" aria-labelledby="deleteProfileModal" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header header-strip">
+                <h3 class="modal-title" id="deleteProfileModalTitle">Do you really want to delete your profile?</h3>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="col-12">
+                    <form method="POST" action="{% url 'delete_user' user.id %}">
+                        <fieldset class="form-group">
+                        {% csrf_token %}
+                            <h2 class="header-title header-form-title">Delete my Profile</h2>
+                            <p>Once you press the delete button, this profile will be permanently deleted</p>
+                            <button type="submit" class="btn general-button">Delete</button>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 {% endblock %}
