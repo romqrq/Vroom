@@ -49,7 +49,7 @@ i {
 }
 .feedback-message {
     color: $eerie-black;
-    background-color: #ff7b00ad;
+    background-color: $heat-wave;
     border-color: $heat-wave;
     border-radius: 0;
     box-shadow: 0 0 6px black;
@@ -122,4 +122,8 @@ i {
     min-width: 7rem;
     max-width: 50%;
     margin: 1rem auto !important;
+}
+.delete-item {
+    border: $orange-border;
+    padding: 1.5rem 0;
 }

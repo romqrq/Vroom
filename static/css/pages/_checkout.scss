@@ -1,5 +1,11 @@
 // Checkout
 
+.checkout-feedback-message {
+    position: fixed;
+    top: 5rem;
+    left: 0px;
+    z-index: 999;
+}
 .order-summary-row, .payment-form-row {
     margin: 1rem;
     border: $orange-border;
