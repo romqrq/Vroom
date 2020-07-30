@@ -27,11 +27,15 @@ class CheckoutViewTests(TestCase):
         self.assertEqual(response.status_code, 302)
 
     def test_view_logged_in(self):
-        """Test if logged in user can access the page"""
+        """
+        Test if logged in user is redirected to index page as users can't
+        access checkout with empty cart
+        """
 
         user = Client()
         user.login(username='testuser', password='testpass')
 
         response = user.get('/checkout/')
 
-        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.url, '/')
+        self.assertEqual(response.status_code, 302)
