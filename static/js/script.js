@@ -54,7 +54,9 @@ $(document).ready(function() {
             });
             if( ($.inArray("", all_inputs) !== -1 ) || ($.inArray(null, all_inputs) !== -1) ) {
                 $('.form-message').removeClass('d-none').html("Please fill all required fields.");
-                $('.car-register-row').get(0).scrollIntoView();
+                setTimeout(function(){
+                     $('.form-message').addClass('d-none'); 
+                    }, 7000);
             }
             else{
                 $('.form-box').not('.d-none').addClass('d-none');

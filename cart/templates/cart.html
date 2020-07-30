@@ -24,6 +24,19 @@
     </div>
 </div>
 {% else %}
+<div class="row">
+    <div class="col-12 header-strip">
+        <h4>{{user.username}}'s Cart</h4>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <p>At this page, you can review your cart. You have full control over quantities and removing items from it.</p>
+        <p>Each product is displayed individually. To change the number of days of rental, you can type the new quantity in the required field and click Update.</p>
+        <p>Your partial and total values will be updated automatically.</p>
+        <p>If you wish to remove an item from your cart, you can press the bin button at the top right of the item you wish to remove.</p>
+    </div>
+</div>
 <div class="row cart-items-row">
     {% for item in cart_items %}
     <div class="col-12 cart-item">

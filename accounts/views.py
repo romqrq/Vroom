@@ -16,6 +16,11 @@ def logout(request):
 
 def login(request):
     """A view that manages the login form"""
+
+    if request.user.is_authenticated():
+        messages.success(request, "You are already logged in")
+        return redirect(reverse('index'))
+
     if request.method == 'POST':
         user_form = UserLoginForm(request.POST)
         if user_form.is_valid():
@@ -24,7 +29,7 @@ def login(request):
 
             if user:
                 auth.login(request, user)
-                messages.error(request, "You have successfully logged in")
+                messages.success(request, "You have successfully logged in")
                 request.session['user_id'] = user.id
 
                 if request.GET and request.GET['next'] != '':
@@ -117,6 +122,10 @@ def edit_user_view(request, user_id):
             if form['email'].value():
                 u.email = request.POST.get('email')
                 u.save()
+            messages.success(
+                request,
+                "Your profile was successfully updated!"
+            )
 
         if pwform.is_valid():
             if pwform['password1'].value() and pwform['password2'].value():
