@@ -18,6 +18,12 @@ def checkout(request):
 
     stripe.api_key = settings.STRIPE_SECRET
 
+    cart = request.session.get('cart', {})
+
+    if not cart:
+        messages.error(request, "Your cart is empty, nothing to checkout.")
+        return redirect(reverse('index'))
+
     if request.method == "POST":
         # getting user and payment information posted
         order_form = OrderForm(request.POST)
