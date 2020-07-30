@@ -56,8 +56,8 @@ class OrderLineItem(models.Model):
     
     if car:
         def __str__(self):
-            return "{0} {1} {2} @ {3} per day".format(
-                self.rental_days, self.car,
+            return "{0} {1} per day".format(
+                self.rental_days, self.car.brand,
                 self.car.model, self.car.price
             )
 
