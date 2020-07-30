@@ -10,18 +10,58 @@
 {% include 'unauthorised.html' %}
 
 {% else %}
-<div class="col-12 col-md-10 offset-md-1 form-box">
-    {% include 'forms/edit_car_form.html' %}
+<div class="row">
+    <div class="col-12 header-strip">
+        <h4>Edit my Car</h4>
+    </div>
 </div>
-<div class="col-12 col-md-10 offset-md-1 form-box">
-    <form method="POST" action="{% url 'delete_car' car.id %}">
-        <fieldset class="form-group">
-            <h2 class="header-title header-form-title">Delete this car</h2>
-            {% csrf_token %}
-            <p>Once you press the delete button, this car will be permanently deleted</p>
-            <button type="submit" class="btn general-button">Delete</button>
-        </fieldset>
-    </form>
+<div class="row">
+    <div class="col-12">
+        <p>Here you can edit the details of your car.</p>
+        <p>We've already loaded the current details there for you and if you don't want to change them, you can either leave them the way they are or leave the spaces blank.</p>
+        <p>Only details that you have changed will be updated.</p>
+    </div>
 </div>
+<div class="row">
+    <div class="col-12 col-md-10 offset-md-1 form-box">
+        {% include 'forms/edit_car_form.html' %}
+    </div>
+</div>
+<div class="row delete-form-row">
+    <div class="col-12 col-md-10 offset-md-1 form-box delete-item">
+        <h2 class="header-title header-form-title">Delete this car</h2>
+        <p>Be careful as this operation is irreversible.</p>
+        <button type="button" class="btn general-button" data-toggle="modal" data-target="#deleteCar">
+        Delete Car
+        </button>
+    </div>
+</div>
+
 {% endif %}
+
+<!-- Modal -->
+<div class="modal fade" id="deleteCar" tabindex="-1" role="dialog" aria-labelledby="deleteCarModal" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header header-strip">
+                <h3 class="modal-title" id="deleteCarModalTitle">Do you really want to delete this car?</h3>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="col-12">
+                    <form method="POST" action="{% url 'delete_car' car.id %}">
+                        <fieldset class="form-group">
+                            <h2 class="header-title header-form-title">Delete this car</h2>
+                            {% csrf_token %}
+                            <p>Once you press the delete button, this car will be permanently deleted</p>
+                            <button type="submit" class="btn general-button">Delete</button>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}
