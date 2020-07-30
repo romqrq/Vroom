@@ -1,7 +1,7 @@
 // Navbar
 
 nav {
-    background-color: $dark-grey;
+    background-color: $eerie-black;
 }
 .navbar {
     position: fixed;
@@ -24,7 +24,7 @@ nav {
 }
 .dropdown-item.active, .dropdown-item:active {
     color: inherit;
-    background-color: $bright-orange;
+    background-color: $heat-wave;
 }
 .badge {
     position: absolute;
