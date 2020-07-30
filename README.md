@@ -190,9 +190,9 @@ Vroom website has an overall **modern, sporty, clean feel** with emphasis on cre
 
 These wireframes were created using [Pencil](https://pencil.evolus.vn/) during the Scope Plane part of the design and planning process for this project.
 
-- [Vroom Mobile](LINK)
-- [Vroom Tablet](LINK)
-- [Vroom Desktop](LINK)
+- [Vroom Mobile](https://vroom-s3.s3-eu-west-1.amazonaws.com/readme/wireframes/VroomMobile.pdf)
+- [Vroom Tablet](https://vroom-s3.s3-eu-west-1.amazonaws.com/readme/wireframes/VroomTablet.pdf)
+- [Vroom Desktop](https://vroom-s3.s3-eu-west-1.amazonaws.com/readme/wireframes/VroomDesktop.pdf)
 
 # Features
 
@@ -203,7 +203,7 @@ These wireframes were created using [Pencil](https://pencil.evolus.vn/) during t
 #### Navbar
 
 <div align="center">
-    <img src=LINK_TO_NAVBAR alt="Vroom Navbar on desktop devices" aria-label="Vroom Navbar on desktop devices" />
+    <img src="https://vroom-s3.s3-eu-west-1.amazonaws.com/readme/desktop/nav_desktop.jpg" alt="Vroom Navbar on desktop devices" aria-label="Vroom Navbar on desktop devices" />
 </div>
 
 - The navbar features on every page.
@@ -226,10 +226,8 @@ These wireframes were created using [Pencil](https://pencil.evolus.vn/) during t
 
   - The shopping cart counter works even for a user who is not logged in. This is because all the information about which products the user has added to their cart is stored in their session data. This makes it possible for a new user to add things to their cart before being asked to log in or register.
 
-<!-- - When a user is on a page listed in the navbar the text for that page is highlighted with a deeper color, and `<span class="sr-only">(current)</span>` is added to the relevant html for screen readers to tell which page the user is on. -->
-
 <div align="center">
-    <img src=MOBILE_NAVBAR__IMG_LINK alt="Vroom Navbar on mobile devices" aria-label="Vroom Navbar on mobile devices" />
+    <img src="https://vroom-s3.s3-eu-west-1.amazonaws.com/readme/mobile/nav_mobile_and_tablet.jpg" alt="Vroom Navbar on mobile devices" aria-label="Vroom Navbar on mobile devices" />
 </div>
 
 - **In tablet and mobile view** the logo is moved to the center of the navigation bar, making cart and menu buttons more accessible on both sides.
@@ -237,87 +235,99 @@ These wireframes were created using [Pencil](https://pencil.evolus.vn/) during t
 
 #### Footer
 
-![Footer](FOOTER_IMAGE_LINK)
+![Footer](https://vroom-s3.s3-eu-west-1.amazonaws.com/readme/general/footer.jpg)
 
-- The footer features on every page.
+- The footer features on **every page**.
 
-- The footer features Vroom tagline at the top, designed to speak to users and showcase some of the value Vroom provides.
+- The footer features **Vroom tagline** at the top, designed to speak to users and **showcase** some of the **value** Vroom provides.
 
-- Underneath the tagline is a list of the social media channels.
+- Underneath the tagline is a list of the **social media channel**s.
 
-- The footer background of Eerie **Eerie Black** was chosen to match the navbar, provide some contrast and obvious separation between the footer and the rest of the content on the page. The text is all displayed in white. When the user hovers over a link it turns Heat Wave.
+- The footer background of **Eerie Black** was chosen to **match the navbar**, provide some **contrast** and obvious **separation** between the footer and the rest of the content on the page. The text is all displayed in **white**. When the user **hovers** over a link it turns **Heat Wave**.
 
-- The footer features the copyright information for Vroom.
+- The footer features the "copyright" information for Vroom.
 
 ### Home Page
 
 #### Carousel
 
-- The home page carousel features 4 slides of promotional images from Vroom.
+- The home page carousel features **4 slides of promotional images** from Vroom.
 
 #### What are users using Vroom for
 
-![What are users using Vroom for](USING VROOM IMG LINK)
+![What are users using Vroom for](https://vroom-s3.s3-eu-west-1.amazonaws.com/readme/general/index_using_vroom.jpg)
 
-- Below the track day section, this section illustrates ways Vroom is being used by our users.
-- Icons and minimal text are used in this section to reduce the amount of information while still keeping it intuitive, easy to understand and relevant to give users ideas on how to use Vroom beyond mere car-hiring.
+- Below the promotional carousel section, this section **illustrates ways Vroom is being used** by our users.
+- **Icons and minimal text** are used in this section to **reduce the amount of information** while still **keeping it intuitive**, **easy to understand and relevant** to give users ideas on how to use Vroom beyond mere car-hiring.
 
 #### Find the car of your dreams
 
-![Find the car of your dreams](FIND CAR IMG LINK)
+![Find the car of your dreams](https://vroom-s3.s3-eu-west-1.amazonaws.com/readme/desktop/index_find_a_car_desktop.jpg)
 
-- Below the site introduction are 3 cards containing the categories of cars available, displayed with beautiful product photographs, clear headings, descriptive text and 'Show more' button. The user can click on the button to go for the specific section where they will find further information and more specific cars.
+- This section is composed by **3 cards** containing the **categories of cars available**, displayed with **beautiful product photographs**, **clear headings**, **descriptive text** and **'Show more' button**. The user can click on the button to go for the specific section where they will find further information and more specific cars.
+
+![Find the car of your dreams - MOBILE](https://vroom-s3.s3-eu-west-1.amazonaws.com/readme/mobile/index_find_a_car_mobile.jpg)
+
+- For mobile, the cards in this section will organise themselves in a vertical alignment to fit the screen.
 
 #### I want to rent my car
 
-![I want to rent my car](RENT MY CAR IMG LINK)
+![I want to rent my car](https://vroom-s3.s3-eu-west-1.amazonaws.com/readme/general/index_renty_my_car.jpg)
 
-- Below the find a car section, this section is where users can access more information and form to put their own car up for rental. The text is as short as possible while attempting to create a connection with the user and offering possible situations where the user would possibly want to put their car for rent.
+- Below the find a car section, this section is where users can access **more information** and **forms** to **put their own car up for rental**. The **text** is as **short as possible** while attempting to **create a connection** with the user and offering possible situations where the **user would possibly want** to put their car for rent.
 
 #### Addons
 
-![Addons](TRACK DAY IMG LINK)
+![Addons](https://vroom-s3.s3-eu-west-1.amazonaws.com/readme/desktop/index_addons_desktop.jpg)
 
-- Below the rent my car section, the track day experience offers an add on where, after choosing a car for rental, the user can add the track day package during the checkout process.
-- When the user clicks on the 'Learn more' button, it brings the user to the track day page where there's important information about joining a track day.
+- Below the rent my car section, the **add ons section** offers options where, **after choosing a car for rental**, the user can add **track day package**, **change insurance** or **add private driver** service package **on their way to checkout**.
+- When the user clicks on the **'Find a Car'** button, it brings the user to the page where the **cars are listed**.
+
+![Addons - MOBILE](https://vroom-s3.s3-eu-west-1.amazonaws.com/readme/mobile/index_addons_mobile.jpg)
+
+- For mobile, the cards in this section will organise themselves in a vertical alignment to fit the screen.
 
 #### Testimonials carousel
 
-![Testimonials carousel](TESTIMONIALS IMG LINK)
+![Testimonials carousel](https://vroom-s3.s3-eu-west-1.amazonaws.com/readme/general/index_testimonials_carousel.jpg)
 
-- A carousel of 3 reviews from Vroom users. Each displays a review written by the customer and their picture.
+- A carousel of **3 reviews** from **Vroom users**. Each displays a **review** written by the customer and their **picture**.
 
 ### Find a Car Page
 
-![Find a Car](FIND A CAR IMG LINK)
+![Find a Car](https://vroom-s3.s3-eu-west-1.amazonaws.com/readme/desktop/find_a_car_desktop.jpg)
 
-**Search Area**
+- Page where the user can **search** for cars, **add them to cart** or go to the **car details page**.
 
-- The search area contains a dropdown select field where user can choose a **parameter** for the search and a text input field where the user can narrow down the search using text as a **keyword**.
+#### Search Area
 
-**Results area**
+- Search area contains a **select input field** containing **4** possible parameters: **Category, Location, Brand and Model**, an **input field** and a **search button** .
+- The **search button** remains **deactivated** until the value of the **text input field changes**
 
-- The results area on load can display all cars or one of the three categories (luxury, custom classic or supersport) if loaded through the relating selection from the dropdown submenu under the 'Find a Car' item on the navbar.
-- Once the user submits the desired search parameters, the results area is updated to display the relevant results
+#### Results area
 
-**Car card**
+- The results area on load **can display all cars or one of the three categories** (luxury, custom classic or supersport) if loaded through the relating selection from the dropdown submenu under the 'Find a Car' item on the navbar.
+- Once the user **submits the desired search parameters**, the results area is **updated to display the relevant results**
 
-- Each result is displayed within a card divided in 6 major parts:
-  - Title - Displays car brand, car model and car year in capitalised text.
-  - Image carousel - Contains 5 images uploaded by the user, automatic sliding deactivated while arrows on the sides allow user to go back and forth through the images.
-  - Car details - Displays only main details about the car.
-  - Price, Add to cart field and Vroom button - This area displays rental price per day, a field with placeholder "How many days?" and the Vroom button to add the selection to cart.
-  - View car details button - Brings the user the the Car Detail page, where more information about the car is available.
+#### Car card
+
+- Each result is displayed within a **card** divided in **6 major parts**:
+  - **Title** - Displays car brand, car model and car year in capitalised text.
+  - **Image carousel** - Contains 5 images uploaded by the user, automatic sliding deactivated while arrows on the sides allow user to go back and forth through the images.
+  - **Car details** - Displays only main details about the car.
+  - **Price** - Displays the price of the car per day.
+  - **Add to cart field and Vroom button** - This area displays a field with placeholder "How many days?" and the Vroom button to add the selection to cart.
+  - **View car details button** - Brings the user the the Car Detail page, where more information about the car is available.
 
 ### Car Detail Page
 
-![Car Detail](CAR DETAIL IMG LINK)
+![Car Detail](https://vroom-s3.s3-eu-west-1.amazonaws.com/readme/desktop/car_detail_desktop.jpg)
 
-**Page description text**
+#### Page description text
 
 - A short text is displayed to clarify to the user what they will encounter on the page and offer instructions on how to accomplish actions such as add the car to cart or visit the owner's profile.
 
-**Car information section**
+#### Car information section
 
 - The header displays the cars brand, model and year.
 - Below the header, a carousel with automatic transition disabled contains 5 pictures of the car uploaded by the owner. The user can navigate through the images using the arrows located on the sides of the image.
@@ -325,129 +335,160 @@ These wireframes were created using [Pencil](https://pencil.evolus.vn/) during t
 - Price, Add to cart field and Vroom button - This area displays rental price per day, a field with placeholder "How many days?" and the Vroom button to add the selection to cart.
 - For the car owner, it will be displayed an **Edit** button, that will redirect the user to the **Edit Car** page.
 
+![Car Detail - MOBILE](https://vroom-s3.s3-eu-west-1.amazonaws.com/readme/mobile/car_details_mobile.jpg)
+
+- On mobile the **columns** are narrower and contain only **two elements** to preserve **redability and visual presentation**.
+
 ### Edit Car Page
 
-![Edit Car](EDIT CAR IMG LINK)
-
-#### Page description text
-
-- A short text is displayed to clarify to the user what they will encounter on the page and offer instructions on how to update their car information and its implications.
+![Edit Car](https://vroom-s3.s3-eu-west-1.amazonaws.com/readme/general/edit_car.jpg)
 
 #### Edit Car Form
 
-- The form will ask the user for the same fields as during car registration but this time, the fields left blank won't be updated.
-- The fields are pre-populated with the current car details
-- At the bottom of the form, the user will have the option to Update the cars information or to delete the car.
-- In case the user presses the delete button, a modal comes up to confirm that the user really wants to delete the car.
+- The form will ask the user for the **same fields as during car registration** but this time, the **fields left blank won't be updated**.
+- The fields are **pre-populated** with the **current car details**
+- At the bottom of the form, the user will have the option to **Update** the cars information or to **delete** the car.
+- In case the user presses the **delete button**, a **modal** comes up to **confirm** that the user really wants to delete the car.
 
 ### Rent my Car Page
 
-![Rent my Car](RENT MY CAR IMG LINK)
+- Registration form is **divided into 4 sections** to **reduce the load of information** on the user.
+- Each section goes through a **validation before** the user can move to the next.
+- Users **can go back to the previous form** without triggering the validation.
 
-- The rent my car page at the top displays a text about users renting their cars through vroom and giving instructions about the registration form.
-- Registration form contains clear title, field labels and submission button. The fields are validated and form errors are raised through messages to give user feedback and orientation on how to fix the problem.
+#### Main Details Form
+
+![Main Details Form](https://vroom-s3.s3-eu-west-1.amazonaws.com/readme/general/rent_my_car_main.jpg)
+
+- This section of the form collects the **main information** for the car such as **brand, model, year** and such.
+- The "Next Step" button brings the user to the next section of the form.
+
+![Technical Details Form](https://vroom-s3.s3-eu-west-1.amazonaws.com/readme/general/rent_my_car_tech.jpg)
+
+- This section of the form collects the more **technical information** about the car such as **engine type, engine displacement, doors** and such.
+- The "Next Step" button brings the user to the next section of the form.
+
+![Location Details Form](https://vroom-s3.s3-eu-west-1.amazonaws.com/readme/general/rent_my_car_location.jpg)
+
+- This section of the form collects information about the **cars location**.
+- At this point, the service is only available in 3 cities in Ireland: **Cork, Dublin and Galway** .
+- The "Next Step" button brings the user to the next section of the form.
+
+![Images Form](https://vroom-s3.s3-eu-west-1.amazonaws.com/readme/general/rent_my_car_img.jpg)
+
+- This section of the form allows users to **upload images of the car**.
+- **Only one image is required** for form submission.
+- The "Vroom my Car" button adds the car to the database, redirects the user to the home page and a message is displayed confirming that the car has been added successfully.
 
 ### About Page
 
-![About Page](ABOUT IMG LINK)
+![About Page](https://vroom-s3.s3-eu-west-1.amazonaws.com/readme/general/about.jpg)
 
 - The about page contains two main sections:
-  - What is Vroom? - Where the user can find more detailed information on how Vroom works.
-  - About Vroom - Here the user will find a few paragraphs about Vroom including our mission and how Vroom was created and images of the team.
+  - **Our mission** - Statement describing what is the goal at Vroom.
+  - **Origins** - Here the user will find a few paragraphs about Vroom's history.
 
 ### FAQs Page
 
-![FAQs Page](FAQs IMG LINK)
+![FAQs Page](https://vroom-s3.s3-eu-west-1.amazonaws.com/readme/general/faqs.jpg)
 
-- The frequently asked questions here are displayed with answers that try to offer all the information the user might need.
-- The question is displayed using the header style and the answer under the general text format.
-- The answers are placed immediately below its respective question.
-- Considering the high possibility of different questions from those listed, the page also contains a link to the Contact page.
+- The frequently asked questions here are displayed as **buttons** that **display the respective answers when clicked**.
+- The **question** is displayed inside the **button** and the **answer** immediately under the button **inside a delimited area**.
+- Considering the high possibility of different questions from those listed, the page also contains a link to the **Contact page**.
 
 ### Contact Page
 
-![Contact Page](CONTACT IMG LINK)
+![Contact Page](https://vroom-s3.s3-eu-west-1.amazonaws.com/readme/general/contact.jpg)
 
-- On the contact page, the user will find a short text just below the header explaining to the user the page content and how to use the form.
-- A form is displayed just below the text and it contains fields for first name, last name, email address and a text area for the actual question.
-- All the fields in the contact form are required as to offer the necessary information for contacting the user.
+- On the contact page, the user will find a **short text** just below the header explaining to the user the page content and how to use the form.
+- A **form** is displayed just below the text and it contains fields for **first name, last name, email address** and a **text area** for the actual question.
+- **All the fields** in the contact form are **required** as to offer the necessary information for contacting the user.
 - For this project, this form doesn't send the forms to an actual e-mail.
 
 ### Register Page
 
-![Register page](REGISTER IMG LINK)
+![Register page](https://vroom-s3.s3-eu-west-1.amazonaws.com/readme/general/register.jpg)
 
-- A user who is not logged in can create a new account using the register page.
-- The page on this form includes a username (which must be unique), first name, last name, email address, password and password conformation fields.
+- A user who is **not logged in** can create a new account using the register page.
+- The page on this form includes a **username** (which must be unique), **first name, last name, email address, password and password conformation** fields.
 - Information about what characters are accepted by these fields is displayed with the form.
-- If the user is logged in, the register link on the nav bar won't be visible.
-- If a user who is already logged in tries to access this page, they are redirected to the home page.
+- If the user is logged in, the **register link on the nav bar won't be visible**.
+- If a user who is **already logged in** tries to access this page, they are **redirected to the home page** and a **feedback message is displayed**.
 
 ### Login Page
 
-![Login page](LOGIN IMG LINK)
+![Login page](https://vroom-s3.s3-eu-west-1.amazonaws.com/readme/general/login.jpg)
 
-- The login page features a standard login form asking for username and password.
-- Validation for this form is handled in the back end and relevant feedback is sent to the user when they sign in or if there is any problem.
-- Below the password box, the user will find a **forgot password** link that will bring the user to the reset password page
+- The login page features a **standard login form** asking for **username and password**.
+- **Validation** for this form is handled in the back end and relevant **feedback** is sent to the user when they **sign in or if there is any problem**.
+- Below the password box, the user will find both a **forgot password** and a **register here** links that will bring the user to the **reset password page** and **register page**, respectively.
 
 ### Reset Password Page
 
-![Reset Password page](RESET PASSWORD IMG LINK)
+![Reset Password page](https://vroom-s3.s3-eu-west-1.amazonaws.com/readme/general/reset_password.jpg)
 
-- At the top of the page, the user will find a brief text explaining the process to reset their password
-- Below the text, the user will find an input field that asks for their email and the password reset email will be sent to that email address.
+- At the top of the page, the user will find a brief text explaining the process to **reset their password**
+- Below the text, the user will find an **input field** that asks for their email and the password reset email will be sent to that email address.
 
 ### Profile Page
 
-![Profile Page](PROFILE IMG LINK)
+![Profile Page](https://vroom-s3.s3-eu-west-1.amazonaws.com/readme/general/profile.jpg)
 
-- The users account page can only be accessed by a logged in user.
-- Any user not logged in who tries to access their own profile page will be redirected to the login page.
-- One user can access other user's profile pages but can't edit the information.
+- The users **profile page** can only be accessed by a **logged in** user.
+- Any user **not logged in** who tries to access their own profile page will be **redirected to the login page**.
+- One user can access **other user's profile pages as a visitor** but can't edit the information.
 - The profile page is split into two sections:
   - **Profile Info**
     - Here is displayed user's **first name**, **last name**, **email** and **member since**.
-    - For the profile owner, an edit button will be visible and it will direct the user to the **Edit Profile** page
+    - For the **profile owner**, an edit button will be visible and it will direct the user to the **Edit Profile** page
   - **Cars**
-    - The cars owned by this user are displayed here and other users can access these cars details or add them to cart straight from the current page.
+    - The cars owned by **this user** are displayed here and **other users can access** these cars details or **add them to cart** straight from the current page.
 
 ### Edit Profile Page
 
-![Edit Profile Page](EDIT PROFILE IMG LINK)
-
+![Edit Profile Page](https://vroom-s3.s3-eu-west-1.amazonaws.com/readme/general/edit_profile.jpg)
+<!-- 
 #### Page description text
 
-- A short text is displayed to clarify to the user what they will encounter on the page and offer instructions on how to update their profile information and its implications.
+- A short text is displayed to clarify to the user what they will encounter on the page and offer instructions on how to update their profile information and its implications. -->
 
-#### Edit Car Form
+#### Edit Profile Form
 
-- The form will ask the user for the same fields as during their user registration but this time, the fields left blank won't be updated.
-- The fields are pre-populated with the current car details
-- At the bottom of the form, the user will have the option to update or delete their profile.
-- In case the user presses the delete button, a modal comes up to confirm that the user really wants to delete their profile.
+- The form will ask the user for the **same fields** as during their user registration but this time, the **fields left blank won't be updated**.
+- At the **bottom of the form**, the user will have the option to **update or delete** their profile.
+- In case the user presses the **delete button**, a modal comes up to confirm that the user really wants to delete their profile.
 
 ### Cart page
 
-![Cart Page](CART IMG LINK)
+![Cart Page](https://vroom-s3.s3-eu-west-1.amazonaws.com/readme/general/cart.jpg)
 
-- The shopping cart page features a summary of all the items the user has added to their cart.
-- Each list item includes a picture of the item, the item title and price.
-- For each item, a "number of days" field is displayed where the user can update the number of days or remove the item from the cart setting the value to 0(zero).
-- Any time a quantity is adjusted the subtotal displayed is updated to reflect the change.
-- Add ons are displayed below the car the user chose. The add ons include insurance, track day, track tutor, accessories (such as GPS and booster seats) and private driver.
-- The number of days for the insurance field will be automatically equal to the number of days the car is being rented.
-- In case of users going for track days, the insurance will be automatically updated to full coverage and track tutor will be added for each day with basic coverage.
+- The shopping cart page features a summary of **all the items** the user has added to their cart.
+- Each list item includes the **item title and price**.
+- For each item, a **"number of days"** field is displayed where the user can **update the number of days** or **remove** the item from the cart by setting the **number of days to 0(zero)** or using the **delete button**.
+- Any time a quantity is adjusted the **subtotal** displayed is **updated** to reflect the change.
+- Add ons are displayed below the car the user chose. The add ons include **insurance**, **track day** and **private driver**.
+- The number of days for the insurance field will be **automatically** equal to the number of days the car is being rented.
+- The **private driver and track days packages** can **differ** from the **car rental days** as they can be relevant whith other cars.
 
-#### Checkout
+### Checkout
 
-![Checkout Page](CHECKOUT IMG LINK)
+![Checkout Order Summary and Order Details](https://vroom-s3.s3-eu-west-1.amazonaws.com/readme/general/checkout_top.jpg)
 
-- The checkout page features an order summary, which lists all the items in the users cart, title, price and quantity.
-  - On mobile devices this order summary is part of a closed accordion, the top part of which displays the total cost. It can be clicked to open the full order details. This was done to save space on a smaller screen.
-  - On tablet devices and larger screens, the order summary is displayed in full on the right side of the screen on all checkout pages.
-- Below the order summary, the user will find a form where they can input their details to make the payment using a credit or debit card.
-  - Messages are displayed to the user when the payment succeeds or otherwise helping the user to understand what went wrong.
+#### Order Summary
+
+- Area where **all items** in the users **cart** are displayed accompained by **number of days and price**.
+
+#### Order Details
+
+- Form where user supplies personal details such as **name, city, country** and such.
+
+#### Payment Details
+
+![Checkout Payment Summary](https://vroom-s3.s3-eu-west-1.amazonaws.com/readme/general/checkout_bottom.jpg)
+
+- This section is **validated by stripe** at the backend and it is where the user supplies the **payment details** for a credit or debit card.
+
+- Messages are displayed to the user when the payment succeeds or otherwise helping the user to understand what went wrong.
 
 ## Features for Future Releases
 
@@ -465,7 +506,7 @@ These wireframes were created using [Pencil](https://pencil.evolus.vn/) during t
 ## Database Choice
 
 - As a framework Django works with SQL databases. During development on my local machine I worked with the standard **sqlite3** database installed with Django.
-- On deployment, the SQL database provided by Heroku is a **PostgreSQL** database. 
+- On deployment, the SQL database provided by Heroku is a **PostgreSQL** database.
 
 ### Data Models
 
@@ -481,77 +522,66 @@ Within the `cars` app, the **Car** model holds all the data for the cars.
 
 | Name | Key in db | Validation | Field Type |
 --- | --- | --- | ---
-Car Owner | car_owner | on_delete=models.CASCADE | ForeignKey to User
-Car Class | car_class | choices=CATEGORY_CHOICES | CharField
-Price | price | max_digits=6, decimal_places=2_ | DecimalField
-Brand | brand | max-length=30 | CharField
-Model | model | max-length=30 | CharField
-Year | year | max_digits=4, decimal_places=0, choices=YEAR_CHOICES | DecimalField
-Engine Type | engine_type | choices=ENGINE_TYPE_CHOICES | CharField
-Displacement | displacement | max_digits=4, decimal_places=1 | DecimalField
-Transmission | transmission | max_length=20, choices=TRANSMISSION_CHOICES | CharField
-Fuel | fuel | max_length=50, choices=FUEL_CHOICES | CharField
-Passengers | passengers | max_digits=10, decimal_places=0, choices=PASSENGER_CHOICES | DecimalField
-Doors | doors | max_digits=10, decimal_places=0, choices=DOORS_CHOICES | DecimalField
-Accessories | accessories | max_length=20, choices=ACCESSORIES_CHOICES | CharField
-City | city | max_length=30, choices=CITY_CHOICES | CharField
-County | county | max_length=30, choices=COUNTY_CHOICES | CharField
-Country | country | max_length=30, choices=COUNTRY_CHOICES | CharField
-Image 1 | image1 |  | ImageField
-Image 2 | image2 |  | ImageField
-Image 3 | image3 |  | ImageField
-Image 4 | image4 |  | ImageField
-Image 5 | image5 |  | ImageField
-Guidelines | guidelines | max_length=500 | TextField
+**Car Owner** | car_owner | on_delete=models.CASCADE | ForeignKey to User
+**Car Class** | car_class | choices=CATEGORY_CHOICES | CharField
+**Price** | price | max_digits=6, decimal_places=2_ | DecimalField
+**Brand** | brand | max-length=30 | CharField
+**Model** | model | max-length=30 | CharField
+**Year** | year | max_digits=4, decimal_places=0, choices=YEAR_CHOICES | DecimalField
+**Engine Type** | engine_type | choices=ENGINE_TYPE_CHOICES | CharField
+**Displacement** | displacement | max_digits=4, decimal_places=1 | DecimalField
+**Transmission** | transmission | max_length=20, choices=TRANSMISSION_CHOICES | CharField
+**Fuel** | fuel | max_length=50, choices=FUEL_CHOICES | CharField
+**Passengers** | passengers | max_digits=10, decimal_places=0, choices=PASSENGER_CHOICES | DecimalField
+**Doors** | doors | max_digits=10, decimal_places=0, choices=DOORS_CHOICES | DecimalField
+**Accessories** | accessories | max_length=20, choices=ACCESSORIES_CHOICES | CharField
+**City** | city | max_length=30, choices=CITY_CHOICES | CharField
+**County** | county | max_length=30, choices=COUNTY_CHOICES | CharField
+**Country** | country | max_length=30, choices=COUNTRY_CHOICES | CharField
+**Image 1** | image1 |  | ImageField
+**Image 2** | image2 |  | ImageField
+**Image 3** | image3 |  | ImageField
+**Image 4** | image4 |  | ImageField
+**Image 5** | image5 |  | ImageField
+**Guidelines** | guidelines | max_length=500 | TextField
 
 - Category choices are defined within the Product model.
-- The Product model uses Pillow to store all image files in an AWS S3 bucket.
+- The Product model uses **Pillow** to store all image files in an **AWS S3 bucket**.
 
 #### Order model
 
 | Name | Key in db | Validation | Field Type |
 --- | --- | --- | ---
-First Name | first_name | max_length=40, blank=False | CharField
-Last Name | last_name | max_length=40, blank=False | CharField
-Phone Number | phone_number | max_length=40, blank=False | CharField
-Address Line 1 | address1 | max_length=40, blank=False | CharField
-Address Line 2 | address2 | max_length=40, blank=False | CharField
-Postcode | postcode | max_length=40, blank=False | CharField
-City | city | max_length=40, blank=False | CharField
-County | county | max_length=150, blank=True | CharField
-Country | country | max_length=40, blank=False | CharField
-Date User Joined | date |  | DateField
+**First Name** | first_name | max_length=40, blank=False | CharField
+**Last Name** | last_name | max_length=40, blank=False | CharField
+**Phone Number** | phone_number | max_length=40, blank=False | CharField
+**Address Line 1** | address1 | max_length=40, blank=False | CharField
+**Address Line 2** | address2 | max_length=40, blank=False | CharField
+**Postcode** | postcode | max_length=40, blank=False | CharField
+**City** | city | max_length=40, blank=False | CharField
+**County** | county | max_length=150, blank=True | CharField
+**Country** | country | max_length=40, blank=False | CharField
 
-- An instance of the Order model is created before any OrderItems, as the latter relies on the former for a ForeignKey.
+- An instance of the **Order model** is created **before** any OrderItems, as the latter **relies** on the former for a **ForeignKey**.
 
 #### OrderItem model
 
 | Name | Key in db | Validation | Field Type |
 --- | --- | --- | ---
-Order | order | on_delete=models.CASCADE, null=False| ForeignKey to Order
-Car | car | on_delete=models.PROTECT, null=False | ForeignKey to Product
-Rental Days | rental_days | blank=False| IntegerField
+**Order** | order | on_delete=models.CASCADE, null=False| ForeignKey to Order
+**Car** | car | on_delete=models.PROTECT, null=False | ForeignKey to Product
+**Rental Days** | rental_days | blank=False| IntegerField
 
-- An instance of OrderItem is created for each unique product in the users cart. It links to the already existing Order for this user, the relevant product and the quantity the user wishes to buy.
+- An instance of **OrderItem** is created for **each unique product** in the users cart. It links to the **already existing Order** for this user, the **relevant product** and the **quantity** the user wishes to buy.
 
 # Technologies Used
 
 ## Tools
 
 - [Gitpod](https://www.gitpod.io/) is the IDE used for developing this project.
-- [Django](https://www.djangoproject.com/) as python web framework for rapid development and clean design.
 - [Stripe](https://stripe.com) as payment platform to validate and accept credit card payments securely.
 - [Travis](https://travis-ci.org/) for continuous integration.
 - [AWS S3 Bucket](https://aws.amazon.com/) to store images entered into the database.
-- [Boto3](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html) to enable creation, configuration and management of AWS S3.
-- [Coverage](https://coverage.readthedocs.io/en/v4.5.x/) to measure code coverage of python unittests.
-- [Django Heroku](https://pypi.org/project/django-heroku/) to improve deployment of django projects on heroku.
-- [Django Storages](https://django-storages.readthedocs.io/en/latest/) a collection of custom storage backends with django to work with boto3 and AWS S3.
-- [Gunicorn](https://pypi.org/project/gunicorn/) WSGI HTTP Server for UNIX to aid in deployment of the Django project to heroku.
-- [Pillow](https://pillow.readthedocs.io/en/stable/) as python imaging library to aid in processing image files to store in database.
-- [Psycopg2](https://pypi.org/project/psycopg2/) as PostgreSQL database adapter for Python.
-- [Whitenoise](http://whitenoise.evans.io/en/stable/) to allows the web app to serve its own static files.
-- [PIP](https://pip.pypa.io/en/stable/installing/) for installation of tools needed in this project.
 - [Git](https://gist.github.com/derhuerst/1b15ff4652a867391f03) to handle version control.
 - [GitHub](https://github.com/) to store and share all project code remotely.
 - [Power Mapper](https://www.powermapper.com/) to test functionality on all browsers and devices.
@@ -569,6 +599,16 @@ Rental Days | rental_days | blank=False| IntegerField
 
 ## Libraries and Frameworks
 
+- [Django](https://www.djangoproject.com/) as python web framework for rapid development and clean design.
+- [Boto3](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html) to enable creation, configuration and management of AWS S3.
+- [Coverage](https://coverage.readthedocs.io/en/v4.5.x/) to measure code coverage of python unittests.
+- [Django Heroku](https://pypi.org/project/django-heroku/) to improve deployment of django projects on heroku.
+- [Django Storages](https://django-storages.readthedocs.io/en/latest/) a collection of custom storage backends with django to work with boto3 and AWS S3.
+- [Gunicorn](https://pypi.org/project/gunicorn/) WSGI HTTP Server for UNIX to aid in deployment of the Django project to heroku.
+- [Pillow](https://pillow.readthedocs.io/en/stable/) as python imaging library to aid in processing image files to store in database.
+- [Psycopg2](https://pypi.org/project/psycopg2/) as PostgreSQL database adapter for Python.
+- [Whitenoise](http://whitenoise.evans.io/en/stable/) to allows the web app to serve its own static files.
+- [PIP](https://pip.pypa.io/en/stable/installing/) for installation of tools needed in this project.
 - [JQuery](https://jquery.com) to simplify DOM manipulation.
 - [Bootstrap](https://www.bootstrapcdn.com/) to simplify the structure of the website and make the website responsive easily.
 - [FontAwesome](https://www.bootstrapcdn.com/fontawesome/) to provide icons for Vroom.
@@ -608,7 +648,7 @@ Please click the links above for documentation on how to set these up and retrie
 
 ## Instructions
 
-1. Save a copy of the github repository located at https://github.com/romqrq/Vroom by clicking the "download zip" button at the top of the page and extracting the zip file to your chosen folder. If you have Git installed on your system, you can clone the repository with the following command
+1. Save a copy of the github repository located at [Vroom repo](https://github.com/romqrq/Vroom) by clicking the "download zip" button at the top of the page and extracting the zip file to your chosen folder. If you have Git installed on your system, you can clone the repository with the following command
 
     ```
     git clone https://github.com/romqrq/Vroom
