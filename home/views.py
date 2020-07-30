@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.contrib import messages
 
 
 def index_view(request):
@@ -18,4 +19,9 @@ def faqs_view(request):
 
 def contact_view(request):
     """View that displays the Frequently Asked Questions page"""
+    if request.method == 'POST':
+        messages.success(
+            request,
+            "Thanks for contacting us! We'll get back to you soon.")
+        return render(request, 'index.html')
     return render(request, 'contact.html')
