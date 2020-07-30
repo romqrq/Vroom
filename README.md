@@ -194,6 +194,8 @@ These wireframes were created using [Pencil](https://pencil.evolus.vn/) during t
 - [Vroom Tablet](https://vroom-s3.s3-eu-west-1.amazonaws.com/readme/wireframes/VroomTablet.pdf)
 - [Vroom Desktop](https://vroom-s3.s3-eu-west-1.amazonaws.com/readme/wireframes/VroomDesktop.pdf)
 
+**Note on wireframes**: On all versions of the wireframes there were changes from the first version set on the wireframe files. Those changes were, in its vast majority, result of the natural evolution and improvement that comes with observation, testing and user feedback.
+
 # Features
 
 ## Existing Features
@@ -524,7 +526,7 @@ Within the `cars` app, the **Car** model holds all the data for the cars.
 --- | --- | --- | ---
 **Car Owner** | car_owner | on_delete=models.CASCADE | ForeignKey to User
 **Car Class** | car_class | choices=CATEGORY_CHOICES | CharField
-**Price** | price | max_digits=6, decimal_places=2_ | DecimalField
+**Price** | price | max_digits=6, decimal_places=2 | DecimalField
 **Brand** | brand | max-length=30 | CharField
 **Model** | model | max-length=30 | CharField
 **Year** | year | max_digits=4, decimal_places=0, choices=YEAR_CHOICES | DecimalField
