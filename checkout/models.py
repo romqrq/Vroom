@@ -7,18 +7,18 @@ class Order(models.Model):
     """Model for Order"""
 
     customer = models.ForeignKey(User, on_delete=models.PROTECT, null=True)
-    car = models.ForeignKey(Car, on_delete=models.PROTECT, null=True)
+    car = models.ForeignKey(Car, on_delete=models.CASCADE, null=True)
     track_day = models.ForeignKey(
         TrackDayAddon,
-        on_delete=models.PROTECT,
+        on_delete=models.CASCADE,
         null=True)
     insurance = models.ForeignKey(
         InsuranceAddon,
-        on_delete=models.PROTECT,
+        on_delete=models.CASCADE,
         null=True)
     private_driver = models.ForeignKey(
         PrivateDriverAddon,
-        on_delete=models.PROTECT,
+        on_delete=models.CASCADE,
         null=True)
     first_name = models.CharField(max_length=40, blank=False)
     last_name = models.CharField(max_length=40, blank=False)
@@ -45,18 +45,18 @@ class OrderLineItem(models.Model):
     """Model for each line in the order representing a product"""
 
     order = models.ForeignKey(Order, on_delete=models.CASCADE, null=False)
-    car = models.ForeignKey(Car, on_delete=models.PROTECT, null=True)
+    car = models.ForeignKey(Car, on_delete=models.CASCADE, null=True)
     track_day = models.ForeignKey(TrackDayAddon,
-                                  on_delete=models.PROTECT, null=True)
+                                  on_delete=models.CASCADE, null=True)
     insurance = models.ForeignKey(InsuranceAddon,
-                                  on_delete=models.PROTECT, null=True)
+                                  on_delete=models.CASCADE, null=True)
     private_driver = models.ForeignKey(PrivateDriverAddon,
-                                       on_delete=models.PROTECT, null=True)
+                                       on_delete=models.CASCADE, null=True)
     rental_days = models.IntegerField(blank=False)
-    
+
     if car:
         def __str__(self):
-            return "{0} {1} per day".format(
+            return "{0} {1} {2} @ {3} per day".format(
                 self.rental_days, self.car.brand,
                 self.car.model, self.car.price
             )
