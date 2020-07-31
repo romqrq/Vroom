@@ -1,10 +1,10 @@
-[![Build Status](https://Travis-ci.org/romqrq/Vroom.svg?branch=master)](https://travis-ci.org/romqrq/Vroom)
-
 <div align="center">
     <img src="https://vroom-s3.s3-eu-west-1.amazonaws.com/readme/general/vroom_banner.jpg" href="https://vroom-heroku.herokuapp.com/" target="_blank" rel="noopener" alt="Vroom - rent a car or rent yours to someone else" aria-label="Vroom - rent other users' cars or rent yours to them" />
 </div>
 
 [Vroom](https://vroom-heroku.herokuapp.com/) was designed, built and deployed by Romulo Albuquerque as his final project for the Code Institute Full Stack Web Development diploma. The purpose of Vroom is to allow more people to experience a wide variety of high end cars owned by other users. This website is designed to allow users to navigate effortlessly and intuitively. Vroom is aimed towards users that have a stronger connection to cars than the average but also offering relevant information for more utilitarian users.
+
+[![Build Status](https://Travis-ci.org/romqrq/Vroom.svg?branch=master)](https://travis-ci.org/romqrq/Vroom)
 
 ## Table of Contents
 
@@ -113,37 +113,45 @@ The Goals of Vroom as a business are:
 
 As a visitor to Vroom website:
 
-1. To easily find what I am looking for, I want the layout of the site to make sense so I am not confused or put off using it.
+1. To uderstand what the site is about.
 
-2. The information I am presented with to be laid out in a way that is easy for me to navigate and digest, so that I find what I need quickly and efficiently.
+2. I want the layout of the site to make sense so I am not confused or put off using it.
 
-3. The ability to search through small amounts of information to find what I need, and then be able to easily click to get more detailed information when I need it.
+3. The information I am presented with to be laid out in a way that is easy for me to navigate and digest.
 
-4. To be able to use the website in any device, desktop, tablet or phone. For the content to look good and be useable on all of these devices.
+4. To easily find what I am looking for.
 
-5. To learn more about the business and how it works, so that I can be assured I am covered and/or have directions on dealing with other users.
+5. To build trust in my decision of engaging the platform.
 
-6. To be able to read reviews of the business and other users written by previous customers, to build trust in my decision of engaging the platform.
+6. For all information and images to be laid out in a clear and easy to understand way, on whatever size screen I am viewing the website on.
 
-7. For all information and images to be laid out in a clear and easy to understand way, on whatever size screen I am viewing the website on.
+As a user:
 
-8. Plenty of high quality images of the cars and products for sale, so I have a clear idea of what I am renting/buying.
+1. I want the layout of the site to make sense so I am not confused or put off using it.
 
-9. To be able to easily find out all the information I need to make an informed purchase. I expect detailed information about car (model, year, engine, transmission, doors, seats, fuel...), insurance coverage, accessories such as GPS or car seats and pick up/delivery options to be available on every listing page.
+2. I find what I need quickly and efficiently.
 
-10. A text search function so that I can quickly narrow down my search when looking for something specific.
+3. Be able to easily click to get more detailed information when I need it.
 
-11. There to be a frequently asked questions page for any further questions I might have about how to deal with some situations.
+4. To be able to use the website in any device, desktop, tablet or phone.
 
-12. That once I am logged in I can access my account details and update them if I need to.
+5. To be able to read reviews of the business and other users written by previous customers.
 
-13. To be able to find information on my bookings and how to cancel or change them.
+6. Plenty of high quality images of the cars and products for sale, so I have a clear idea of what I am renting/buying.
 
-14. To be able to connect to the businesses social media channels to keep up to date with new listings on the site.
+7. To be able to easily find out all the information I need to make an informed purchase.
 
-15. To be able to easily get in contact with the customer service via a contact form.
+8. A text search function so that I can quickly narrow down my search when looking for something specific.
 
-16. Feedback from the website I am using when I interact with it, I expect to see messages to inform me when my forms have been completed and sent correctly. Or to let me know when an error has occurred and what to do next.
+9. There to be a frequently asked questions page for any further questions I might have about how to deal with some situations.
+
+10. That once I am logged in I can access my account details and update them if I need to.
+
+11. To be able to connect to the businesses social media channels to keep up to date with new listings on the site.
+
+12. To be able to easily get in contact with the customer service via a contact form.
+
+13. To see feedback from the website when I interact with it, I expect to see messages to inform me when my forms have been completed and sent correctly. Or to let me know when an error has occurred and what to do next.
 
 ## Design Choices
 
@@ -182,6 +190,7 @@ Vroom website has an overall **modern, sporty, clean feel** with emphasis on cre
 
 ### Styling
 
+- **Images** play a crucial role **showcasing** the very subject with that in mind, images are **used as often as possible** to enhance the impact of images uploaded by users.
 - Subtle **box shadowing** and **curved corners** were applied to elements that needed a little extra **emphasis, separation from the background and style**. For example on **buttons, forms and cards**.
 - In cases where an area is **clickable**, for example product images or call to action buttons, the shadow size is more evident and buttons are animated to when the user hovers over that element, this was done to make the area more tempting to click.
 - Curved corner styling was chosen for its **easy-in-the-eye** property and as it is a common stylistic choice of bootstrap it blends well with styles used from that library on this project.
