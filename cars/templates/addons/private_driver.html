@@ -37,8 +37,9 @@
             <div class="row">
                 <div class="col-12 col-md-6 offset-md-3 add-on-form-box">                                
                     <div class="input-area mt-3">
-                        <input name="quantity" type="number" min="1" max="999" class="form-control addon-input" placeholder="How many days?">
-                        <button class="btn general-button card-button addon-submit disabled-button" type="submit" disabled>Add to cart and Checkout</button> 
+                        <p class="text-muted">How many days?</p>
+                        <input name="quantity" type="number" min="1" max="999" class="form-control addon-input" value="1">
+                        <button class="btn general-button card-button addon-submit" type="submit">Add to cart and Checkout</button> 
                         <a href="{% url 'checkout' %}" class="btn general-button card-button link-button" rel="noopener" aria-label="Button to checkout page">
                         Skip and Checkout
                         </a>

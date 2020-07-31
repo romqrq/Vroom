@@ -123,8 +123,9 @@
         <form method="POST" action="{% url 'add_to_cart' 'car' car.id %}">
             {% csrf_token %}
             <div class="input-area mt-3">
-                <input name="quantity" type="number" min="1" max="999" class="form-control addon-input" placeholder="How many days?">
-                <button class="btn general-button card-button addon-submit disabled-button" type="submit" disabled>Vroom!</button> 
+                <p class="text-muted">How many days?</p>
+                <input name="quantity" type="number" min="1" max="999" class="form-control addon-input" value="1">
+                <button class="btn general-button card-button addon-submit" type="submit">Vroom!</button> 
             </div>
         </form>
     </div>
