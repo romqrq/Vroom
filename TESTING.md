@@ -526,6 +526,25 @@ Responsive design was also tested in the Chrome Developer Tools device simulator
     });
     ```
 
+6. **Error when trying to delete cars**
+    - When trying to delete a car that was referenced in an order object, it didn't allow the car to be deleted.
+    - The solution was to change the on_delete behaviour of the foreign key from PROTECT to CASCADE.
+    - As keeping records of orders can be interesting for a real world business, we are looking further into this subject.
+
+    Previously:
+
+    ```python
+        track_day = models.ForeignKey(TrackDayAddon,
+                                    on_delete=models.PROTECT, null=True)
+    ```
+
+    Updated:
+
+    ```python
+        track_day = models.ForeignKey(TrackDayAddon,
+                                    on_delete=models.CASCADE, null=True)
+    ```
+
 #### Unsolved bugs
 
 1. **Error When the user submits image files that are jpg!d or other less common extensions**
@@ -533,51 +552,6 @@ Responsive design was also tested in the Chrome Developer Tools device simulator
     - The idea of solution is:
         1. To use JavaScript to check the field and isolate the file extension.
         2. Use messages feedback to tell user the expected file extensions.
-
-2. **Error when trying to delete order items**
-    - When trying to delete an order through the admin panel on heroku, it raises a server error even though it works locally.
-    - We couldn't look in depth into this problem due to time constraints.
-
-    ```python
-    class OrderLineItem(models.Model):
-        """Model for each line in the order representing a product"""
-
-        order = models.ForeignKey(Order, on_delete=models.CASCADE, null=False)
-        car = models.ForeignKey(Car, on_delete=models.PROTECT, null=True)
-        track_day = models.ForeignKey(TrackDayAddon,
-                                    on_delete=models.PROTECT, null=True)
-        insurance = models.ForeignKey(InsuranceAddon,
-                                    on_delete=models.PROTECT, null=True)
-        private_driver = models.ForeignKey(PrivateDriverAddon,
-                                        on_delete=models.PROTECT, null=True)
-        rental_days = models.IntegerField(blank=False)
-
-        if car:
-            def __str__(self):
-                return "{0} {1} {2} @ {3} per day".format(
-                    self.rental_days, self.car,
-                    self.car.model, self.car.price
-                )
-
-        elif track_day:
-            def __str__(self):
-                return "{0} {1} {2} @ {3} per day".format(
-                    self.rental_days, self.track_day.title,
-                    self.track_day.coverage, self.track_day.price
-                )
-        elif insurance:
-            def __str__(self):
-                return "{0} {1} {2} @ {3} per day".format(
-                    self.rental_days, self.insurance.title,
-                    self.insurance.coverage, self.insurance.price
-                )
-        elif private_driver:
-            def __str__(self):
-                return "{0} {1} {2} @ {3} per day".format(
-                    self.rental_days, self.private_driver.title,
-                    self.private_driver.coverage, self.private_driver.price
-                )
-    ```
 
 ## Further testing
 
