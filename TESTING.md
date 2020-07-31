@@ -526,8 +526,6 @@ Responsive design was also tested in the Chrome Developer Tools device simulator
     });
     ```
 
-
-
 #### Unsolved bugs
 
 1. **Error When the user submits image files that are jpg!d or other less common extensions**
@@ -537,9 +535,9 @@ Responsive design was also tested in the Chrome Developer Tools device simulator
         2. Use messages feedback to tell user the expected file extensions.
 
 2. **Error when trying to delete order items**
-    - When trying to delete an order, it raises a server error even though it works locally.
+    - When trying to delete an order through the admin panel on heroku, it raises a server error even though it works locally.
     - We couldn't look in depth into this problem due to time constraints.
-    
+
     ```python
     class OrderLineItem(models.Model):
         """Model for each line in the order representing a product"""
@@ -553,7 +551,7 @@ Responsive design was also tested in the Chrome Developer Tools device simulator
         private_driver = models.ForeignKey(PrivateDriverAddon,
                                         on_delete=models.PROTECT, null=True)
         rental_days = models.IntegerField(blank=False)
-        
+
         if car:
             def __str__(self):
                 return "{0} {1} {2} @ {3} per day".format(
@@ -580,6 +578,7 @@ Responsive design was also tested in the Chrome Developer Tools device simulator
                     self.private_driver.coverage, self.private_driver.price
                 )
     ```
+
 ## Further testing
 
 1. Sent the link to friends, family and especially focusing on people with IT and design background for more technical feedback.
